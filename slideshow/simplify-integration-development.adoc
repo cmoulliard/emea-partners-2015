@@ -66,13 +66,29 @@ image::{revealjs_cover_image}[]
 [#why-so-hard]
 == Why integration is so hard & expensive ?
 
-// ************** slide ********
-[#slide]
-== Slide
+* Many systems to integrate
+* Many different formats, protocols to support
+* Many standards, APis, languages to "inter operate" between applications, systems
 
 // ************** slide ********
-[#slide]
+[#data-management]
 == Slide
+
+* Lack of vision OR strategy to manage common "data model",
+"services definition" between business units
+
+// ************** slide ********
+[#change-impact]
+== Slide
+
+* Every change will impact all the systems integrated/interconnected & testing program
+
+// ************** slide ********
+[#devops-strategy]
+== Slide
+
+* Absence of DevOps strategy (reuse some ideas
+developed through - CD/CI talk)
 
 
 // ************** transition page ************
@@ -89,13 +105,43 @@ image::{revealjs_cover_image}[]
 [#facts]
 == Some "historical" facts
 
-// ************** slide ********
-[#slide]
-== Slide
+* 2005 -> JBI & SCA emerging --> ESB vision
 
 // ************** slide ********
-[#slide]
+[#issues]
+== Issues
+
+* Present issues & concerns about the centric vision of JBI:  XML
+based (inner conversion from CSV to XML or XML to CSV, ..., too complex
+to design/develop, very few components
+
+// ************** slide ********
+[#proprietary]
 == Slide
+
+- IT players have proposed proprietary products but
+--> Targeted to the Business User (wisiwig tool, BPEL and Web Services ....)
+
+// ************** slide ********
+[#dev-impact]
+== Slide
+
+* Not for the Developer (as code was generated, not possible to debug,
+...)
+
+// ************** slide ********
+[#complex]
+== Slide
+
+* Complex to learn, to handle by different actors ...
+
+// ************** slide ********
+[#not-agile]
+== Slide
+
+* Not agile at all due to the usage of the Web Services, XML & XSD
+schema (or complex spec like WS-Atom, ...) everywhere imposing to embed
+the model within the service itself
 
 
 [#block,width="800px",top="0px"]
@@ -115,6 +161,61 @@ image::{revealjs_cover_image}[]
 [#looking-for]
 == What are we looking for ?
 
+* More agile environment to design, develop, test, build & deploy
+
+// ************** slide ********
+[#lock-in]
+== Slide
+
+*  No more lock in to "proprietary" products &  (perhaps risky as we have 
+to mention under the line that IBM, Tibco, Oracle products are 
+"proprietary" products, generating code or hiding code run by the 
+integration server)
+
+// ************** slide ********
+[#opensource]
+== Slide
+
+* Open Source & Apache License Model is the way to go (for the reasons 
+that we know)
+
+// ************** slide ********
+[#java-integration]
+== Slide
+
+* Java Integration Framework easy to use
+
+// ************** slide ********
+[#microservice]
+== Slide
+
+* Microservice architecture (no more centric vision but deployment of 
+packaged camel routes using OSGI bundle or tomorrow Docker image or 
+Kubernetes application
+
+// ************** slide ********
+[#tooling]
+== Slide
+
+* Integration tooling to package, deploy,
+
+// ************** slide ********
+[#cd-strategy]
+== Slide
+
+* CD/CI Strategy for Dev/Ops
+
+// ************** slide ********
+[#container-agnostic]
+== Slide
+
+* Container agnostic
+
+// ************** slide ********
+[#crossing]
+== Slide
+
+* Cross Technology (Rules, Process, ...)
 
 // ************** transition page ************
 [#transition4, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
@@ -130,13 +231,80 @@ image::{revealjs_cover_image}[]
 [#simplify-that]
 == How Can we simplify that
 
-// ************** slide ********
-[#slide]
-== Slide
+- Adopting Apache Camel & CXF Frameworks to design the project
+--> Reduce functional & technical analysis & Architecture design
 
 // ************** slide ********
-[#slide]
+[#dsl-eip]
 == Slide
+
+- DSL & EIP Patterns = common language, grammar between actors = 
+developer, analyst & architect to design the solution
+--> Reduce Dev Time as the functional diagram can be implemented 
+directly by the Developer
+
+// ************** slide ********
+[#extend]
+== Slide
+
+- Extend Java Framework
+--> As Apache Camel is a Java Framework, it allows to use / reuse the 
+most powerful existing framework for testing (Junit), Logging (SLF4J) & 
+Java EE standards (JPA, JTA, ...)
+
+// ************** slide ********
+[#adopting]
+== Slide
+
+- Adopting Camel Testing model
+--> Can be started, debugged and profiled locally in JBDS (no need to 
+use Java Container)
+
+// ************** slide ********
+[#components]
+== Slide
+
+- Library of Components & Data Format support 95% of the use case 
+without to develop
+
+// ************** slide ********
+[#new-component-format]
+== Slide
+
+- Can be extended easily (just 3-4 classes to be implemented to create a 
+new component) + Data Format
+
+// ************** slide ********
+[#processors]
+== Slide
+
+- Huge collection of processor/interceptor supporting all the EIP
+
+// ************** slide ********
+[#junit]
+== Slide
+
+- Junit & Exception centric
+
+// ************** slide ********
+[#exception]
+== Slide
+
+- Exception centric
+
+// ************** slide ********
+[#microservice-architecture]
+== Slide
+
+- Adopt microservice architecture model & split services as collection 
+of camel routes
+
+// ************** slide ********
+[#separate-service-contract]
+== Slide
+
+- Separate Service from the model (by adoption a REST proxy layer 
+validating the data outside of the endpoint, ...)
 
 // *********************************
 [#questions]
