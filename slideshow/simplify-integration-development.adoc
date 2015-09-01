@@ -273,10 +273,11 @@ image::{revealjs_cover_image}[]
 [#dsl-eip]
 == Slide
 
-* Adopt DSL & EIP Patterns
 * Common language, grammar between actors (developer, analyst & architect)
+** Correspond to DSL
+** Implement EIP Patterns instead of lockin standards
 
---> Reduce Dev Time as Functional Integration diagram can be implemented directly by the Developer
+* Reduce Dev Time as Functional Integration diagram can be implemented directly by the Developer
 
 // ************** slide ********
 [#dsl-eip]
@@ -300,7 +301,7 @@ image::{revealjs_cover_image}[]
 
 * Adopt Camel Testing model to design Integration Test
 ** Explain why & motivations
---> Can be started, debugged and profiled locally in JBDS (no need to 
+** Can be started, debugged and profiled locally in JBDS (no need to
 use Java Container)
 
 // ************** slide ********
