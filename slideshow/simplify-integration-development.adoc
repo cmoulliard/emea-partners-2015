@@ -350,6 +350,29 @@ new component) + Data Format
 * Support to separate Service from the model (by adoption a REST proxy layer
 validating the data outside of the endpoint, ...)
 
+// ************** slide ********
+[#container]
+== Slide
+
+* Fuse Container
+* Docker & kubernetes application
+
+// ************** slide ********
+[#governance-service]
+== Slide
+
+* Manage your services & governance using
+** Apiman
+** Keycloak
+** Overlord or Insight
+
+// ************** slide ********
+[#solution]
+== Slide
+
+* Add a pie chart about Red Hat Middleware portfolio + emerging
+* JBoss Fuse, JBoss A-MQ, Fabric8 v2, Openshift v3, Apiman, Keycloak, ...
+
 // *********************************
 [#questions]
 == Questions
