@@ -1,13 +1,13 @@
 :footer_copyright: Copyright ©2015 Red Hat, Inc.
 :imagesdir: images/
-:title-author: {author}
-:talk-title: How Red Hat Middleware technology can simplify your Integration Development
+:speaker: Charles Moulliard
+:speaker-title: Pr. Solution Architect, Fuse Expert, Apache Committer
+:speaker-email: cmoulliard@redhat.com
+:speaker-blog: http://cmoulliard.github.io
+:speaker-twitter: http://twitter.com/cmoulliard[@cmoulliard]
+:talk-speaker: {speaker}
+:talk-name: How Red Hat Middleware technology can simplify your Integration Development
 :talk-date: EMEA Partners - 5 to 7 Oct 2015
-:title-speaker: Pr. Solution Architect, Fuse Expert, Apache Committer
-:twitter: cmoulliard
-:author: Charles Moulliard
-:author-email: cmoulliard@redhat.com
-:blog: http://cmoulliard.github.io
 
 [#cover,data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
@@ -16,10 +16,10 @@
 image::{revealjs_cover_image}[]
 
 [#cover-h1,width="600px",left="0px",top="200px"]
-{talk-title}
+{talk-name}
 
 [#cover-h2,width="800px",left="0px",top="450px"]
-{author} +
+{speaker} +
 {talk-date}
 
 // ************** who - charles ********
@@ -29,13 +29,13 @@ image::{revealjs_cover_image}[]
 [.noredheader,cols="30,70"]
 |===
 | image:cmoulliard.png[width="90%",height="100%"]
-| {title-speaker}
+| {speaker-title}
 
-Blog: {blog}
+Blog: {speaker-blog}
 
-Twitter: link::@{twitter}
+Twitter: {speaker-twitter}
 
-Email: cmoulliard@redhat.com |
+Email: {speaker-email} |
 |===
 
 * Committer on Apache Camel, Karaf, Fabric8, Hawtio ... & PMC
@@ -60,333 +60,83 @@ Email: cmoulliard@redhat.com |
 image::{revealjs_cover_image}[]
 
 [#cover-h1,width="600px",left="0px",top="400px"]
-*Cost of change*
+*Integration is so hard & expensive*
 
-// ************** cost of change ********
-== Cost of change
+// ************** why so hard ********
+[#why-so-hard]
+== Why integration is so hard & expensive ?
 
-[.noredheader]
-|===
-a| * **D**evelopment
-* **O**perational
-* **I**nfrastructure
-* **B**usiness requirements | image:change.png[width="35%",height="35%",float="right"]
-|===
+// ************** slide ********
+[#slide]
+== Slide
 
-* http://blog.christianposta.com/microservices/microservices-and-reducing-the-cost-of-change/[Microservices {icon-arrow-right} reducing the Cost of Change]
+// ************** slide ********
+[#slide]
+== Slide
 
-// ************** cost of change ********
-== Integration costs
-
-[.noredheader,cols="60,40"]
-|===
-a|* *Integration* is *Hard!*
-* *Different* system *vintages*
-* Mainframe, EAI Hub, MOM, EJB, Web Services
-* *Evolving* business processes
-* *Systems* must *collaborate* | image:esb.png[width="75%"]
-|===
-
-// ************** cost of change ********
-== Integration costs 
-
-[.noredheader,cols="60,40"]
-|===
-a|
-* Platforms, *Protocols*
-* *Data Formats*
-* Organizational *mismatch*
-* *Timing*, **Com**munication | image:integration-1.png[width="90%"]
-|===
-
-image::integration-2.png[width="65%"]
 
 // ************** transition page ************
-[#transition1, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
+[#transition2, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
 
 [#block,width="200px",left="70px",top="0px"]
 image::{revealjs_cover_image}[]
 
 [#cover-h1,left="0px",top="350px",width="2000px"]
-*Continuous Delivery/Integration*
+*Some "historical" facts*
 
-// ************** devops ***********
+// ************** facts ********
+[#facts]
+== Some "historical" facts
 
-== {blank-space}
+// ************** slide ********
+[#slide]
+== Slide
+
+// ************** slide ********
+[#slide]
+== Slide
+
 
 [#block,width="800px",top="0px"]
 image:worked-fine-in-dev.png[width="80%"]
 
-// ************** devops ************
-
-== “WTF is DevOps?”
-
-[.noredheader]
-|===
- a| * *IT* is a *core* competency
-* *Set* of *principles*
-* There’s more to applications than coding!
-* Feedback, *Repetition*
-* *Communication*
-* People! | image:wtf-dev-ops.png[width="95%"]
-|===
-
-// ************** devops ************
-
-== Continuous Delivery
-
-* *Objective* {icon-arrow-right} *Continuous Integration* strategy
-* Establish a concrete *pipeline to production*
-* Build/Test/Release often!
-* Bottlenecks?
-* *Involves Dev and Ops* to be successful
-* Every *build* is a “release candidate”
-
-// ************** devops ************
-
-== Automate everything!
-
-* Developers
-** Unit tests
-** Integration tests
-** Builds
-** Deployments in dev
-
-* Operations
-** VMs
-** Provisioning software
-** Deployments in QA/UAT/PROD
-
 // ************** transition page ************
-[#transition1, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
+[#transition3, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
 
 [#block,width="200px",left="70px",top="0px"]
 image::{revealjs_cover_image}[]
 
 [#cover-h1,left="0px",top="350px",width="2000px"]
-*Requirements to support CD*
+*What are we looking for ?*
 
-// ************** devops ************
+// ************** What are we looking for ? ********
+[#looking-for]
+== What are we looking for ?
 
-== Tools, tools
-
-[.noredheader]
-|===
-a|* Git for SCM
-* Gerrit for code review
-* Gitlab/Gogs for git projects mngt
-* Apache Maven - build
-* Jenkins + plugins - automate
-* Linux containers
-* and of course… Fabric8! a|
-[#block, top=25px, left=500px]
-image:fabric8-cd-tools.png[height="65%"]
-|===
 
 // ************** transition page ************
-[#transition1, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
+[#transition4, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
 
 [#block,width="200px",left="70px",top="0px"]
 image::{revealjs_cover_image}[]
 
 [#cover-h1,left="0px",top="350px",width="2000px"]
-*Linux containers*
-
-// ************** docker ************
-
-== Process
-
-[#block,width="800px",top="50px"]
-image:docker-animated-1.gif[]
-
-// ************** docker ************
-
-== Docker
-
-* *Container runtime*, *image* distribution, *Process* launcher
-
-[#block,width="650px",top="150px"]
-image:docker-animated-2.gif[]
-
-[#block,width="100px",top="-20px",left="200px"]
-image:docker-logo.png[width="25%",height="25%"]
-
-// ************** docker ************
-
-== Docker
-
-image::docker-filesystems-multilayer.png[width="60%,height="60%"]
-
-* Top of a Union FS mounted with immutable images
-* Benefits: *portability*, *reusability*, versioning, application-centric
-
-[#block,width="150px",top="0px",left="350px"]
-image:dockerfile.png[width="65%"]
-
-// ************** transition page ************
-[#transition1, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
-== {blank-space}
-
-[#block,width="200px",left="70px",top="0px"]
-image::{revealjs_cover_image}[]
-
-[#cover-h1,left="0px",top="350px",width="2000px"]
-*Management platform*
-
-// ************** kubernetes ************
-
-== Kubernetes
-
-* Runtime & *Operational management* of containers
-* ApiServer (event, status), *Scheduler*, *Controller* & State Storage
-* *Agent - Kubelet* - manage containers on host
-* Containers {icon-arrow-right} *pods* (= shared docker containers)
-
-image::kubernetes-logo.png[width="25%",height="25%"]
-
-// ************** kubernetes ************
-
-== Kubernetes
-
-[#block,width="800px",left="0px",top="50px"]
-image:kubernetes-platform.png[]
-
-// ************** kubernetes ************
-
-== Pod & docker
-
-image::fabric8-pod.png[]
-
-* Communicate to each other using *skyDNS* to resolve hostname
-
-// ************** kubernetes ************
-
-== Pods & port
-
-image::fabric8-pod-port.png[]
-
-* Ports can be *exposed*
-
-// ************** kubernetes ************
-
-== Pods & volume
-
-image::fabric8-pod-volume.png[]
-
-* *Share data* using *mounted volume* between host & container
-
-// ************** kubernetes ************
-
-== Kubernetes Service
-
-image::fabric8-service-pod.png[]
-
-* Kube Service *loadbalanced* through the pods using *HA-Proxy* & *Routes*
-
-// ************** kubernetes ************
-
-== Kube Application JSon
-
-[.noredheader]
-|===
-| image:kubernetes-json-1.png[width="85%"] | image:kubernetes-json-2.png[width="65%"]
-|===
-
-// ************** transition page ************
-[#transition1, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
-== {blank-space}
-
-[#block,width="200px",left="70px",top="0px"]
-image::{revealjs_cover_image}[]
-
-[#cover-h1,left="0px",top="350px",width="2000px"]
-*Cloud Platform*
-
-// ************** openshift **********
-
-== Openshift v3
-
-* *Designed* around Kubernetes, Docker & Fabric8
-* Provide additional features : build (STI), deploy, manage & promote
-
-image::openshift_logo.png[width="30%,height="30%"]
-
-// ************** openshift ************
-
-== Platform as a Service
-
-* Flexible technology options
-* Developer self service
-* Automation, DevOps philosophy
-* Decoupling between operations and developers, reduces coordination
-
-image::openshift_logo.png[width="35%"]
-
-// ************** openshift ************
-
-== OS3 Architecture
-
-[#block,width="800px",top="120px"]
-image:ose-v3.png[width="95%",height="95%"]
-
-// ************** transition page ************
-[#transition1, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
-== {blank-space}
-
-[#block,width="200px",left="70px",top="0px"]
-image::{revealjs_cover_image}[]
-
-[#cover-h1,left="0px",top="350px",width="2000px"]
-*Tooling, prepackaged apps*
-
-// ************** fabric8 ************
-
-== {blank-space}
-
-[#block,width="800px",top="0px"]
-image:fabric8.png[width="95%",height="95%"]
-
-// ************** fabric8 ************
-
-== {blank-space}
-
-[#block,width="800px",top="0px"]
-image:fabric8-diagram1.png[width="80%",height="80%"]
-
-// ************** fabric v2 ************
-
-== http://fabric8.io/gitbook/mavenPlugin.html[Fabric8 Maven Plugin]
-
-* docker:build {icon-arrow-right} Build image of app
-
-* fabric8:json {icon-arrow-right} generates Kube MetaData App
-
-* fabric8:apply {icon-arrow-right} deploy/redeploy on Openshift
-
-* and more to create env, delete pods, create routes
-
-// ************** fabric v2 ************
-
-== {blank-space}
-
-[#block,width="800px",top="0px"]
-image:fabric8-cdci.png[width="80%"]
-
-// ************** transition page ************
-[#transition1, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
-== {blank-space}
-
-[#block,width="200px",left="70px",top="0px"]
-image::{revealjs_cover_image}[]
-
-[#cover-h1,width="600px",left="0px",top="500px"]
-*Demo*
-
-image::jenkins-pipeline.png[width="95%",height="95%"]
-
+*How Can we simplify that*
+
+// ************** How Can we simplify that ********
+[#simplify-that]
+== How Can we simplify that
+
+// ************** slide ********
+[#slide]
+== Slide
+
+// ************** slide ********
+[#slide]
+== Slide
 
 // *********************************
 [#questions]
@@ -396,7 +146,7 @@ image::jenkins-pipeline.png[width="95%",height="95%"]
 |===
 
 .2+|image:questions.png[width="95%",height="95%"]
-a|* Twitter : *@cmoulliard*
+a|* Twitter : *{speaker-twitter}*
 |===
 
 * More info {icon-arrow-right}
