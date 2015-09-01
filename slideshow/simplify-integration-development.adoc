@@ -48,8 +48,8 @@ Email: {speaker-email} |
 
 * Why integration is so hard & expensive ?
 * Existing solutions
-* What are we looking for ?
-* How Can we simplify that
+* How can we simplify that ?
+* Ideal Integration Platform
 * Wrap Up
 
 // ************** transition page ************
@@ -72,6 +72,7 @@ image::{revealjs_cover_image}[]
 * Team collaboration
 * Business is different
 * Data model & schemas not managed all
+* Lack of common vocabulary, grammar  between integration actors
 * Lack of catalogue or registry to publish services, data structure, validation rules
 * Lack of vision OR strategy to manage common "data model",
   "services definition" between business units
@@ -116,7 +117,7 @@ image::{revealjs_cover_image}[]
 [#existing]
 == Existing solutions
 
-? Add a timeline with solutions / products
+? Add a timeline with solutions
 
 * EAI
 * 2005 -> JBI & SCA emerging
@@ -127,32 +128,36 @@ image::{revealjs_cover_image}[]
 
 // ************** slide ********
 [#issues]
-== Issues
+== Centric vision
 
-* Issues about the centric vision of JBI, SCA
+* Centric vision
 ** XML based (inner conversion from CSV to XML or XML to CSV, ...) --> increase functional & modeling cost
+** Central server where the processes are deployed and run (what about incremental updates, ...)
 ** Long process to design/develop due to technology complexity --> increase dvlpt time & learning curve
-** Too few components --> will require home code (TODO: To be reviewed)
+
+// ************** slide ********
+[#issues]
+== Integration & orchestration standards
+
+* JBI, SCA
+** Proprietary implementation
+** Suffer from number of components --> will require home code (TODO: To be reviewed)
 
 * Orchestration engines
 ** BPEL & WebServices --> increase learning curve & expertise level, does not fit very well huge volume processing
 ** Contract(s) & Services (TODO: To be reviewed)
+** Not compatible
 
 // ************** slide ********
 [#proprietary]
-== Proprietary
+== Dev Impact
 
-* IT players have proposed proprietary implementation
-** Targeted to the Business User (wisiwig tool, BPEL and Web Services .... BUT
-
-// ************** slide ********
-[#dev-impact]
-== Slide
-
-* Not for the Developer
-** Due to the fact that the code was generated, 
-** Not possible to debug, to test (TODO: To be reviewed)
-** Complex to learn, to be used between teams or cross projects (TODO: To be reviewed)
+* Targeted to the Business User (wisiwig tool, BPEL and Web Services ...) BUT
+** Not for the Developer
+** Complex to learn, to be used between by teams or cross projects (TODO: To be reviewed)
+** Generated code
+** Design & runtime platforms are different
+--> Not possible to debug, to test (TODO: To be reviewed)
 
 // ************** slide ********
 [#not-agile]
@@ -173,13 +178,14 @@ image:worked-fine-in-dev.png[width="80%"]
 image::{revealjs_cover_image}[]
 
 [#cover-h1,left="0px",top="350px",width="2000px"]
-*What are we looking for ?*
+*How can we simplify that ?*
 
 // ************** What are we looking for ? ********
 [#looking-for]
-== What are we looking for ?
+== How can we simplify Integration Project Dev
 
-* More agile environment to design, develop, test, build & deploy
+* Use agile Dev technique (scrum, ...)
+* Adopt a design, develop, test& build "platform"
 
 // ************** slide ********
 [#lock-in]
@@ -213,7 +219,7 @@ that we know)
 [#tooling]
 == Slide
 
-* Integration tooling to package, deploy,
+* Integration tooling to package, deploy
 
 // ************** slide ********
 [#cd-strategy]
@@ -228,6 +234,12 @@ that we know)
 * Container agnostic
 
 // ************** slide ********
+[#cloud-ready]
+== Slide
+
+* Cloud ready
+
+// ************** slide ********
 [#crossing]
 == Slide
 
@@ -235,6 +247,9 @@ that we know)
 ** Design complex logic using rules engine, 
 ** Manage long term process using standard BPM
 ** Distribute workload in an sync/async way
+** Manage & govern services
+** Report centrally the logs & activities
+** Secure endpoints and services
 ...
 
 // ************** transition page ************
@@ -245,14 +260,14 @@ that we know)
 image::{revealjs_cover_image}[]
 
 [#cover-h1,left="0px",top="350px",width="2000px"]
-*How Can we simplify that*
+*Ideal Integration Platform*
 
 // ************** How Can we simplify that ********
-[#simplify-that]
-== How Can we simplify that
+[#ideal-platform]
+== Ideal Integration Platform
 
-* Adopting Apache Camel & CXF Frameworks to design the project
---> Reduce functional & technical analysis & Architecture design
+* Does it exist --> YES
+* What is the technology supporting such vision --> JBoss Fuse, JBoss A-MQ, OpenShift & emerging (Keycloak, ApiMan, Overlord, Hawtio, Fabric8, ...)
 
 // ************** slide ********
 [#dsl-eip]
@@ -261,8 +276,16 @@ image::{revealjs_cover_image}[]
 * Adopt DSL & EIP Patterns
 * Common language, grammar between actors (developer, analyst & architect)
 
---> Reduce Dev Time as the functional diagram can be implemented 
-directly by the Developer
+--> Reduce Dev Time as Functional Integration diagram can be implemented directly by the Developer
+
+// ************** slide ********
+[#dsl-eip]
+== Slide
+
+* Adopt Opensource Framework implementing EIP Patterns and DSL like Apache Camel 
+** Benefit to use well establishes patterns & practices
+** Reduce functional & technical analysis & Architecture design
+** Opensource community power 
 
 // ************** slide ********
 [#extend]
@@ -284,46 +307,46 @@ use Java Container)
 [#components]
 == Slide
 
-- Library of Components & Data Format support 95% of the use case 
+* Library of Components & Data Format support 95% of the use case 
 without to develop
 
 // ************** slide ********
 [#new-component-format]
 == Slide
 
-- Can be extended easily (just 3-4 classes to be implemented to create a 
+* Can be extended easily (just 3-4 classes to be implemented to create a 
 new component) + Data Format
 
 // ************** slide ********
 [#processors]
 == Slide
 
-- Huge collection of processor/interceptor supporting all the EIP
+* Huge collection of processor/interceptor supporting all the EIP
 
 // ************** slide ********
 [#junit]
 == Slide
 
-- Junit & Exception centric
+* Junit & Exception centric
 
 // ************** slide ********
 [#exception]
 == Slide
 
-- Exception centric
+* Exception centric
 
 // ************** slide ********
 [#microservice-architecture]
 == Slide
 
-- Adopt microservice architecture model & split services as collection 
-of camel routes
+* Propose microservice architecture model
+* Split services as collection of camel routes
 
 // ************** slide ********
 [#separate-service-contract]
 == Slide
 
-- Separate Service from the model (by adoption a REST proxy layer 
+* Support to separate Service from the model (by adoption a REST proxy layer
 validating the data outside of the endpoint, ...)
 
 // *********************************
