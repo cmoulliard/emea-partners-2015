@@ -351,7 +351,7 @@ new component) + Data Format
 validating the data outside of the endpoint, ...)
 
 // ************** slide ********
-[#container]
+[#containers]
 == Slide
 
 * Fuse Container
@@ -361,9 +361,15 @@ validating the data outside of the endpoint, ...)
 [#governance-service]
 == Slide
 
-* Manage your services & governance using
+* Manage your services & governance
 ** Apiman
 ** Keycloak
+
+// ************** slide ********
+[#bai]
+== Slide
+
+* Business Activities
 ** Overlord or Insight
 
 // ************** slide ********
