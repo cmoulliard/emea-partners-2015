@@ -20,9 +20,11 @@ git rm -rf slideshow
 
 echo "Uncompress"
 tar zxf $TMPDIR/$file.tar.gz slideshow/generated
+git add slideshow/
 
 echo "Add index file"
 touch $index_file
+git add $index_file
 
 echo "Add index page"
 cat <<_EOF_ > $index_file
