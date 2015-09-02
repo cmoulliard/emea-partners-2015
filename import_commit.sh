@@ -39,7 +39,7 @@ echo << _EOF_ > $index_file
 </html>
 _EOF_
 
-echo "Commit to github and checlout to master"
-git commit -m "Update web content" -a
-git push
+echo "Commit to github and checkout to master"
+#git commit -m "Update web content" -a
+#git push
 git checkout master
