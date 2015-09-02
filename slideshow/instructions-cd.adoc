@@ -17,6 +17,7 @@
     cd fabric8-installer/vagrant/openshift
     
 . Start Vagrant using this command
++
 ----
     vagrant up
 ----
@@ -66,7 +67,7 @@ When the VirtualBox machine has been started and created successfully, you shoul
 # Setup ENV vars to access Docker or Openshift daemons running within the Virtualbox machine    
 
 . Define for the HOST macosx the docker daemon which runs within the Vagrant VM Box and kubernetes env vars
-
++
 ----
 unset DOCKER_CERT_PATH
 unset DOCKER_TLS_VERIFY
@@ -76,7 +77,7 @@ export KUBERNETES_MASTER=https://vagrant.f8:8443
 export KUBERNETES_DOMAIN=vagrant.f8
 export KUBERNETES_TRUST_CERT="true"
 ----
-
++
 . Authenticate the Openshift Client with the Openshift platform and select default as domain
 +
 ----
