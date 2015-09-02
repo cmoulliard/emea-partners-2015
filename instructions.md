@@ -7,10 +7,7 @@
 
 Instructions to add manually pages : https://help.github.com/articles/creating-project-pages-manually/
 
-Link of the content generated : 
-
-- http://cmoulliard.github.io/emea-partners-2015/slideshow/generated/simplify-integration-development.html
-- http://cmoulliard.github.io/emea-partners-2015/slideshow/generated/continuous-delivery.html
+Home page of the content : http://cmoulliard.github.io/emea-partners-2015/slideshow/generated/
 
 ## Create tar file of the HTML files generated 
 
