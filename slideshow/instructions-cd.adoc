@@ -70,31 +70,52 @@ When the VirtualBox machine has been started and created successfully, you shoul
 ----
 unset DOCKER_CERT_PATH
 unset DOCKER_TLS_VERIFY
-export DOCKER_HOST=tcp://vagrant.local:2375
+export DOCKER_HOST=tcp://vagrant.f8:2375
 export KUBERNETES_NAMESPACE=default
-export KUBERNETES_MASTER=https://172.28.128.4:8443
-export KUBERNETES_DOMAIN=vagrant.local
+export KUBERNETES_MASTER=https://vagrant.f8:8443
+export KUBERNETES_DOMAIN=vagrant.f8
 export KUBERNETES_TRUST_CERT="true"
 ----
 
-* Authentificate the OS user with the openshift platform
-```
-    oc project default
-    oc login -u admin -p admin https://172.28.128.4:8443
-```
-* Add the name of the application to the hosts file
-```
+. Authenticate the Openshift Client with the Openshift platform and select default as domain
++
+----
+oc project default
+oc login -u admin -p admin https://172.28.128.4:8443
+----
++
+. Add the name of the application to the hosts file
++
+----
     172.28.128.4    fabric8.local gogs.local vagrant.local docker-registry.vagrant.local fabric8-master.vagrant.local fabric8.vagrant.local gogs.vagrant.local gogs.fabric8.vagrant.local gogs-http.vagrant.local jenkins.vagrant.local kibana.vagrant.local nexus.vagrant.local router.vagrant.local gerrit-ssh.vagrant.local gerrit-http.vagrant.local gerrit.vagrant.local sonarqube.vagrant.local letschat.vagrant.local orion.vagrant.local taiga.vagrant.local quickstart-camelservlet.vagrant.local quickstart-rest.vagrant.local
-```
-* Deploy the Fabric8 Base APP
-```
-    oc process -v DOMAIN='vagrant.local' -f http://central.maven.org/maven2/io/fabric8/apps/base/2.1.11/base-2.1.11-kubernetes.json | oc create -f -
-    oc process -v DOMAIN='vagrant.local' -f /Users/chmoulli/MyProjects/MyConferences/fuse-tech-2015/demo/base-2.1.11-kubernetes.json | oc create -f -
-```
-* Add the route for Fabric8
-```
-    mvn fabric8:create-routes
-```
+----
++
+. Download Fabric 8 Kubernetes templates
++
+----
+curl -o fabric8.zip http://repo1.maven.org/maven2/io/fabric8/apps/distro/2.2.19/distro-2.2.19-templates.zip
+unzip fabric8.zip
+----
+
+. Deploy the Fabric8 Continuous Delivery application
++
+----
+oc process -v DOMAIN='vagrant.f8' -f main/cdelivery-2.2.19.json  | oc create -f -
+----
++
+NOTE: Don't worry about such messages as the elasticsearch, elasticsearch-cluster & kibana kube apps have alsready been deployed when we have started the Virtualbox
++
+. Add the route for Fabric8 within a Fabric8 Maven project
+----
+mvn fabric8:create-routes
+----
++
+. Everywhere
++
+----
+mvn io.fabric8:fabric8-maven-plugin:2.2.19:create-routes -Dfabric8.domain=cd.fabric8.io
+----
+.
 * Show the project `camel-servlet` within the quickstart project
 * Analyze the properties of the pom.xml file
 
@@ -102,10 +123,12 @@ export KUBERNETES_TRUST_CERT="true"
 
 *  mvn install docker:build fabric8:json fabric8:apply
 
-* Run command fabric8:json & explain kubernetes.json
-```
+. Run command fabric8:json & explain kubernetes.json
++
+----
     mvn clean fabric8:json compile
-```
+----
++
 * Explain docker:build, docker:push
 
 * Create the image --> mvn docker:build
