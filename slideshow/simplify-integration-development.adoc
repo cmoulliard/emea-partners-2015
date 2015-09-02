@@ -70,7 +70,7 @@ image::{revealjs_cover_image}[]
 * Many different formats, protocols to support
 * Many standards, APis, languages to "inter operate" between applications, systems
 * Team collaboration
-* Business is different
+* Many different business to interface
 
 // ************** why so hard ********
 [#why-so-hard-2]
