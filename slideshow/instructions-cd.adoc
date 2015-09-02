@@ -129,24 +129,23 @@ mvn io.fabric8:fabric8-maven-plugin:2.2.19:create-routes -Dfabric8.domain=cd.fab
 mvn install docker:build fabric8:json fabric8:apply
 ----
 +
-. Run command fabric8:json & explain kubernetes.json
+. Run command fabric8:json
 +
 ----
 mvn clean fabric8:json compile
 ----
-+
-. Explain docker:build, docker:push
-. Create the image --> mvn docker:build
+
 
 # Deploy the Camel Servlet WAR example
 +
 ----
-    mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.f8
+mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.f8
 ----
 + 
 . The application Camel Web Servlet is accessible : http://quickstart-camelservlet.vagrant.f8/
 
-== To replay
+
+# Troubleshooting
 
 * To access a docker container
 
