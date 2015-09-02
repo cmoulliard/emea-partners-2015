@@ -14,24 +14,69 @@
 . Download the [Fabric8 Installer project](https://github.com/fabric8io/fabric8-installer/archive/master.zip)containing the Vagrant config file
 . Unzip the content
 . Open a Terminal and move to the directory of vagrant openshift 
-
     cd fabric8-installer/vagrant/openshift
     
 . Start Vagrant using this command
-
+----
     vagrant up
+----
++
+[NOTE]
+====
+When the VirtualBox machine has been started and created successfully, you should be able to see this message within the console
 
-* Define for the HOST macosx the docker daemon which runs within the Vagrant VM Box and kubernetes env vars
+----
+==> default: --------------------------------------------------------------
+==> default: Fabric8 pod is running! Who-hoo!
+==> default: --------------------------------------------------------------
+==> default:
+==> default: Now open the fabric8 console at:
+==> default:
+==> default:     http://fabric8.vagrant.f8/
+==> default:
+==> default: When you first open your browser Chrome will say:
+==> default:
+==> default:    Your connection is not private
+==> default:
+==> default: * Don't panic!
+==> default: * Click on the small 'Advanced' link on the bottom left
+==> default: * Now click on the link that says 'Proceed to fabric8.vagrant.f8 (unsafe)' bottom left
+==> default: * Now the browser should redirect to the login page. Enter admin/admin
+==> default: * You should now be in the main fabric8 console. That was easy eh! :)
+==> default: * Make sure you start off in the 'default' namespace.
+==> default:
+==> default: To install more applications click the Run... button on the Apps tab.
+==> default:
+==> default: We love feedback: http://fabric8.io/community/
+==> default: Have fun!
+==> default:
+==> default: Now open the fabric8 console at:
+==> default:
+==> default:     http://fabric8.vagrant.f8/
+==> default:
+==> default: --------------------------------------------------------------
+==> default: deploymentconfigs/docker-registry
+==> default: services/docker-registry
+----
+====
++
+. Open your browser and access the Fabric8 console at this address +http://fabric8.vagrant.f8/+. The login/password to be used is +admin/admin+
+    
+    
+# Setup ENV vars to access Docker or Openshift daemons running within the Virtualbox machine    
 
-```
-    unset DOCKER_CERT_PATH
-    unset DOCKER_TLS_VERIFY
-    export DOCKER_HOST=tcp://vagrant.local:2375
-    export KUBERNETES_NAMESPACE=default
-    export KUBERNETES_MASTER=https://172.28.128.4:8443
-    export KUBERNETES_DOMAIN=vagrant.local
-    export KUBERNETES_TRUST_CERT="true"
-```
+. Define for the HOST macosx the docker daemon which runs within the Vagrant VM Box and kubernetes env vars
+
+----
+unset DOCKER_CERT_PATH
+unset DOCKER_TLS_VERIFY
+export DOCKER_HOST=tcp://vagrant.local:2375
+export KUBERNETES_NAMESPACE=default
+export KUBERNETES_MASTER=https://172.28.128.4:8443
+export KUBERNETES_DOMAIN=vagrant.local
+export KUBERNETES_TRUST_CERT="true"
+----
+
 * Authentificate the OS user with the openshift platform
 ```
     oc project default
