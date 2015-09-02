@@ -5,14 +5,15 @@ index_file=slideshow/generated/index.html
 talk_name="Red Hat EMEA Partners 2015"
 
 echo "Create Tar file"
-tar zcvf $TMPDIR/$file.tar.gz slideshow/generated
+rm $TMPDIR/$file.tar.gz
+tar zcf $TMPDIR/$file.tar.gz slideshow/generated
 
 echo "Checkout to gh-pages"
 git checkout gh-pages
 rm -rf slideshow
 
 echo "Uncompress"
-tar zxvf $TMPDIR/$file.tar.gz slideshow/generated
+tar zxf $TMPDIR/$file.tar.gz slideshow/generated
 
 touch slideshow/generated/index.html
 
