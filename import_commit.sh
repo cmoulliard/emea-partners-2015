@@ -4,6 +4,9 @@ file=emea-partners
 index_file=slideshow/generated/index.html
 talk_name="Red Hat EMEA Partners 2015"
 
+echo "Generate HTML" 
+hyla generate -c slideshow/conference-redhat.yaml
+
 echo "Create Tar file"
 rm $TMPDIR/$file.tar.gz
 tar zcf $TMPDIR/$file.tar.gz slideshow/generated
