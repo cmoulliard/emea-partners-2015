@@ -2,4 +2,4 @@
 
 file=emea-partners
 
-tar -zxvf $TMPDIR/$file.tar.gz slideshow/generated
+tar zxvf $TMPDIR/$file.tar.gz slideshow/generated

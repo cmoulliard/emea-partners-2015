@@ -15,8 +15,7 @@ https://help.github.com/articles/creating-project-pages-manually/
 ## Create gh-pages branch (one time)
 
     git checkout --orphan gh-pages
-    git rm -rf slideshow/*
-    git rm .gitignore
+    git rm -rf slideshow   
     
 ## Add content  - first time
 
