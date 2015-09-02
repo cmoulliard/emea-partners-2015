@@ -16,7 +16,7 @@ ls $TMPDIR/$file.tar.gz
 
 echo "Checkout to gh-pages"
 git checkout gh-pages
-rm -rf slideshow
+git rm -rf slideshow
 
 echo "Uncompress"
 tar zxf $TMPDIR/$file.tar.gz slideshow/generated
