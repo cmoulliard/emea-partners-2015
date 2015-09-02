@@ -8,6 +8,9 @@ echo "Create Tar file"
 rm $TMPDIR/$file.tar.gz
 tar zcf $TMPDIR/$file.tar.gz slideshow/generated
 
+echo "File compressed"
+ll $TMPDIR/$file.tar.gz
+
 echo "Checkout to gh-pages"
 git checkout gh-pages
 rm -rf slideshow
