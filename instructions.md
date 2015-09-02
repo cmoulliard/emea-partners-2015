@@ -26,11 +26,12 @@ https://help.github.com/articles/creating-project-pages-manually/
     git commit -m "Update web content" -a
     
 ## Add content - next time
-    
+
+    ./generate_tar.sh
     git checkout gh-pages
     rm -rf slideshow
     ./import_site.sh
     git commit -m "Update web content" -a
     git push
-    
+    git checkout master
     
