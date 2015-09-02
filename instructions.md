@@ -29,13 +29,25 @@ Link of the content generated :
     git add slideshow
     git commit -m "Update web content" -a
     
-## Add content - next time
+## Add content - next time 
 
-    ./generate_tar.sh
-    git checkout gh-pages
-    rm -rf slideshow
-    ./import_site.sh
-    git commit -m "Update web content" -a
-    git push
-    git checkout master
+Use script `/import_commit.sh` which contain the following instructions
+
+```
+#!/usr/bin/env bash
+
+file=emea-partners
+echo "Create Tar file"
+tar zcvf $TMPDIR/$file.tar.gz slideshow/generated
+
+echo "Checkout to gh-pages"
+git checkout gh-pages
+rm -rf slideshow
+
+tar zxvf $TMPDIR/$file.tar.gz slideshow/generated
+
+git commit -m "Update web content" -a
+git push
+git checkout master
+```    
     
