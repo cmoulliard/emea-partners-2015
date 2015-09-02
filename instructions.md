@@ -28,6 +28,7 @@ https://help.github.com/articles/creating-project-pages-manually/
 ## Add content - next time
     
     git checkout gh-pages
+    rm -rf slideshow
     ./import_site.sh
     git commit -m "Update web content" -a
     git push
