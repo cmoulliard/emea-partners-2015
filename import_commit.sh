@@ -15,7 +15,8 @@ rm -rf slideshow
 echo "Uncompress"
 tar zxf $TMPDIR/$file.tar.gz slideshow/generated
 
-touch slideshow/generated/index.html
+echo "Add index file"
+touch $index_file
 
 echo "Add index page"
 echo << _EOF_ > $index_file
