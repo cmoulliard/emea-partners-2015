@@ -1,12 +1,11 @@
 # Generate the Slideshow
 
-hyla generate -c slideshow/conference-redhat.yaml
-
-# hyla generate -c demo/conference-redhat.yaml
+    hyla generate -c slideshow/conference-redhat.yaml
+    hyla generate -c demo/conference-redhat.yaml
 
 # Move content to Github io
 
-https://help.github.com/articles/creating-project-pages-manually/
+    https://help.github.com/articles/creating-project-pages-manually/
 
 ## Create tar file of the HTML files generated 
 
