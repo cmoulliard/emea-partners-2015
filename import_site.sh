@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-tar -zxvf ~/Temp/devnation-presentation.tar.gz slideshow/generated
+file=emea-partners
+
+tar -zxvf $TMPDIR/$file.tar.gz slideshow/generated
