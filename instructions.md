@@ -16,11 +16,14 @@ https://help.github.com/articles/creating-project-pages-manually/
 
     git checkout --orphan gh-pages
     git rm -rf slideshow 
+    git rm .gitignore
     rm -rf slideshow  
     
 ## Add content  - first time
 
     ./import_site.sh
+    git add slideshow
+    git commit -m "Update web content" -a
     
 ## Add content - next time
     
