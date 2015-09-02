@@ -25,7 +25,7 @@ echo "Add index file"
 touch $index_file
 
 echo "Add index page"
-echo << _EOF_ > $index_file
+echo <<_EOF_ > $index_file
 <html>
   <head>
     <title>Index of presentations</title>
@@ -42,7 +42,7 @@ echo << _EOF_ > $index_file
 </html>
 _EOF_
 
-echo "Commit to github and checkout to master"
+echo "Commit to github gh-pages branch and checkout to master"
 git commit -m "Update web content" -a
 git push
 git checkout master
