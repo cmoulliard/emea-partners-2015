@@ -25,7 +25,7 @@ echo "Add index file"
 touch $index_file
 
 echo "Add index page"
-echo <<_EOF_ > $index_file
+cat <<_EOF_ > $index_file
 <html>
   <head>
     <title>Index of presentations</title>
