@@ -43,6 +43,6 @@ echo << _EOF_ > $index_file
 _EOF_
 
 echo "Commit to github and checkout to master"
-#git commit -m "Update web content" -a
-#git push
+git commit -m "Update web content" -a
+git push
 git checkout master
