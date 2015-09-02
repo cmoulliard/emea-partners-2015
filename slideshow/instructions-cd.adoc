@@ -1,0 +1,192 @@
+# Prerequisite : maven 3.3.3, Java JDK 1.7
+
+```
+    source ~/.bash_profile
+    jvm 1.7
+
+    Add to the local macosx machine the following route to forward all tge packets to the IP Address of the VM running into the VirtualBox
+    sudo route -n delete 172.0.0.0/8
+    sudo route -n add 172.0.0.0/8  172.28.128.4
+```
+# Download and install Fabric8 Installer
+
+. Download the [Fabric8 Installer project](https://github.com/fabric8io/fabric8-installer/archive/master.zip)containing the Vagrant config file
+. Unzip the content
+. Open a Terminal and move to the directory of Fabric8 project (use master branch)
+* Start Vagrant
+
+```
+    vagrant up
+```
+
+* Define for the HOST macosx the docker daemon which runs within the Vagrant VM Box and kubernetes env vars
+
+```
+    unset DOCKER_CERT_PATH
+    unset DOCKER_TLS_VERIFY
+    export DOCKER_HOST=tcp://vagrant.local:2375
+    export KUBERNETES_NAMESPACE=default
+    export KUBERNETES_MASTER=https://172.28.128.4:8443
+    export KUBERNETES_DOMAIN=vagrant.local
+    export KUBERNETES_TRUST_CERT="true"
+```
+* Authentificate the OS user with the openshift platform
+```
+    oc project default
+    oc login -u admin -p admin https://172.28.128.4:8443
+```
+* Add the name of the application to the hosts file
+```
+    172.28.128.4    fabric8.local gogs.local vagrant.local docker-registry.vagrant.local fabric8-master.vagrant.local fabric8.vagrant.local gogs.vagrant.local gogs.fabric8.vagrant.local gogs-http.vagrant.local jenkins.vagrant.local kibana.vagrant.local nexus.vagrant.local router.vagrant.local gerrit-ssh.vagrant.local gerrit-http.vagrant.local gerrit.vagrant.local sonarqube.vagrant.local letschat.vagrant.local orion.vagrant.local taiga.vagrant.local quickstart-camelservlet.vagrant.local quickstart-rest.vagrant.local
+```
+* Deploy the Fabric8 Base APP
+```
+    oc process -v DOMAIN='vagrant.local' -f http://central.maven.org/maven2/io/fabric8/apps/base/2.1.11/base-2.1.11-kubernetes.json | oc create -f -
+    oc process -v DOMAIN='vagrant.local' -f /Users/chmoulli/MyProjects/MyConferences/fuse-tech-2015/demo/base-2.1.11-kubernetes.json | oc create -f -
+```
+* Add the route for Fabric8
+```
+    mvn fabric8:create-routes
+```
+* Show the project `camel-servlet` within the quickstart project
+* Analyze the properties of the pom.xml file
+
+* Checkout the master or tag 2.1.6 of the quickstart app 'camel servlet war' & compile/build/deploy the kube App & docker image
+
+*  mvn install docker:build fabric8:json fabric8:apply
+
+* Run command fabric8:json & explain kubernetes.json
+```
+    mvn clean fabric8:json compile
+```
+* Explain docker:build, docker:push
+
+* Create the image --> mvn docker:build
+
+* Deploy the Camel Servlet WAR example
+```
+    mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.local
+```
+*  The application Camel Web Servlet is accessible : http://quickstart-camelservlet.vagrant.local/
+
+== To replay
+
+* To access a docker container
+
+```
+    docker exec -it $(docker ps | grep 'fabric8/gerrit' | cut -f1 -d" ") bash
+```
+
+* Delete pods, services & replica
+
+```
+    osc get pods -l provider=fabric8
+    osc get rc -l provider=fabric8
+    osc get svc -l provider=fabric8
+    osc get oauthclients | grep fabric8
+
+    osc delete rc -l provider=fabric8
+    osc delete pods -l provider=fabric8
+    osc delete svc -l provider=fabric8
+    osc delete oauthclients fabric8
+```
+
+* Delete containers & image
+
+```
+    docker rm $(docker ps -a | grep gerrit)
+    docker rmi $(docker images | grep gerrit)
+```
+
+* Delete PODS using Fabric8 plugin
+
+```
+    mvn install docker:build fabric8:delete-pods
+```
+
+For more see http://fabric8.io/guide/mavenFabric8DeletePods.html
+
+
+# Delete the Fabric8 App
+
+osc delete rc -l provider=fabric8
+osc delete pods -l provider=fabric8
+osc delete svc -l provider=fabric8
+osc delete oauthclients fabric8
+
+osc get pods -l provider=fabric8
+osc get rc -l provider=fabric8
+osc get svc -l provider=fabric8
+osc get oauthclients | grep fabric8
+
+# Delete the containers & images
+
+docker rm $(docker ps -a | grep fabric8)
+docker rmi $(docker images | grep fabric8)
+
+# Install Base or CDelivery
+
+osc process -v DOMAIN='vagrant.local' -f http://central.maven.org/maven2/io/fabric8/apps/base/2.1.11/base-2.1.11-kubernetes.json | osc create -f -
+osc process -v DOMAIN='vagrant.local' -f http://central.maven.org/maven2/io/fabric8/apps/cdelivery-core/2.1.11/cdelivery-core-2.1.11-kubernetes.json | osc create -f -
+
+# Compile & Deploy a project
+
+mvn clean fabric8:json compile
+mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.local
+
+docker exec -it $(docker ps | grep 'fabric8/gerrit' | cut -f1 -d" ") bash
+docker stop $(docker ps | grep 'fabric8/gerrit' | cut -f1 -d" ")
+
+docker exec -it $(docker ps | grep 'fabric8/gogs' | cut -f1 -d" ") bash
+
+
+root@gerrit-controller-wqzdo:/home/gerrit# more  ~/.ssh/config
+echo  Host gogs-ssh \
+      User git \
+      StrictHostKeyChecking no \
+      UserKnownHostsFile /dev/null >> ~/Temp/test.txt
+
+cat <<EOT >> ~/.ssh/config
+Host gogs-ssh
+     User git
+     StrictHostKeyChecking no
+     UserKnownHostsFile /dev/null
+EOT
+
+ssh-keyscan -t rsa gogs-ssh.default.svc.cluster.local >> ~/.ssh/known_hosts
+
+
+[remote "git-server"]
+   # url = http://root:redhat01@gogs.default.svc.cluster.local:80/root/${name}.git
+   url = git@gogs-ssh.default.svc.cluster.local:root/${name}.git
+   adminUrl = ssh://git@gogs-ssh.default.svc.cluster.local/home/git/gogs-repositories/root/${name}.git
+   createMissingRepositories = true
+   autoReload = true
+
+
+   # url = http://chm:chmchm@localhost:3000/chm/${name}.git
+   url = chmoulli@localhost:chm/${name}.git
+
+   # url = git@gogs-ssh.default.svc.cluster.local:root/${name}.git
+   # adminUrl = ssh://git@gogs-ssh.default.svc.cluster.local/home/git/gogs-repositories/root/${name}.git
+   createMissingRepositories = true
+   autoReload = true
+
+
+cat <<EOT >> ~/.ssh/config
+Host localhost
+     User chmoulli
+     StrictHostKeyChecking no
+     UserKnownHostsFile /dev/null
+EOT
+
+ssh -i /Users/chmoulli/Fuse/Fuse-projects/fabric8/docker-gerrit/ssh-keys/admin/id_rsa -p 29418 admin@192.168.59.103 gerrit create-project --name fabric8/demo.git
+
+http --auth admin:secret http://192.168.59.103:8080/projects/
+http --auth-type digest -a admin:mysecret PUT http://192.168.59.103:8080/a/projects/MyProject < my-project.json
+{
+  "description": "This is a demo project.",
+  "submit_type": "CHERRY_PICK"
+}
+
+
