@@ -107,6 +107,7 @@ oc process -v DOMAIN='vagrant.f8' -f main/cdelivery-2.2.19.json  | oc create -f 
 NOTE: Don't worry about such messages as the elasticsearch, elasticsearch-cluster & kibana kube apps have alsready been deployed when we have started the Virtualbox
 +
 . Add the route for Fabric8 within a Fabric8 Maven project
++
 ----
 mvn fabric8:create-routes
 ----
@@ -116,29 +117,34 @@ mvn fabric8:create-routes
 ----
 mvn io.fabric8:fabric8-maven-plugin:2.2.19:create-routes -Dfabric8.domain=cd.fabric8.io
 ----
-.
-* Show the project `camel-servlet` within the quickstart project
-* Analyze the properties of the pom.xml file
 
-* Checkout the master or tag 2.1.6 of the quickstart app 'camel servlet war' & compile/build/deploy the kube App & docker image
+# Camel Quikstart
 
-*  mvn install docker:build fabric8:json fabric8:apply
-
+. Show the project `camel-servlet` within the quickstart project
+. Analyze the properties of the pom.xml file
+. Checkout the master or tag 2.1.6 of the quickstart app 'camel servlet war' & compile/build/deploy the kube App & docker image
+. Deploy the project
++
+----
+mvn install docker:build fabric8:json fabric8:apply
+----
++
 . Run command fabric8:json & explain kubernetes.json
 +
 ----
-    mvn clean fabric8:json compile
+mvn clean fabric8:json compile
 ----
 +
-* Explain docker:build, docker:push
+. Explain docker:build, docker:push
+. Create the image --> mvn docker:build
 
-* Create the image --> mvn docker:build
-
-* Deploy the Camel Servlet WAR example
-```
-    mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.local
-```
-*  The application Camel Web Servlet is accessible : http://quickstart-camelservlet.vagrant.local/
+# Deploy the Camel Servlet WAR example
++
+----
+    mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.f8
+----
++ 
+. The application Camel Web Servlet is accessible : http://quickstart-camelservlet.vagrant.f8/
 
 == To replay
 
