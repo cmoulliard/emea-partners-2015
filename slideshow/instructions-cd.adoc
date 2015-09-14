@@ -118,7 +118,7 @@ mvn fabric8:create-routes
 mvn io.fabric8:fabric8-maven-plugin:2.2.19:create-routes -Dfabric8.domain=cd.fabric8.io
 ----
 
-# Camel Quikstart
+# Camel Quickstart
 
 . Show the project `camel-servlet` within the quickstart project
 . Analyze the properties of the pom.xml file
@@ -156,15 +156,15 @@ mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.f8
 * Delete pods, services & replica
 
 ```
-    osc get pods -l provider=fabric8
-    osc get rc -l provider=fabric8
-    osc get svc -l provider=fabric8
-    osc get oauthclients | grep fabric8
+    oc get pods -l provider=fabric8
+    oc get rc -l provider=fabric8
+    oc get svc -l provider=fabric8
+    oc get oauthclients | grep fabric8
 
-    osc delete rc -l provider=fabric8
-    osc delete pods -l provider=fabric8
-    osc delete svc -l provider=fabric8
-    osc delete oauthclients fabric8
+    oc delete rc -l provider=fabric8
+    oc delete pods -l provider=fabric8
+    oc delete svc -l provider=fabric8
+    oc delete oauthclients fabric8
 ```
 
 * Delete containers & image
@@ -215,6 +215,12 @@ docker stop $(docker ps | grep 'fabric8/gerrit' | cut -f1 -d" ")
 
 docker exec -it $(docker ps | grep 'fabric8/gogs' | cut -f1 -d" ") bash
 
+# Check logs of journalctl
+
+    sudo journalctl -r -u openshift
+    sudo journalctl -r -u docker
+    
+# To classify
 
 root@gerrit-controller-wqzdo:/home/gerrit# more  ~/.ssh/config
 echo  Host gogs-ssh \
