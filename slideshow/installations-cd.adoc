@@ -315,17 +315,17 @@ image::images/fabric8-project-7.png[]
 
 * Review what has been created in jenkins, gogs, gerrit & fabric8
 
-Git repo created into Gogs
+.Git repo created into Gogs
 image::images/fabric8-project-9.png[]
 
-Git repo created in Gerrit Review Application
+.Git repo created in Gerrit Review Application
 image::images/gerrit-4.png[]
 
-Jenkins jobs for the project have been created (it, dev, deploy)
+.Jenkins jobs for the project have been created (it, dev, deploy)
 image::images/jenkins-1a.png[]
 image::images/jenkins-1b.png[]
 
-Fabric8 CD/CI Pipeline created from the project
+.Fabric8 CD/CI Pipeline created from the project
 image::images/jenkins-2.png[]
 
 
