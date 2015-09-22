@@ -122,11 +122,15 @@ export KUBERNETES_TRUST_CERT="true"
 ```
 oc project default
 oc login -u admin -p admin https://172.28.128.4:8443
+
+or 
+
+./scripts/authenticate_with_os.sh
 ```
 
 # Create the development namespace using openshift client
 
-We will use the `dev-namespace` to manage the demo bubernetes application created during the CD/CI scenario
+We will use the `dev-namespace` to manage the demo kubernetes application created during the CD/CI scenario
 
 * Execute this command to setup the namespace
 
@@ -271,7 +275,7 @@ chrome http://fabric8.vagrant.f8
 
 ![Alt text](images/fabric8-project-1.png)
 
-* Encode the login/password to access Gogs (gogsadmin/RedHat$1 & gogsadmin@fabric8.locaf8)
+* Encode the login/password to access Gogs (gogsadmin/RedHat$1 & gogsadmin@fabric8.local)
 
 ![Alt text](images/fabric8-git-login.png)
 
