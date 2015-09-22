@@ -18,6 +18,7 @@ toc::[]
 - https://github.com/openshift/origin/releases/tag/v1.0.6[Openshift Client - V1.0.6 (optional)]
 - https://www.virtualbox.org/[VirtualBox]
 - https://git-scm.com/downloads[Git client]
+- https://github.com/fabric8io/gofabric8/releases[gofabric8 client]
 
 = Installation
 
@@ -34,6 +35,26 @@ export PATH=$OPENSHIFT_HOME:$PATH
 +
 .. Update the path to use `oc` client within a terminal
 
+* Generate keys locally and import them
+
++
+----
+rm -rf gerrit-admin-ssh
+rm -rf gerrit-users-ssh-keys
+
+mkdir gerrit-admin-ssh
+cd gerrit-admin-ssh/
+ssh-keygen -b 4096 -t rsa -f ssh-key -q -N "" -C "admin@fabric8.io"
+cd ..
+
+mkdir gerrit-users-ssh-keys
+cd gerrit-users-ssh-keys
+ssh-keygen -b 4096 -t rsa -f jenkins-master-ssh -q -N "" -C "jenkins@fabric8.io"
+ssh-keygen -b 4096 -t rsa -f sonarqube-ssh -q -N "" -C "sonar@fabric8.io"
+cd ..
+gofabric8 secrets
+----
+oc delete secrets gerrit-admin-ssh
 
 ////
  * Verify that the `/etc/hosts` file contains a mapping between the IP address of the VM and these hostnames
