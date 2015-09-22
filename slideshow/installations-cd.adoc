@@ -15,6 +15,7 @@ toc::[]
 = Prerequisites
 
 - https://www.vagrantup.com/downloads.html[Vagrant]
+- https://github.com/openshift/origin/releases/tag/v1.0.6[Openshift Client - V1.0.6 (optional)]
 - https://www.virtualbox.org/[VirtualBox]
 - https://git-scm.com/downloads[Git client]
 
@@ -22,9 +23,17 @@ toc::[]
 
 Here is the description/presentation of the steps to be followed in order to setup the environment and run the demo
 
-* Install the Openshift Client on your MacosX machine (Optional)
+. Install the Openshift Client on your machine (Optional)
+.. Download the tar.gz file and uncompress the content locally
+.. Edit your bash file to add a variable `OPENSHIFT_HOME` and specify the location of the content unzipped
++
+----
+export OPENSHIFT_HOME=~/MyApplications/openshift-origin-v1.0.6
+export PATH=$OPENSHIFT_HOME:$PATH
+----
++
+.. Update the path to use `oc` client within a terminal
 
-* 
 
 ////
  * Verify that the `/etc/hosts` file contains a mapping between the IP address of the VM and these hostnames
@@ -88,7 +97,7 @@ vagrant up
 ==> default: To install more applications click the Run... button on the Apps tab.
 ==> default:
 ==> default: We love feedback: http://fabric8.io/community/
-==> default: Have fun!
+==> default: Havefun!
 ==> default:
 ==> default: Now open the fabric8 console at:
 ==> default:
