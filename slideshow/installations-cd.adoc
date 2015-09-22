@@ -1,8 +1,30 @@
-# Demo scenario
+:sectanchors:
+:toc: macro
+:toclevels: 2
+:toc-title: Table of Content
+:numbered:
+
+= Continuous Delivery & Integration scenario
+
+toc::[]
+
+== Goals
+
+== Overview
+
+= Prerequisites
+
+- https://www.vagrantup.com/downloads.html[Vagrant]
+- https://www.virtualbox.org/[VirtualBox]
+- https://git-scm.com/downloads[Git client]
+
+= Installation
 
 Here is the description/presentation of the steps to be followed in order to setup the environment and run the demo
 
-* Install the Openshift Client on your MacosX machine (TODO)
+* Install the Openshift Client on your MacosX machine (Optional)
+
+* 
 
 ////
  * Verify that the `/etc/hosts` file contains a mapping between the IP address of the VM and these hostnames
