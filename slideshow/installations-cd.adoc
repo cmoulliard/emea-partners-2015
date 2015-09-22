@@ -128,15 +128,15 @@ or
 ./scripts/authenticate_with_os.sh
 ```
 
-# Create the development namespace using openshift client
-
-We will use the `dev-namespace` to manage the demo kubernetes application created during the CD/CI scenario
-
-* Execute this command to setup the namespace
-
-```
-oc create -f local-scripts/dev-namespace.json
-```
+>> # Create the development namespace using openshift client
+>>
+>> We will use the `dev-namespace` to manage the demo kubernetes application created during the CD/CI scenario
+>>
+>> * Execute this command to setup the namespace
+>>
+>> ```
+>> oc create -f demo/scripts/demo-namespace.json
+>> ```
 
 >> # Copy ssh keys
 >>

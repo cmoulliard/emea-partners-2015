@@ -76,6 +76,10 @@ export KUBERNETES_NAMESPACE=default
 export KUBERNETES_MASTER=https://vagrant.f8:8443
 export KUBERNETES_DOMAIN=vagrant.f8
 export KUBERNETES_TRUST_CERT="true"
+
+or
+
+./demo/script/set_kubernetes_env.sh
 ----
 +
 . Authenticate the Openshift Client with the Openshift platform and select default as domain
@@ -83,6 +87,10 @@ export KUBERNETES_TRUST_CERT="true"
 ----
 oc project default
 oc login -u admin -p admin https://172.28.128.4:8443
+
+or
+
+./demo/script/authenticate_with_os.sh
 ----
 +
 . Add the name of the application to the hosts file
@@ -153,13 +161,18 @@ mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.f8
     docker exec -it $(docker ps | grep 'fabric8/gerrit' | cut -f1 -d" ") bash
 ```
 
-* Delete pods, services & replica
+* Get pods, services, ...
 
 ```
     oc get pods -l provider=fabric8
     oc get rc -l provider=fabric8
     oc get svc -l provider=fabric8
     oc get oauthclients | grep fabric8
+```    
+
+* Delete pods, services & replica
+
+```
 
     oc delete rc -l provider=fabric8
     oc delete pods -l provider=fabric8
@@ -177,7 +190,7 @@ mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.f8
 * Delete PODS using Fabric8 plugin
 
 ```
-    mvn install docker:build fabric8:delete-pods
+    mvn fabric8:delete-pods
 ```
 
 For more see http://fabric8.io/guide/mavenFabric8DeletePods.html
@@ -185,6 +198,7 @@ For more see http://fabric8.io/guide/mavenFabric8DeletePods.html
 
 # Delete the Fabric8 App
 
+```
 osc delete rc -l provider=fabric8
 osc delete pods -l provider=fabric8
 osc delete svc -l provider=fabric8
@@ -194,19 +208,25 @@ osc get pods -l provider=fabric8
 osc get rc -l provider=fabric8
 osc get svc -l provider=fabric8
 osc get oauthclients | grep fabric8
+```
 
 # Delete the containers & images
 
+```
 docker rm $(docker ps -a | grep fabric8)
 docker rmi $(docker images | grep fabric8)
+```
 
 # Install Base or CDelivery
 
+```
 osc process -v DOMAIN='vagrant.local' -f http://central.maven.org/maven2/io/fabric8/apps/base/2.1.11/base-2.1.11-kubernetes.json | osc create -f -
 osc process -v DOMAIN='vagrant.local' -f http://central.maven.org/maven2/io/fabric8/apps/cdelivery-core/2.1.11/cdelivery-core-2.1.11-kubernetes.json | osc create -f -
+```
 
 # Compile & Deploy a project
 
+```
 mvn clean fabric8:json compile
 mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.local
 
@@ -214,14 +234,18 @@ docker exec -it $(docker ps | grep 'fabric8/gerrit' | cut -f1 -d" ") bash
 docker stop $(docker ps | grep 'fabric8/gerrit' | cut -f1 -d" ")
 
 docker exec -it $(docker ps | grep 'fabric8/gogs' | cut -f1 -d" ") bash
+```
 
 # Check logs of journalctl
 
+```
     sudo journalctl -r -u openshift
     sudo journalctl -r -u docker
+```
     
 # To classify
 
+```
 root@gerrit-controller-wqzdo:/home/gerrit# more  ~/.ssh/config
 echo  Host gogs-ssh \
       User git \
@@ -270,5 +294,5 @@ http --auth-type digest -a admin:mysecret PUT http://192.168.59.103:8080/a/proje
   "description": "This is a demo project.",
   "submit_type": "CHERRY_PICK"
 }
-
+```
 
