@@ -4,29 +4,31 @@ Here is the description/presentation of the steps to be followed in order to set
 
 * Install the Openshift Client on your MacosX machine (TODO)
 
->> * Verify that the `/etc/hosts` file contains a mapping between the IP address of the VM and these hostnames
->>
->> ```
->> 172.28.128.4	fabric8.local gogs.local vagrant.local docker-registry.vagrant.local fabric8-master.vagrant.local fabric8.vagrant.local gogs.vagrant.local jenkins.vagrant.local kibana.vagrant.local nexus.vagrant.local router.vagrant.local gerrit-ssh.vagrant.local gerrit.vagrant.local gerrit.vagrant.local gerrit-http.vagrant.local sonarqube.vagrant.local letschat.vagrant.local orion.vagrant.local taiga.vagrant.local quickstart-camelservlet.vagrant.local quickstart-rest.vagrant.local
->> ```
->>
->> * Add the routes used by the macos x machine to access the Pods/Docker containers
->>
->> ```
->> sudo route -n delete 172.0.0.0/8
->> sudo route -n add 172.0.0.0/8  172.28.128.4
->> ```
->>
->> # Clone fabric8-installer
->>
->> Clone the Fabric8-installer project and move to the vagrant/openshift-latest directory. Checkout this id
->> as the latest commit (19/06/2015) is not working anymore
->>
->> ```
->> git clone https://github.com/fabric8io/fabric8-installer
->> git checkout 09d2005
->> cd fabric8-installer/vagrant/openshift-latest
->> ```
+////
+ * Verify that the `/etc/hosts` file contains a mapping between the IP address of the VM and these hostnames
+
+ ```
+ 172.28.128.4	fabric8.local gogs.local vagrant.local docker-registry.vagrant.local fabric8-master.vagrant.local fabric8.vagrant.local gogs.vagrant.local jenkins.vagrant.local kibana.vagrant.local nexus.vagrant.local router.vagrant.local gerrit-ssh.vagrant.local gerrit.vagrant.local gerrit.vagrant.local gerrit-http.vagrant.local sonarqube.vagrant.local letschat.vagrant.local orion.vagrant.local taiga.vagrant.local quickstart-camelservlet.vagrant.local quickstart-rest.vagrant.local
+ ```
+
+ * Add the routes used by the macos x machine to access the Pods/Docker containers
+
+ ```
+ sudo route -n delete 172.0.0.0/8
+ sudo route -n add 172.0.0.0/8  172.28.128.4
+ ```
+
+ # Clone fabric8-installer
+
+ Clone the Fabric8-installer project and move to the vagrant/openshift-latest directory. Checkout this id
+ as the latest commit (19/06/2015) is not working anymore
+
+ ```
+ git clone https://github.com/fabric8io/fabric8-installer
+ git checkout 09d2005
+ cd fabric8-installer/vagrant/openshift-latest
+ ```
+//// 
 
 # Download and install Fabric8 Installer
 
@@ -76,25 +78,27 @@ vagrant up
 ```
 * Open your browser and access the Fabric8 console at this address +http://fabric8.vagrant.f8/+. The login/password to be used is +admin/admin+
 
->> # Import SSH Keys
->>
->> In order to use gerrit, we have to import the ssh-keys of the admin and jenkins/gogs/sonar users. The private/public keys of the admin user are mandatory
->> while optional for the others
->>
->> * First ssh to the vagrant machine
->> ```
->> vagrant ssh
->> ```
->> * Next run these instructions to create directories
->>
->> ```
->> sudo mkdir -p /home/gerrit/site
->> sudo mkdir -p /home/gerrit/admin-ssh-key/
->> sudo chown -R vagrant /home/gerrit/
->> mkdir -p /home/gerrit/ssh-keys/
->> sudo chown -R vagrant /home/gerrit/ssh-keys/
->> ```
->> * You can exit from the vagrant machine
+////
+# Import SSH Keys
+
+In order to use gerrit, we have to import the ssh-keys of the admin and jenkins/gogs/sonar users. The private/public keys of the admin user are mandatory
+while optional for the others
+
+* First ssh to the vagrant machine
+```
+vagrant ssh
+```
+* Next run these instructions to create directories
+
+```
+sudo mkdir -p /home/gerrit/site
+sudo mkdir -p /home/gerrit/admin-ssh-key/
+sudo chown -R vagrant /home/gerrit/
+mkdir -p /home/gerrit/ssh-keys/
+sudo chown -R vagrant /home/gerrit/ssh-keys/
+```
+* You can exit from the vagrant machine
+////
 
 # Setup ENV vars to access Docker or Openshift daemons running within the Virtualbox machine
 
@@ -128,6 +132,7 @@ or
 ./scripts/authenticate_with_os.sh
 ```
 
+////
 >> # Create the development namespace using openshift client
 >>
 >> We will use the `dev-namespace` to manage the demo kubernetes application created during the CD/CI scenario
@@ -162,7 +167,9 @@ or
 >> ```
 >> mvn clean install -Papps -DskipTests=true
 >> ```
+////
 
+////
 # Deploy the group of the cdelivery Kube applications on OSv3
 
 >> Now that the Kube applications for that demo are compiled and the Openshift/Docker virtual machine is running, we can deploy the application
@@ -171,7 +178,7 @@ or
 >> ```
 >> mvn install -Pconsole -Pcdelivery
 >> ```
-
+////
 
 ## Download Fabric 8 Kubernetes templates
 
