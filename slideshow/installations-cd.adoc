@@ -324,7 +324,7 @@ image::images/gerrit-4.png[]
 .Jenkins jobs for the project created (it, dev, deploy)
 image::images/jenkins-1a.png[]
 
-.Jenkins consoel output
+.Jenkins console output
 image::images/jenkins-1b.png[]
 
 .Fabric8 CD/CI Pipeline created from the project
