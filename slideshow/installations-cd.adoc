@@ -321,8 +321,9 @@ image::images/fabric8-project-9.png[]
 .Git repo created in Gerrit Review Application
 image::images/gerrit-4.png[]
 
-.Jenkins jobs for the project have been created (it, dev, deploy)
+.Jenkins jobs for the projects created (it, dev, deploy)
 image::images/jenkins-1a.png[]
+
 image::images/jenkins-1b.png[]
 
 .Fabric8 CD/CI Pipeline created from the project
