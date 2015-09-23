@@ -35,6 +35,23 @@ export PATH=$OPENSHIFT_HOME:$PATH
 +
 .. Update the path to use `oc` client within a terminal
 
+. Install Gofabric8 client
++
+----
+# GoFabric8 Client binary
+export GOFABRIC8_HOME=~/MyApplications/gofabric8-0.3.13
+export PATH=$GOFABRIC8_HOME:$PATH
+----
++
+
+# Test issue with keys
+
+----
+./demo/scripts/deletefabric8.sh
+gofabric8 deploy -y 
+./demo/scripts/gen_keys_import.sh
+----
+
 * Generate keys locally and import them
 
 +
