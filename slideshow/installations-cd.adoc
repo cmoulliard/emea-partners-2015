@@ -44,34 +44,6 @@ export PATH=$GOFABRIC8_HOME:$PATH
 ----
 +
 
-# Test issue with keys
-
-----
-./demo/scripts/deletefabric8.sh
-gofabric8 deploy -y 
-./demo/scripts/gen_keys_import.sh
-----
-
-* Generate keys locally and import them
-
-+
-----
-rm -rf gerrit-admin-ssh
-rm -rf gerrit-users-ssh-keys
-
-mkdir gerrit-admin-ssh
-cd gerrit-admin-ssh/
-ssh-keygen -b 4096 -t rsa -f ssh-key -q -N "" -C "admin@fabric8.io"
-cd ..
-
-mkdir gerrit-users-ssh-keys
-cd gerrit-users-ssh-keys
-ssh-keygen -b 4096 -t rsa -f jenkins-master-ssh -q -N "" -C "jenkins@fabric8.io"
-ssh-keygen -b 4096 -t rsa -f sonarqube-ssh -q -N "" -C "sonar@fabric8.io"
-cd ..
-gofabric8 secrets
-----
-oc delete secrets gerrit-admin-ssh
 
 ////
  * Verify that the `/etc/hosts` file contains a mapping between the IP address of the VM and these hostnames
@@ -199,7 +171,7 @@ export KUBERNETES_TRUST_CERT="true"
 * Or run this bash script
 
 ```
-./scripts/set_kubernetes_env.sh
+source ./demo/scripts/set_kubernetes_env.sh 172.28.128.4
 ```
 
 * Authenticate the Openshift Client with the Openshift platform and select default as domain
