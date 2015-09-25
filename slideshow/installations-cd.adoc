@@ -243,10 +243,10 @@ sudo chown -R vagrant /home/gerrit/ssh-keys/
 * You can exit from the vagrant machine
 ////
 
-== Setup ENV vars to access Docker or Openshift daemons running within the Virtualbox machine
+*  Setup ENV vars to access Docker or Openshift daemons running within the Virtualbox machine
 
-* Define for the HOST macosx the docker daemon which runs within the Vagrant VM Box and kubernetes env vars
-* Run these commands within a terminal
+** Define for the HOST macosx the docker daemon which runs within the Vagrant VM Box and kubernetes env vars
+** Run these commands within a terminal
 
 ```
 unset DOCKER_CERT_PATH
