@@ -107,7 +107,7 @@ When the VirtualBox machine has been started and created successfully, you shoul
 
 As a snapshot version of the Fabric8 Forge Docker image is required, we have to build it and deploy the docker image into OSv3.
 Move to the directory of the project `abric8-devops/fabric8-forge` and run these commands within a local terminal.
-+
+
 ----
 unset DOCKER_CERT_PATH
 unset DOCKER_TLS_VERIFY
@@ -126,8 +126,8 @@ mvn clean install docker:build fabric8:recreate
 
 Return to the terminal opened wihin this directory `fabric8-installer/vagrant/openshift` and ssh to your vagrant machine.
 As the cd-pipeline kube apps require the docker images of gerrit, gogs, jenkins, nexus, ..., we will install them by issuing these commands within the vagrant box
-+
----
+
+----
 vagrant ssh
 
 docker pull fabric8/fabric8-console
@@ -141,7 +141,7 @@ docker pull tpires/sonar-server
 
 Next, we will deploy the template of the cd-pipeline application using the project `abric8-devops`.
 So, move to this project `fabric8-devops/packages/cd-pipeline` and run these commands from a terminal opened on your machine as vagrant can't access to this file generated
-+
+
 ----
 cd /Users/chmoulli/Fuse/Fuse-projects/fabric8/fabric8-devops-cloned/packages/cd-pipeline
 
