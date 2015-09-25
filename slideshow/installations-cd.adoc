@@ -64,8 +64,6 @@ sudo route -n add 172.0.0.0/8  172.28.128.4
 vagrant up
 ----
 +
-[NOTE]
-====
 When the VirtualBox machine has been started and created successfully, you should be able to see this message within the console
 
 ----
