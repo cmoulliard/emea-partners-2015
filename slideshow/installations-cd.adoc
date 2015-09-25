@@ -37,10 +37,6 @@ export PATH=$OPENSHIFT_HOME:$PATH
 +
 .. Source your bash file tobe able to run `oc` command within one of your terminal
 
-. Install Gofabric8 client
-+
-----
-+
 . Install GoFabric8 Client binary on your machine (Optional)
 .. Download the tar.gz file and uncompress the content locally
 .. Edit your bash file to add a variable `GOFABRIC8_HOME` and specify the location of the content unzipped
@@ -49,7 +45,7 @@ export PATH=$OPENSHIFT_HOME:$PATH
 export GOFABRIC8_HOME=~/MyApplications/gofabric8-0.3.13
 export PATH=$GOFABRIC8_HOME:$PATH
 ----
-+
+
 .. Source your bash file to be able to run `oc` command within one of your terminal
 +
 . Configure the routing between your local machine and the VM Box
