@@ -102,6 +102,7 @@ When the VirtualBox machine has been started and created successfully, you shoul
 ==> default: deploymentconfigs/docker-registry
 ==> default: services/docker-registry
 ----
+====
 
 == Install Snapshot of CD-Pipeline
 
