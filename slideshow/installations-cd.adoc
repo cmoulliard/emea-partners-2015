@@ -198,9 +198,9 @@ Open your browser at this address `http://localhost:8080/#/settings/ssh-keys` an
 * Edit the keys 
 
 ----
-oc edit secret/gerrit-admin-ssh --output-version=v1beta3 -o json
-oc edit secret/gerrit-users-ssh-keys --output-version=v1beta3 -o json
-oc edit template/cd-pipeline --output-version=v1beta3 -o json
+oc edit secret/gerrit-admin-ssh -o json
+oc edit secret/gerrit-users-ssh-keys -o json
+oc edit template/cd-pipeline -o json
 ----
 
 * To display it
@@ -553,5 +553,121 @@ image::images/fabric8-project-11.png[]
 image::images/camel-docker.png[]
 
 Enjoy your First Apache Camel Docker experience with Openshift Fabric8 technology & our CD/CI strategy !!
+
+== Camel Quickstart
+
+. Show the project `camel-servlet` within the quickstart project
+. Analyze the properties of the pom.xml file
+. Checkout the master or tag 2.1.6 of the quickstart app 'camel servlet war' & compile/build/deploy the kube App & docker image
+. Deploy the project
++
+----
+mvn install docker:build fabric8:json fabric8:apply
+----
++
+. Run command fabric8:json
++
+----
+mvn clean fabric8:json compile
+----
+
+== Deploy the Camel Servlet WAR example
++
+----
+mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.f8
+----
++
+. The application Camel Web Servlet is accessible : http://quickstart-camelservlet.vagrant.f8/
+
+== Troubleshooting
+
+=== To access a docker container
+
+```
+    docker exec -it $(docker ps | grep 'fabric8/gerrit' | cut -f1 -d" ") bash
+```
+
+=== Get pods, services, ...
+
+```
+    oc get pods -l provider=fabric8
+    oc get rc -l provider=fabric8
+    oc get svc -l provider=fabric8
+    oc get oauthclients | grep fabric8
+```
+
+=== Delete pods, services & replica
+
+```
+
+    oc delete rc -l provider=fabric8
+    oc delete pods -l provider=fabric8
+    oc delete svc -l provider=fabric8
+    oc delete oauthclients fabric8
+```
+
+=== Delete containers & image
+
+```
+    docker rm $(docker ps -a | grep gerrit)
+    docker rmi $(docker images | grep gerrit)
+```
+
+=== Delete PODS using Fabric8 plugin
+
+```
+    mvn fabric8:delete-pods
+```
+
+For more see http://fabric8.io/guide/mavenFabric8DeletePods.html
+
+
+=== Delete the Fabric8 App
+
+```
+osc delete rc -l provider=fabric8
+osc delete pods -l provider=fabric8
+osc delete svc -l provider=fabric8
+osc delete oauthclients fabric8
+
+osc get pods -l provider=fabric8
+osc get rc -l provider=fabric8
+osc get svc -l provider=fabric8
+osc get oauthclients | grep fabric8
+```
+
+=== Delete the containers & images
+
+```
+docker rm $(docker ps -a | grep fabric8)
+docker rmi $(docker images | grep fabric8)
+```
+
+=== Install Base and CDelivery
+
+```
+os process -f http://central.maven.org/maven2/io/fabric8/apps/base/2.2.23.1/base-2.2.23.1-kubernetes.json | os create -f -
+oc process -f http://central.maven.org/maven2/io/fabric8/apps/cdelivery-core/2.2.23.1/cdelivery-core-2.2.23.1-kubernetes.json | oc create -f -
+oc process -f /Users/chmoulli/.m2/repository/io/fabric8/devops/apps/gerrit/2.2.31-SNAPSHOT/gerrit-2.2.31-SNAPSHOT-kubernetes.json | oc create -f -
+```
+
+=== Compile & Deploy a project
+
+```
+mvn clean fabric8:json compile
+mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.local
+
+docker exec -it $(docker ps | grep 'fabric8/gerrit' | cut -f1 -d" ") bash
+docker stop $(docker ps | grep 'fabric8/gerrit' | cut -f1 -d" ")
+
+docker exec -it $(docker ps | grep 'fabric8/gogs' | cut -f1 -d" ") bash
+```
+
+=== Check logs of journalctl
+
+```
+    sudo journalctl -r -u openshift
+    sudo journalctl -r -u docker
+```
 
 
