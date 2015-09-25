@@ -22,7 +22,9 @@ toc::[]
 
 = Installation
 
-Here is the description/presentation of the steps to be followed in order to setup the environment and run the demo
+== Setup your local machine 
+
+Here is the description of the steps to be followed in order to setup the environment and run the demo
 
 . Install the Openshift Client on your machine (Optional)
 .. Download the tar.gz file and uncompress the content locally
@@ -33,28 +35,34 @@ export OPENSHIFT_HOME=~/MyApplications/openshift-origin-v1.0.6
 export PATH=$OPENSHIFT_HOME:$PATH
 ----
 +
-.. Update the path to use `oc` client within a terminal
+.. Source your bash file tobe able to run `oc` command within one of your terminal
 
 . Install Gofabric8 client
 +
 ----
-# GoFabric8 Client binary
++
+. Install GoFabric8 Client binary on your machine (Optional)
+.. Download the tar.gz file and uncompress the content locally
+.. Edit your bash file to add a variable `GOFABRIC8_HOME` and specify the location of the content unzipped
++
+----
 export GOFABRIC8_HOME=~/MyApplications/gofabric8-0.3.13
 export PATH=$GOFABRIC8_HOME:$PATH
 ----
-
-== Routing
- 
-Add the routes used by the macosx machine to access the Pods/Docker containers running within the VM
-
-```
++
+.. Source your bash file to be able to run `oc` command within one of your terminal
++
+. Configure the routing between your local machine and the VM Box
+..  Add the routes used by the macosx machine to access the Pods/Docker containers running within the VM by issuing these commands within a terminal
++
+----
 sudo route -n delete 172.0.0.0/8
 sudo route -n add 172.0.0.0/8  172.28.128.4
-```
+----
 
 == Install Vagrant config file
 
-. Clone the https://github.com/fabric8io/fabric8-installer.git[Fabric8-installer] or download/unzip it from this https://github.com/fabric8io/fabric8-installer/archive/master.zip[repository address]
+. Clone the https://github.com/fabric8io/fabric8-installer.git[Fabric8-installer] git project or download/unzip it from this https://github.com/fabric8io/fabric8-installer/archive/master.zip[repository address]
 . Unzip the content
 . Open a Terminal and move to the directory of `fabric8-installer/vagrant/openshift`
 . Start Vagrant using this command
@@ -103,8 +111,8 @@ When the VirtualBox machine has been started and created successfully, you shoul
 
 As a snapshot version of the Fabric8 Forge Docker image is required, we have to build it and deploy the docker image into OSv3.
 Move to the directory of the project `abric8-devops/fabric8-forge` and run these commands within a local terminal.
-
-```
++
+----
 unset DOCKER_CERT_PATH
 unset DOCKER_TLS_VERIFY
 export DOCKER_HOST=tcp://172.28.128.4:2375
@@ -116,14 +124,14 @@ oc login -u admin -p admin https://172.28.128.4:8443
 
 cd fabric8-devops/fabric8-forge
 mvn clean install docker:build fabric8:recreate
-```
+----
 
 == Install the docker images
 
 Return to the terminal opened wihin this directory `fabric8-installer/vagrant/openshift` and ssh to your vagrant machine.
 As the cd-pipeline kube apps require the docker images of gerrit, gogs, jenkins, nexus, ..., we will install them by issuing these commands within the vagrant box
-
-```
++
+---
 vagrant ssh
 
 docker pull fabric8/fabric8-console
@@ -131,14 +139,14 @@ docker pull fabric8/nexus
 docker pull fabric8/jenkernetes
 docker pull fabric8/gerrit
 docker pull tpires/sonar-server
-```
+----
 
 == Install the cd-pipeline template
 
 Next, we will deploy the template of the cd-pipeline application using the project `abric8-devops`.
 So, move to this project `fabric8-devops/packages/cd-pipeline` and run these commands from a terminal opened on your machine as vagrant can't access to this file generated
-
-```
++
+----
 cd /Users/chmoulli/Fuse/Fuse-projects/fabric8/fabric8-devops-cloned/packages/cd-pipeline
 
 unset DOCKER_CERT_PATH
@@ -154,7 +162,7 @@ mvn clean install fabric8:recreate
 OR
 
 oc process -f /Users/chmoulli/.m2/repository/io/fabric8/devops/packages/cd-pipeline/2.2.35-SNAPSHOT/cd-pipeline-2.2.35-SNAPSHOT-kubernetes.json | oc create -f -
-```
+----
 
 ==  Issue with keys
 
@@ -163,14 +171,14 @@ we will generate locally new keys and import them into the OSV3 platform
 
 Remark : The name of the folders correspond to the names of the keys defined within the gerrit kube app project
 
-* Run this command within this `emea-2015` project to generate the keys and import them in OSv3
-
+. Run this command within this `emea-2015` project to generate the keys and import them in OSv3
++
 ----
 ./demo/scripts/gen_keys_import.sh
 ----
-
-* Check that the keys have been imported correctly (subl is a shortcut to open sublime text editor)
-
++
+. Check that the keys have been imported correctly (subl is a shortcut to open sublime text editor)
++
 ----
 oc get -o json secret gerrit-admin-ssh | subl &
 oc get -o json secret gerrit-users-ssh-keys | subl &
@@ -178,19 +186,19 @@ oc get -o json secret gerrit-users-ssh-keys | subl &
 
 == Redeploy Gerrit to use the correct secrets
 
-* First remove the gerrit-site folder created previously on the vagrant machine
-
+. First remove the gerrit-site folder created previously on the vagrant machine
++
 ----
 sudo rm -rf /home/gerrit-site
 ----
-
-* Next, move to the gerrit directory of the project fabric8-devops/gerrit and redeploy the template
-
++
+. Next, move to the gerrit directory of the project fabric8-devops/gerrit and redeploy the template
++
 ----
 mvn clean install abric8:recreate
 ----
-
-Open your browser at this address `http://localhost:8080/#/settings/ssh-keys` and you should be able to see the ssh keys imported for the users admin, jenkins and sonar
++
+.Open your browser at this address `http://localhost:8080/#/settings/ssh-keys` and you should be able to see the ssh keys imported for the users admin, jenkins and sonar
 
 == Tricks
 
