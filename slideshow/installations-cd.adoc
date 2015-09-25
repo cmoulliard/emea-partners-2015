@@ -66,9 +66,8 @@ vagrant up
 +
 [NOTE]
 ====
-
 When the VirtualBox machine has been started and created successfully, you should be able to see this message within the console
-+
+
 ----
 ==> default: --------------------------------------------------------------
 ==> default: Fabric8 pod is running! Who-hoo!
