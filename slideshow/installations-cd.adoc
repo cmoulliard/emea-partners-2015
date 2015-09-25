@@ -195,7 +195,7 @@ Open your browser at this address `http://localhost:8080/#/settings/ssh-keys` an
 == Tricks
 
 * Edit the keys 
-
++
 ----
 oc edit secret/gerrit-admin-ssh -o json
 oc edit secret/gerrit-users-ssh-keys -o json
@@ -203,6 +203,7 @@ oc edit template/cd-pipeline -o json
 ----
 
 * To display it
++
 ----
 oc get -o json secret gerrit-admin-ssh | subl &
 oc get -o json secret gerrit-users-ssh-keys | subl &
@@ -212,12 +213,11 @@ oc get -o json template gerrit
 ----
 
 * To delete a template
++
 ----
 oc delete template cd-pipeline
 oc delete secrets gerrit-admin-ssh
 ----
-
-**********************************
 
 * Open your browser and access the Fabric8 console at this address +http://fabric8.vagrant.f8/+. The login/password to be used is +admin/admin+
 
