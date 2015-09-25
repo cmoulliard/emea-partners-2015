@@ -47,7 +47,7 @@ Email: {speaker-email} |
 == Agenda
 
 * The cost of change
-* CI/CD
+* CD/CI
 * Technology
 * OpenShift
 * Fabric8
@@ -65,45 +65,63 @@ image::{revealjs_cover_image}[]
 
 // ************** cost of change ********
 [#cost-of-change]
-== Cost of change
+== Cost of change image:change.png[width="15%",height="15%",float="right"]
 
-[.noredheader]
+[.noredheader,cols="^"]
 |===
-a| * **D**evelopment
-* **O**perational
-* **I**nfrastructure
-* **B**usiness requirements | image:change.png[width="35%",height="35%",float="right"]
+| **B**usiness requirements
+|
+| {icon-arrow-down} 2x
+|
+| **D**evelopment
+|
+| {icon-arrow-down} 3x
+|
+| **O**perations
+|
+| {icon-arrow-down} 4x
+|
+| **I**nfrastructure
 |===
-
-* http://blog.christianposta.com/microservices/microservices-and-reducing-the-cost-of-change/[Microservices {icon-arrow-right} reducing the Cost of Change]
 
 // ************** cost of change ********
 [#integration-cost]
 == Integration costs
 
-[.noredheader,cols="60,40"]
+[.noredheader,cols="45,55"]
 |===
 a|* *Integration* is *Hard!*
 * *Different* system *vintages*
 * Mainframe, EAI Hub, MOM, EJB, Web Services
-* *Evolving* business processes
-* *Systems* must *collaborate* | image:esb.png[width="75%"]
+* *Systems* must *collaborate* | image:esb.png[width="85%"]
 |===
 
 // ************** cost of change ********
-[#integration-cost-cont]
+[#integration-cost-cont1]
 == Integration costs
 
-[.noredheader,cols="60,40"]
+[.noredheader,cols="40,60"]
 |===
 a|
 * Platforms, *Protocols*
 * *Data Formats*
-* Organizational *mismatch*
-* *Timing*, **Com**munication | image:integration-1.png[width="90%"]
+* Data *Mapping* 
+* Schemas, XSD, JSon | image:integration-2.png[width="95%"]
 |===
 
-image::integration-2.png[width="65%"]
+// ************** cost of change ********
+[#integration-cost-cont2]
+== Integration costs
+
+[.noredheader,cols="40,60"]
+|===
+a|
+* *Services* governance
+* Security
+* *Procedures*
+* *Volumetry*
+* *Timing*, **Communication** | image:integration-1.png[width="90%"]
+|===
 
 // ************** transition page ************
 [#transition3, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
@@ -113,7 +131,7 @@ image::integration-2.png[width="65%"]
 image::{revealjs_cover_image}[]
 
 [#cover-h1,left="0px",top="350px",width="2000px"]
-*Continuous Delivery/Integration*
+*Continuous Delivery Strategy !*
 
 // ************** devops ***********
 [#devops]
@@ -135,6 +153,28 @@ image:worked-fine-in-dev.png[width="80%"]
 * *Communication*
 * People! | image:wtf-dev-ops.png[width="95%"]
 |===
+
+// ************** devops ************
+[#devops-wtf1]
+== “Coder, programmer”
+
+image::developer.jpg[width="75%"]
+
+// ************** devops ************
+[#devops-wtf2]
+== “Interest”
+
+image::languages.jpeg[width="65%"]
+
+{icon-arrow-right} java, web2, html, js, unit test, ...
+ 
+// ************** devops ************
+[#devops-wtf3]
+== “Operation guy”
+
+image::opts-it.jpg[width="65%"]
+
+{icon-arrow-right} log, procedure, cpu, thread blocked, report, deployment procedure, alert, monitor, ...
 
 // ************** devops ************
 [#cd]
