@@ -67,7 +67,7 @@ image::{revealjs_cover_image}[]
 [#cost-of-change]
 == Cost of change image:change.png[width="15%",height="15%",float="right"]
 
-[.noredheader,cols="^"]
+[.noredheader,cols=""]
 |===
 | **B**usiness requirements
 |
@@ -146,7 +146,7 @@ image:worked-fine-in-dev.png[width="80%"]
 
 [.noredheader]
 |===
- a| * *IT* is a *core* competency
+a| * *IT* is a *core* competency
 * *Set* of *principles*
 * There’s more to applications than coding!
 * Feedback, *Repetition*
@@ -178,29 +178,62 @@ image::opts-it.jpg[width="65%"]
 
 // ************** devops ************
 [#cd]
-== Continuous Delivery
+== Strategy
 
-* *Objective* {icon-arrow-right} *Continuous Integration* strategy
-* Establish a concrete *pipeline to production*
-* Build/Test/Release often!
-* Bottlenecks?
-* *Involves Dev and Ops* to be successful
-* Every *build* is a “release candidate”
+[.noredheader]
+|===
+a|* *Objective* {icon-arrow-right} *Continuous Integration* strategy
+* Establish a concrete *pipeline to production* {icon-exclamation-mark}
+* Build/Test/Release *more* often! | image:idea.jpeg[]
+|===
 
 // ************** devops ************
-[cd-automate]
-== Automate everything!
+[#cd1]
+== Impact
 
-* Developers
-** Unit tests
-** Integration tests
-** Builds
-** Deployments in dev
+[.noredheader, cols="40,60"]
+|===
+a|* *Bottlenecks ?*
+* Involves *Dev* & *Ops* to be *successful*
+* Every *build* is a “release candidate” | image:collaborate.jpeg[]
+|===
 
-* Operations
-** VMs
-** Provisioning software
-** Deployments in QA/UAT/PROD
+// ************** devops ************
+[#cd-automate]
+== Automate Pipeline !
+
+[.noredheader, cols="40,60"]
+|===
+a|* Developer
+** *Unit* test
+** *Integration* test
+** *Build*
+** *Deployment*
+** Doc / Release | image:devops2.jpeg[]
+|===
+
+// ************** devops ************
+[#cd-automate1]
+== Automate Pipeline - con't
+
+[.noredheader, cols="40,60"]
+|===
+a|* Operations
+** Setup *VMachine*
+** *Provisioning* software
+** *Deployment* in QA/UAT/PROD | image:devops1.jpeg[]
+|===
+
+// ************** devops ************
+[#cd-automate2]
+== What is needed ?
+
+[.noredheader, cols="40,60"]
+|===
+a|* **T**ools
+* **P**latform as a Service
+* **P**ipelines procedures | image:collaborate1.jpeg[]
+|===
 
 // ************** transition page ************
 [#transition4, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
