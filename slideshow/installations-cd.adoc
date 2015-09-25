@@ -191,7 +191,7 @@ Next, move to the gerrit directory of the project fabric8-devops/gerrit and rede
 mvn clean install fabric8:recreate
 ----
 
-Open your browser at this address ` ` and you should be able to see the ssh keys imported for the users admin, jenkins and sonar
+Open your browser at this address `http://localhost:8080/#/settings/ssh-keys` and you should be able to see the ssh keys imported for the users admin, jenkins and sonar
 
 == Tricks
 
