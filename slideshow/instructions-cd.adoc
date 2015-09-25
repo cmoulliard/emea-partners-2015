@@ -217,11 +217,12 @@ docker rm $(docker ps -a | grep fabric8)
 docker rmi $(docker images | grep fabric8)
 ```
 
-# Install Base or CDelivery
+# Install Base and CDelivery
 
 ```
-osc process -v DOMAIN='vagrant.local' -f http://central.maven.org/maven2/io/fabric8/apps/base/2.1.11/base-2.1.11-kubernetes.json | osc create -f -
-osc process -v DOMAIN='vagrant.local' -f http://central.maven.org/maven2/io/fabric8/apps/cdelivery-core/2.1.11/cdelivery-core-2.1.11-kubernetes.json | osc create -f -
+os process -f http://central.maven.org/maven2/io/fabric8/apps/base/2.2.23.1/base-2.2.23.1-kubernetes.json | os create -f -
+oc process -f http://central.maven.org/maven2/io/fabric8/apps/cdelivery-core/2.2.23.1/cdelivery-core-2.2.23.1-kubernetes.json | oc create -f -
+oc process -f /Users/chmoulli/.m2/repository/io/fabric8/devops/apps/gerrit/2.2.31-SNAPSHOT/gerrit-2.2.31-SNAPSHOT-kubernetes.json | oc create -f -
 ```
 
 # Compile & Deploy a project

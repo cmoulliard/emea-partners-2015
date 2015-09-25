@@ -16,10 +16,11 @@ cd gerrit-admin-ssh/
 ssh-keygen -b 4096 -t rsa -f ssh-key -q -N "" -C "admin@fabric8.io"
 cd ..
 
-echo ">> Genenate new keys for jenkins & sonar users"
+echo ">> Generate new keys for jenkins & sonar users"
 mkdir gerrit-users-ssh-keys
 cd gerrit-users-ssh-keys/
-ssh-keygen -b 4096 -t rsa -f id-admin-rsa -q -N "" -C "admin@fabric8.io"
+
+cp ../gerrit-admin-ssh/ssh-key.pub ./id-admin-rsa.pub
 ssh-keygen -b 4096 -t rsa -f id-jenkins-rsa -q -N "" -C "jenkins@fabric8.io"
 ssh-keygen -b 4096 -t rsa -f id-sonar-rsa -q -N "" -C "sonar@fabric8.io"
 cd ..
