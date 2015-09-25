@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><title>Prerequisite : maven 3.3.3, Java JDK 1.7</title><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><link href="revealjs-redhat/lib/css/theme-v2-liberation.css" rel="stylesheet" /><link href="revealjs-redhat/lib/css/theme-output.css" rel="stylesheet" /><link rel="stylesheet" href="revealjs-redhat/lib/css/font-awesome-4.3.0.css" /><link rel="stylesheet" href="revealjs-redhat/lib/css/conference.css" id="theme" /><link rel="stylesheet" href="revealjs-redhat/lib/css/highlightjs/sunburst.min.css" /></head><script type="text/javascript">document.write( '<link rel="stylesheet" href="revealjs-redhat/lib/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script><body class="theme-font-liberation"><div class="reveal"><div class="slides"><div id="preamble"><div class="sectionbody"><div class="listingblock"><div class="content"><pre class="highlight"><code>    source ~/.bash_profile
+    jvm 1.7
+
+    # Add to the local macosx machine the following route to forward all tge packets to the IP Address of the VM running into the VirtualBox
+    # sudo route -n delete 172.0.0.0/8
+    # sudo route -n add 172.0.0.0/8  172.28.128.4</code></pre></div></div></div></div>
+<section id="_download_and_install_fabric8_installer"><h2>Download and install Fabric8 Installer</h2><div class="scrollbar"><div class="olist arabic"><ol class="arabic"><li><p>Download the [Fabric8 Installer project](<a href="https://github.com/fabric8io/fabric8-installer/archive/master.zip)containing">https://github.com/fabric8io/fabric8-installer/archive/master.zip)containing</a> the Vagrant config file</p></li><li><p>Unzip the content</p></li><li><p>Open a Terminal and move to the directory of vagrant openshift
+cd fabric8-installer/vagrant/openshift</p></li><li><p>Start Vagrant using this command</p><div class="listingblock"><div class="content"><pre>    vagrant up</pre></div></div>
+<div class="admonitionblock note"><table><tr><td class="icon"><i class="icon-note" title="Note"></i></td><td class="content"><div class="paragraph"></div><p>When the VirtualBox machine has been started and created successfully, you should be able to see this message within the console</p>
+<div class="listingblock"><div class="content"><pre>==&gt; default: --------------------------------------------------------------
+==&gt; default: Fabric8 pod is running! Who-hoo!
+==&gt; default: --------------------------------------------------------------
+==&gt; default:
+==&gt; default: Now open the fabric8 console at:
+==&gt; default:
+==&gt; default:     http://fabric8.vagrant.f8/
+==&gt; default:
+==&gt; default: When you first open your browser Chrome will say:
+==&gt; default:
+==&gt; default:    Your connection is not private
+==&gt; default:
+==&gt; default: * Don't panic!
+==&gt; default: * Click on the small 'Advanced' link on the bottom left
+==&gt; default: * Now click on the link that says 'Proceed to fabric8.vagrant.f8 (unsafe)' bottom left
+==&gt; default: * Now the browser should redirect to the login page. Enter admin/admin
+==&gt; default: * You should now be in the main fabric8 console. That was easy eh! :)
+==&gt; default: * Make sure you start off in the 'default' namespace.
+==&gt; default:
+==&gt; default: To install more applications click the Run... button on the Apps tab.
+==&gt; default:
+==&gt; default: We love feedback: http://fabric8.io/community/
+==&gt; default: Have fun!
+==&gt; default:
+==&gt; default: Now open the fabric8 console at:
+==&gt; default:
+==&gt; default:     http://fabric8.vagrant.f8/
+==&gt; default:
+==&gt; default: --------------------------------------------------------------
+==&gt; default: deploymentconfigs/docker-registry
+==&gt; default: services/docker-registry</pre></div></div></td></tr></table></div></li><li><p>Open your browser and access the Fabric8 console at this address <code><a href="http://fabric8.vagrant.f8/">http://fabric8.vagrant.f8/</a></code>. The login/password to be used is <code>admin/admin</code></p></li></ol></div><div class="footer">Copyright ©2015 Red Hat, Inc.</div></div></section>
+<section id="_setup_env_vars_to_access_docker_or_openshift_daemons_running_within_the_virtualbox_machine"><h2>Setup ENV vars to access Docker or Openshift daemons running within the Virtualbox machine</h2><div class="scrollbar"><div class="olist arabic"><ol class="arabic"><li><p>Define for the HOST macosx the docker daemon which runs within the Vagrant VM Box and kubernetes env vars</p><div class="listingblock"><div class="content"><pre>unset DOCKER_CERT_PATH
+unset DOCKER_TLS_VERIFY
+export DOCKER_HOST=tcp://vagrant.f8:2375
+export KUBERNETES_NAMESPACE=default
+export KUBERNETES_MASTER=https://vagrant.f8:8443
+export KUBERNETES_DOMAIN=vagrant.f8
+export KUBERNETES_TRUST_CERT="true"
+
+or
+
+./demo/script/set_kubernetes_env.sh</pre></div></div></li><li><p>Authenticate the Openshift Client with the Openshift platform and select default as domain</p><div class="listingblock"><div class="content"><pre>oc project default
+oc login -u admin -p admin https://172.28.128.4:8443
+
+or
+
+./demo/script/authenticate_with_os.sh</pre></div></div></li><li><p>Add the name of the application to the hosts file</p><div class="listingblock"><div class="content"><pre>    172.28.128.4    fabric8.local gogs.local vagrant.local docker-registry.vagrant.local fabric8-master.vagrant.local fabric8.vagrant.local gogs.vagrant.local gogs.fabric8.vagrant.local gogs-http.vagrant.local jenkins.vagrant.local kibana.vagrant.local nexus.vagrant.local router.vagrant.local gerrit-ssh.vagrant.local gerrit-http.vagrant.local gerrit.vagrant.local sonarqube.vagrant.local letschat.vagrant.local orion.vagrant.local taiga.vagrant.local quickstart-camelservlet.vagrant.local quickstart-rest.vagrant.local</pre></div></div></li><li><p>Download Fabric 8 Kubernetes templates</p><div class="listingblock"><div class="content"><pre>curl -o fabric8.zip http://repo1.maven.org/maven2/io/fabric8/apps/distro/2.2.19/distro-2.2.19-templates.zip
+unzip fabric8.zip</pre></div></div></li><li><p>Deploy the Fabric8 Continuous Delivery application</p><div class="listingblock"><div class="content"><pre>oc process -v DOMAIN='vagrant.f8' -f main/cdelivery-2.2.19.json  | oc create -f -</pre></div></div>
+<div class="admonitionblock note"><table><tr><td class="icon"><i class="icon-note" title="Note"></i></td><td class="content">Don&#8217;t worry about such messages as the elasticsearch, elasticsearch-cluster &amp; kibana kube apps have alsready been deployed when we have started the Virtualbox</td></tr></table></div></li><li><p>Add the route for Fabric8 within a Fabric8 Maven project</p><div class="listingblock"><div class="content"><pre>mvn fabric8:create-routes</pre></div></div></li><li><p>Everywhere</p><div class="listingblock"><div class="content"><pre>mvn io.fabric8:fabric8-maven-plugin:2.2.19:create-routes -Dfabric8.domain=cd.fabric8.io</pre></div></div></li></ol></div><div class="footer">Copyright ©2015 Red Hat, Inc.</div></div></section>
+<section id="_camel_quickstart"><h2>Camel Quickstart</h2><div class="scrollbar"><div class="olist arabic"><ol class="arabic"><li><p>Show the project <code>camel-servlet</code> within the quickstart project</p></li><li><p>Analyze the properties of the pom.xml file</p></li><li><p>Checkout the master or tag 2.1.6 of the quickstart app <em>camel servlet war</em> &amp; compile/build/deploy the kube App &amp; docker image</p></li><li><p>Deploy the project</p><div class="listingblock"><div class="content"><pre>mvn install docker:build fabric8:json fabric8:apply</pre></div></div></li><li><p>Run command fabric8:json</p><div class="listingblock"><div class="content"><pre>mvn clean fabric8:json compile</pre></div></div></li></ol></div><div class="footer">Copyright ©2015 Red Hat, Inc.</div></div></section>
+<section id="_deploy_the_camel_servlet_war_example"><h2>Deploy the Camel Servlet WAR example</h2><div class="scrollbar"><div class="paragraph"></div><p>+</p>
+<div class="listingblock"><div class="content"><pre>mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.f8</pre></div></div>
+<div class="paragraph"></div><p>+
+. The application Camel Web Servlet is accessible : <a href="http://quickstart-camelservlet.vagrant.f8/">http://quickstart-camelservlet.vagrant.f8/</a></p><div class="footer">Copyright ©2015 Red Hat, Inc.</div></div></section>
+<section id="_test_issue_with_keys"><h2>Test issue with keys</h2><div class="scrollbar"><div class="listingblock"><div class="content"><pre>./demo/scripts/deletefabric8.sh
+gofabric8 deploy -y
+./demo/scripts/gen_keys_import.sh
+oc edit Secret/gerrit-admin-ssh --output-version=v1beta3 -o json</pre></div></div>
+<div class="ulist"><ul><li><p>Generate keys locally and import them</p><div class="listingblock"><div class="content"><pre>rm -rf gerrit-admin-ssh
+rm -rf gerrit-users-ssh-keys
+
+mkdir gerrit-admin-ssh
+cd gerrit-admin-ssh/
+ssh-keygen -b 4096 -t rsa -f ssh-key -q -N "" -C "admin@fabric8.io"
+cd ..
+
+mkdir gerrit-users-ssh-keys
+cd gerrit-users-ssh-keys
+ssh-keygen -b 4096 -t rsa -f jenkins-master-ssh -q -N "" -C "jenkins@fabric8.io"
+ssh-keygen -b 4096 -t rsa -f sonarqube-ssh -q -N "" -C "sonar@fabric8.io"
+cd ..
+gofabric8 secrets
+
+# To edit a secret key
+oc edit Secret/gerrit-admin-ssh --output-version=v1beta3 -o json
+oc edit Secret/gerrit-users-ssh-keys --output-version=v1beta3 -o json
+oc edit template/cd-pipeline --output-version=v1beta3 -o json
+
+# To display it
+oc get -o json secret gerrit-admin-ssh | subl &amp;
+oc get -o json secret gerrit-users-ssh-keys | subl &amp;
+
+oc get -o json template cd-pipeline
+oc get -o json template gerrit
+
+# To delete a template
+oc delete template cd-pipeline
+</pre></div></div>
+<div class="paragraph"></div><p>oc delete secrets gerrit-admin-ssh</p></li></ul></div><div class="footer">Copyright ©2015 Red Hat, Inc.</div></div></section>
+<section id="_install_snapshot_of_cd_pipeline"><h2>Install Snapshot of CD-Pipeline</h2><div class="scrollbar"><div class="ulist"><ul><li><p>Install the docker images</p></li></ul></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code>docker pull fabric8/fabric8-console
+docker pull fabric8/nexus
+docker pull tpires/sonar-server
+docker pull fabric8/gerrit
+docker pull fabric8/fabric8-forge:2.2.34`</code></pre></div></div>
+<div class="ulist"><ul><li><p>Edit the kubernetes file to change the docker image forge version from 2.2.35-SNASPHOT to 2.2.4</p></li><li><p>Install the cd-pipeline template</p></li></ul></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code>oc process -f /Users/chmoulli/.m2/repository/io/fabric8/devops/packages/cd-pipeline/2.2.35-SNAPSHOT/cd-pipeline-2.2.35-SNAPSHOT-kubernetes.json | oc create -f -</code></pre></div></div><div class="footer">Copyright ©2015 Red Hat, Inc.</div></div></section>
+<section id="_troubleshooting"><h2>Troubleshooting</h2><div class="scrollbar"><div class="ulist"><ul><li><p>To access a docker container</p></li></ul></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code>    docker exec -it $(docker ps | grep 'fabric8/gerrit' | cut -f1 -d" ") bash</code></pre></div></div>
+<div class="ulist"><ul><li><p>Get pods, services, &#8230;</p></li></ul></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code>    oc get pods -l provider=fabric8
+    oc get rc -l provider=fabric8
+    oc get svc -l provider=fabric8
+    oc get oauthclients | grep fabric8</code></pre></div></div>
+<div class="ulist"><ul><li><p>Delete pods, services &amp; replica</p></li></ul></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code>
+    oc delete rc -l provider=fabric8
+    oc delete pods -l provider=fabric8
+    oc delete svc -l provider=fabric8
+    oc delete oauthclients fabric8</code></pre></div></div>
+<div class="ulist"><ul><li><p>Delete containers &amp; image</p></li></ul></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code>    docker rm $(docker ps -a | grep gerrit)
+    docker rmi $(docker images | grep gerrit)</code></pre></div></div>
+<div class="ulist"><ul><li><p>Delete PODS using Fabric8 plugin</p></li></ul></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code>    mvn fabric8:delete-pods</code></pre></div></div>
+<div class="paragraph"></div><p>For more see <a href="http://fabric8.io/guide/mavenFabric8DeletePods.html">http://fabric8.io/guide/mavenFabric8DeletePods.html</a></p><div class="footer">Copyright ©2015 Red Hat, Inc.</div></div></section>
+<section id="_delete_the_fabric8_app"><h2>Delete the Fabric8 App</h2><div class="scrollbar"><div class="listingblock"><div class="content"><pre class="highlight"><code>osc delete rc -l provider=fabric8
+osc delete pods -l provider=fabric8
+osc delete svc -l provider=fabric8
+osc delete oauthclients fabric8
+
+osc get pods -l provider=fabric8
+osc get rc -l provider=fabric8
+osc get svc -l provider=fabric8
+osc get oauthclients | grep fabric8</code></pre></div></div><div class="footer">Copyright ©2015 Red Hat, Inc.</div></div></section>
+<section id="_delete_the_containers_images"><h2>Delete the containers &amp; images</h2><div class="scrollbar"><div class="listingblock"><div class="content"><pre class="highlight"><code>docker rm $(docker ps -a | grep fabric8)
+docker rmi $(docker images | grep fabric8)</code></pre></div></div><div class="footer">Copyright ©2015 Red Hat, Inc.</div></div></section>
+<section id="_install_base_and_cdelivery"><h2>Install Base and CDelivery</h2><div class="scrollbar"><div class="listingblock"><div class="content"><pre class="highlight"><code>os process -f http://central.maven.org/maven2/io/fabric8/apps/base/2.2.23.1/base-2.2.23.1-kubernetes.json | os create -f -
+oc process -f http://central.maven.org/maven2/io/fabric8/apps/cdelivery-core/2.2.23.1/cdelivery-core-2.2.23.1-kubernetes.json | oc create -f -
+oc process -f /Users/chmoulli/.m2/repository/io/fabric8/devops/apps/gerrit/2.2.31-SNAPSHOT/gerrit-2.2.31-SNAPSHOT-kubernetes.json | oc create -f -</code></pre></div></div><div class="footer">Copyright ©2015 Red Hat, Inc.</div></div></section>
+<section id="_compile_deploy_a_project"><h2>Compile &amp; Deploy a project</h2><div class="scrollbar"><div class="listingblock"><div class="content"><pre class="highlight"><code>mvn clean fabric8:json compile
+mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.local
+
+docker exec -it $(docker ps | grep 'fabric8/gerrit' | cut -f1 -d" ") bash
+docker stop $(docker ps | grep 'fabric8/gerrit' | cut -f1 -d" ")
+
+docker exec -it $(docker ps | grep 'fabric8/gogs' | cut -f1 -d" ") bash</code></pre></div></div><div class="footer">Copyright ©2015 Red Hat, Inc.</div></div></section>
+<section id="_check_logs_of_journalctl"><h2>Check logs of journalctl</h2><div class="scrollbar"><div class="listingblock"><div class="content"><pre class="highlight"><code>    sudo journalctl -r -u openshift
+    sudo journalctl -r -u docker</code></pre></div></div><div class="footer">Copyright ©2015 Red Hat, Inc.</div></div></section>
+<section id="_to_classify"><h2>To classify</h2><div class="scrollbar"><div class="listingblock"><div class="content"><pre class="highlight"><code>root@gerrit-controller-wqzdo:/home/gerrit# more  ~/.ssh/config
+echo  Host gogs-ssh \
+      User git \
+      StrictHostKeyChecking no \
+      UserKnownHostsFile /dev/null &gt;&gt; ~/Temp/test.txt
+
+cat &lt;&lt;EOT &gt;&gt; ~/.ssh/config
+Host gogs-ssh
+     User git
+     StrictHostKeyChecking no
+     UserKnownHostsFile /dev/null
+EOT
+
+ssh-keyscan -t rsa gogs-ssh.default.svc.cluster.local &gt;&gt; ~/.ssh/known_hosts
+
+
+[remote "git-server"]
+   # url = http://root:redhat01@gogs.default.svc.cluster.local:80/root/${name}.git
+   url = git@gogs-ssh.default.svc.cluster.local:root/${name}.git
+   adminUrl = ssh://git@gogs-ssh.default.svc.cluster.local/home/git/gogs-repositories/root/${name}.git
+   createMissingRepositories = true
+   autoReload = true
+
+
+   # url = http://chm:chmchm@localhost:3000/chm/${name}.git
+   url = chmoulli@localhost:chm/${name}.git
+
+   # url = git@gogs-ssh.default.svc.cluster.local:root/${name}.git
+   # adminUrl = ssh://git@gogs-ssh.default.svc.cluster.local/home/git/gogs-repositories/root/${name}.git
+   createMissingRepositories = true
+   autoReload = true
+
+
+cat &lt;&lt;EOT &gt;&gt; ~/.ssh/config
+Host localhost
+     User chmoulli
+     StrictHostKeyChecking no
+     UserKnownHostsFile /dev/null
+EOT
+
+ssh -i /Users/chmoulli/Fuse/Fuse-projects/fabric8/docker-gerrit/ssh-keys/admin/id_rsa -p 29418 admin@192.168.59.103 gerrit create-project --name fabric8/demo.git
+
+http --auth admin:secret http://192.168.59.103:8080/projects/
+http --auth-type digest -a admin:mysecret PUT http://192.168.59.103:8080/a/projects/MyProject &lt; my-project.json
+{
+  "description": "This is a demo project.",
+  "submit_type": "CHERRY_PICK"
+}</code></pre></div></div><div class="footer">Copyright ©2015 Red Hat, Inc.</div></div></section></div></div><script src="revealjs-redhat/lib/js/head.min.js"></script><script src="revealjs-redhat/lib/js/reveal.min.js"></script><script type="text/javascript">// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Display the page number of the current slide
+  slideNumber: true,
+  // Push each slide change to the browser history
+  history: true,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: false,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'none',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+  // Optional libraries used to extend on reveal.js
+
+  margin: 0.2,
+  marginTop: '', // Top position of the slide : percentage or px
+  marginLeft: '', // Left position of the slide : percentage or px
+
+  width: 960,
+  height: 700,
+  minScale: 0.2,
+  maxScale: 1,
+
+  // Theme (e.g., beige, black, blood, league, moon, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  theme: Reveal.getQueryHash().theme || 'conference',
+
+  notes: {},
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    {
+      src: 'revealjs-redhat/lib/plugin/markdown/marked.js', condition: function () {
+      return !!document.querySelector('[data-markdown]');
+    }
+    },
+    {
+      src: 'revealjs-redhat/lib/plugin/markdown/markdown.js', condition: function () {
+      return !!document.querySelector('[data-markdown]');
+    }
+    },
+    {
+      src: 'revealjs-redhat/lib/plugin/highlight/highlight.js', async: true, condition: function () {
+      return !!document.querySelector('pre code');
+    },
+      callback: function () {
+        hljs.initHighlightingOnLoad();
+      }
+    },
+    { // DOES NOT WORK ANYMORE
+      src: 'revealjs-redhat/lib/plugin/zoom-js/zoom.js', async: true, condition: function () {
+      return !!document.body.classList;
+    }
+    },
+    {
+      src: 'revealjs-redhat/lib/plugin/notes/notes.js', async: true, condition: function () {
+      return !!document.body.classList;
+    }
+    }
+  ]
+   // TODO : Add a parameter to enable/disable REMOTE
+   // { src: 'revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } },
+ });</script></body></html>
