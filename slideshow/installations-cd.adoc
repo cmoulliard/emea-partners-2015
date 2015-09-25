@@ -194,7 +194,7 @@ sudo rm -rf /home/gerrit-site
 mvn clean install abric8:recreate
 ----
 +
-.Open your browser at this address `http://localhost:8080/#/settings/ssh-keys` and you should be able to see the ssh keys imported for the users admin, jenkins and sonar
+. Open your browser at this address `http://localhost:8080/#/settings/ssh-keys` and you should be able to see the ssh keys imported for the users admin, jenkins and sonar
 
 == Tricks
 
