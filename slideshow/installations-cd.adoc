@@ -232,18 +232,21 @@ In order to use gerrit, we have to import the ssh-keys of the admin and jenkins/
 while optional for the others
 
 * First ssh to the vagrant machine
-```
+
+----
 vagrant ssh
-```
+----
+
 * Next run these instructions to create directories
 
-```
+----
 sudo mkdir -p /home/gerrit/site
 sudo mkdir -p /home/gerrit/admin-ssh-key/
 sudo chown -R vagrant /home/gerrit/
 mkdir -p /home/gerrit/ssh-keys/
 sudo chown -R vagrant /home/gerrit/ssh-keys/
-```
+----
+
 * You can exit from the vagrant machine
 ////
 
