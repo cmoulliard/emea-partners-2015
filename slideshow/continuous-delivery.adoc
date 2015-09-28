@@ -439,9 +439,11 @@ image:fabric8-diagram1.png[width="80%",height="80%"]
 
 * docker:build {icon-arrow-right} Build image of app
 
+* docker:push {icon-arrow-right} Push image
+
 * fabric8:json {icon-arrow-right} generates Kube MetaData App
 
-* fabric8:apply {icon-arrow-right} deploy/redeploy on Openshift
+* fabric8:apply/recreate {icon-arrow-right} deploy/redeploy on Openshift
 
 * and more to create env, delete pods, create routes
 
