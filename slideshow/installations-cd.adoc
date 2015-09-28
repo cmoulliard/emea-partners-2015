@@ -567,25 +567,34 @@ Enjoy your First Apache Camel Docker experience with Openshift Fabric8 technolog
 
 = Camel Quickstart
 
-. Show the project `camel-servlet` within the quickstart project
+. Git clone the project locally - git@github.com:fabric8io/ipaas-quickstarts.git
+. Show the project `camel-servlet` within the quickstart project `ipaas-quickstarts/quickstarts/war/camel-servlet`
 . Analyze the properties of the pom.xml file
-. Checkout the master or tag 2.1.6 of the quickstart app 'camel servlet war' & compile/build/deploy the kube App & docker image
-. Deploy the project
+. Checkout the v2.2.35 tag of the quickstart app 'camel servlet war'
 +
 ----
-mvn install docker:build fabric8:json fabric8:apply
+git checkout v2.2.35
 ----
 +
-. Run command fabric8:json
+. Compile/build/deploy the kube App & docker image using these commands
 +
 ----
-mvn clean fabric8:json compile
+unset DOCKER_CERT_PATH
+unset DOCKER_TLS_VERIFY
+export DOCKER_HOST=tcp://172.28.128.4:2375
+export KUBERNETES_NAMESPACE=default
+export KUBERNETES_MASTER=https://172.28.128.4:8443
+export KUBERNETES_DOMAIN=vagrant.f8
+export KUBERNETES_TRUST_CERT="true"
+oc login -u admin -p admin https://172.28.128.4:8443
+
+mvn clean install docker:build fabric8:json
 ----
 
 == Deploy the Camel Servlet WAR example
 +
 ----
-mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.f8
+mvn fabric8:apply -Dfabric8.domain=vagrant.f8
 ----
 +
 . The application Camel Web Servlet is accessible : http://quickstart-camelservlet.vagrant.f8/
@@ -595,7 +604,7 @@ mvn fabric8:apply -Dfabric8.recreate=true -Dfabric8.domain=vagrant.f8
 == To access a docker container
 
 ```
-    docker exec -it $(docker ps | grep 'fabric8/gerrit' | cut -f1 -d" ") bash
+    docker exec -it $(docker ps | grep 'fabric8/jenkernetes' | cut -f1 -d" ") bash
 ```
 
 == Get pods, services, ...
