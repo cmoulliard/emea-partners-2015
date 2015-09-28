@@ -224,17 +224,6 @@ a|* Operations
 ** *Deployment* in QA/UAT/PROD | image:devops1.jpeg[]
 |===
 
-// ************** devops ************
-[#cd-automate2]
-== What is needed ?
-
-[.noredheader, cols="40,60"]
-|===
-a|* **T**ools
-* **P**latform as a Service
-* **P**ipelines procedures | image:collaborate1.jpeg[]
-|===
-
 // ************** transition page ************
 [#transition4, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
@@ -247,7 +236,7 @@ image::{revealjs_cover_image}[]
 
 // ************** devops ************
 [#cd-tools]
-== Tools, tools
+== Dev **T**ools
 
 [.noredheader]
 |===
@@ -256,10 +245,37 @@ a|* Git for SCM
 * Gitlab/Gogs for git projects mngt
 * Apache Maven - build
 * Jenkins + plugins - automate
-* Linux containers
-* and of course… Fabric8! a|
+a|
 [#block, top=25px, left=500px]
 image:fabric8-cd-tools.png[height="65%"]
+|===
+
+// ************** devops ************
+[#cd-tools1]
+== **P**latform
+
+[.noredheader]
+|===
+a|* Machine -> VM -> Linux **Container**
+* Red Hat **Atomic** Enterprise Platform
+a|
+[#block, top=90px, left=500px]
+image:rhel-atomic.png[height="65%"]
+|===
+
+// ************** devops ************
+[#cd-tools2]
+== **C**Delivery Technology
+
+[.noredheader]
+|===
+a|* Manage *setup/build/deploy* images
+* Tool to *design Kubernetes* Applications
+* *Stage* environments
+* Provision Worflow *Pipeline*
+a|
+[#block, top=25px, left=500px]
+image:fabric8-logo.png[height="15%"]
 |===
 
 // ************** transition page ************
@@ -270,7 +286,7 @@ image:fabric8-cd-tools.png[height="65%"]
 image::{revealjs_cover_image}[]
 
 [#cover-h1,left="0px",top="350px",width="2000px"]
-*Linux containers*
+*Linux container*
 
 // ************** docker ************
 [#process]
@@ -382,25 +398,23 @@ image::{revealjs_cover_image}[]
 [#cover-h1,left="0px",top="350px",width="2000px"]
 *Cloud Platform*
 
-// ************** openshift **********
-[#openshift-v3]
-== Openshift v3
-
-* *Designed* around Kubernetes, Docker & Fabric8
-* Provide additional features : build (STI), deploy, manage & promote
-
-image::openshift_logo.png[width="30%,height="30%"]
-
 // ************** openshift ************
 [#paas]
-== Platform as a Service
+== **P**latform as a **S**ervice
 
-* Flexible technology options
-* Developer self service
-* Automation, DevOps philosophy
-* Decoupling between operations and developers, reduces coordination
+[.noredheader,cols="45,55"]
+|===
+a|* *Designed* around Kubernetes, Docker, Fabric8
+* Provide *new* features {icon-arrow-right}
+** Docker Images *Registry* & **C**ertification
+** SSO - Authentication Server
+** Api for Management
+** Client Command Line
+a|
+[#block,left="450px",top="100px",width="200px"]
+image:rht-atomic-enterprise-openshift.png[]
+|===
 
-image::openshift_logo.png[width="35%"]
 
 // ************** openshift ************
 [#os3-architecture]
@@ -441,9 +455,14 @@ image:fabric8-diagram1.png[width="80%",height="80%"]
 
 * docker:push {icon-arrow-right} Push image
 
+{space}
+
 * fabric8:json {icon-arrow-right} generates Kube MetaData App
 
 * fabric8:apply/recreate {icon-arrow-right} deploy/redeploy on Openshift
+* fabric8:apply/recreate {icon-arrow-right} deploy/redeploy on Openshift
+
+{space}
 
 * and more to create env, delete pods, create routes
 
