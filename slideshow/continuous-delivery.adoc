@@ -54,7 +54,7 @@ Email: {speaker-email} |
 * Demo
 
 // ************** transition page ************
-[#transition2, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
+[#transition1, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
 
 [#block,width="200px",left="70px",top="0px"]
@@ -124,7 +124,7 @@ a|
 |===
 
 // ************** transition page ************
-[#transition3, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
+[#transition2, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
 
 [#block,width="200px",left="70px",top="0px"]
@@ -225,7 +225,7 @@ a|* Operations
 |===
 
 // ************** transition page ************
-[#transition4, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
+[#transition3, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
 
 [#block,width="200px",left="70px",top="0px"]
@@ -263,23 +263,8 @@ a|
 image:rhel-atomic.png[height="65%"]
 |===
 
-// ************** devops ************
-[#cd-tools2]
-== **C**Delivery Technology
-
-[.noredheader]
-|===
-a|* Manage *setup/build/deploy* images
-* Tool to *design Kubernetes* Applications
-* *Stage* environments
-* Provision Worflow *Pipeline*
-a|
-[#block, top=25px, left=500px]
-image:fabric8-logo.png[height="15%"]
-|===
-
 // ************** transition page ************
-[#transition5, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
+[#transition4, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
 
 [#block,width="200px",left="70px",top="0px"]
@@ -320,7 +305,7 @@ image::docker-filesystems-multilayer.png[width="60%,height="60%"]
 image:dockerfile.png[width="65%"]
 
 // ************** transition page ************
-[#transition6, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
+[#transition5, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
 
 [#block,width="200px",left="70px",top="0px"]
@@ -389,18 +374,18 @@ image::fabric8-service-pod.png[]
 |===
 
 // ************** transition page ************
-[#transition7, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
+[#transition6, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
 
 [#block,width="200px",left="70px",top="0px"]
 image::{revealjs_cover_image}[]
 
 [#cover-h1,left="0px",top="350px",width="2000px"]
-*Cloud Platform*
+*Platform as Service*
 
 // ************** openshift ************
 [#paas]
-== **P**latform as a **S**ervice
+== OpenShift v3
 
 [.noredheader,cols="45,55"]
 |===
@@ -408,13 +393,11 @@ a|* *Designed* around Kubernetes, Docker, Fabric8
 * Provide *new* features {icon-arrow-right}
 ** Docker Images *Registry* & **C**ertification
 ** SSO - Authentication Server
-** Api for Management
-** Client Command Line
+** Api for Management, Client Command Line
 a|
-[#block,left="450px",top="100px",width="200px"]
-image:rht-atomic-enterprise-openshift.png[]
+[#block,left="450px",top="100px",width="700px"]
+image:rht-atomic-enterprise-openshift.png[width="100%"]
 |===
-
 
 // ************** openshift ************
 [#os3-architecture]
@@ -423,29 +406,20 @@ image:rht-atomic-enterprise-openshift.png[]
 [#block,width="800px",top="120px"]
 image:ose-v3.png[width="95%",height="95%"]
 
-// ************** transition page ************
-[#transition8, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
-== {blank-space}
+// ************** devops ************
+[#cd-tools2]
+== **C**Delivery Technology
 
-[#block,width="200px",left="70px",top="0px"]
-image::{revealjs_cover_image}[]
-
-[#cover-h1,left="0px",top="350px",width="2000px"]
-*Tooling, prepackaged apps*
-
-// ************** fabric8 ************
-[#fabric8-intro]
-== {blank-space}
-
-[#block,width="800px",top="0px"]
-image:fabric8.png[width="95%",height="95%"]
-
-// ************** fabric8 ************
-[#fabric8-desc]
-== {blank-space}
-
-[#block,width="800px",top="0px"]
-image:fabric8-diagram1.png[width="80%",height="80%"]
+[.noredheader]
+|===
+a|* Manage *setup/build/deploy* images
+* Tool to *design Kubernetes* Applications
+* *Stage* environments
+* Provision Worflow *Pipeline*
+a|
+[#block, top=25px, left=500px]
+image:fabric8-logo.png[height="15%"]
+|===
 
 // ************** fabric v2 ************
 [#fabric8-plugin]
@@ -466,6 +440,13 @@ image:fabric8-diagram1.png[width="80%",height="80%"]
 
 * and more to create env, delete pods, create routes
 
+// ************** fabric8 ************
+[#fabric8-desc]
+== {blank-space}
+
+[#block,width="800px",top="0px"]
+image:fabric8-diagram1.png[width="80%",height="80%"]
+
 // ************** fabric v2 ************
 [#fabric8-cdci]
 == {blank-space}
@@ -474,7 +455,7 @@ image:fabric8-diagram1.png[width="80%",height="80%"]
 image:fabric8-cdci.png[width="80%"]
 
 // ************** transition page ************
-[#transition9, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
+[#transition7, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
 
 [#block,width="200px",left="70px",top="0px"]
