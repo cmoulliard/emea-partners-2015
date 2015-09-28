@@ -59,7 +59,7 @@ Email: {speaker-email} |
 [#block,width="200px",left="70px",top="0px"]
 image::{revealjs_cover_image}[]
 
-[#cover-h1,width="600px",left="0px",top="400px"]
+[#cover-h1,width="600px",left="0px",top="300px"]
 *Integration is so hard & expensive*
 
 // ************** why so hard ********
@@ -115,7 +115,7 @@ developed through - CD/CI talk)
 [#block,width="200px",left="70px",top="0px"]
 image::{revealjs_cover_image}[]
 
-[#cover-h1,left="0px",top="350px",width="2000px"]
+[#cover-h1,left="0px",top="300px",width="2000px"]
 *Existing solutions*
 
 // ************** facts ********
@@ -182,7 +182,7 @@ image:worked-fine-in-dev.png[width="80%"]
 [#block,width="200px",left="70px",top="0px"]
 image::{revealjs_cover_image}[]
 
-[#cover-h1,left="0px",top="350px",width="2000px"]
+[#cover-h1,left="0px",top="300px",width="2000px"]
 *How can we simplify that ?*
 
 // ************** What are we looking for ? ********
@@ -264,7 +264,7 @@ that we know)
 [#block,width="200px",left="70px",top="0px"]
 image::{revealjs_cover_image}[]
 
-[#cover-h1,left="0px",top="350px",width="2000px"]
+[#cover-h1,left="0px",top="300px",width="2000px"]
 *Ideal Integration Platform*
 
 // ************** How Can we simplify that ********
