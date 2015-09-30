@@ -132,9 +132,13 @@ As the cd-pipeline kube apps require the docker images of gerrit, gogs, jenkins,
 vagrant ssh
 
 docker pull fabric8/fabric8-console
+docker pull fabric8/fabric8-forge
 docker pull fabric8/nexus
 docker pull fabric8/jenkernetes
 docker pull fabric8/gerrit
+docker pull fabric8/lets-chat
+docker pull fabric8/hubot-notifier
+docker pull fabric8/hubot-letschat
 docker pull tpires/sonar-server
 ----
 
@@ -597,7 +601,7 @@ mvn clean install docker:build fabric8:json
 mvn fabric8:apply -Dfabric8.domain=vagrant.f8
 ----
 +
-. The application Camel Web Servlet is accessible : http://quickstart-camelservlet.vagrant.f8/
+. The application Camel Web Servlet is accessible at the address : http://quickstart-camelservlet.vagrant.f8/
 
 = Troubleshooting
 
