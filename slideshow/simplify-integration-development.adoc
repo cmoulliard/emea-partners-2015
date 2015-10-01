@@ -106,19 +106,6 @@ a|
 |===
 
 // ************** slide ********
-[#devops-strategy]
-== DevOps vision ...
-
-[.noredheader]
-|===
-a|* *Objective* {icon-arrow-right} *Continuous Integration* strategy
-* Establish a concrete *pipeline to production* {icon-exclamation-mark}
-* Build/Test/Release *more* often! | image:idea.jpeg[]
-|===
-
-See next *conference* about DevOps
-
-// ************** slide ********
 [#so-expensive]
 == Why integration is so expensive ?
 
@@ -257,9 +244,9 @@ image::{revealjs_cover_image}[]
 
 * *Agile* Project Mngt {icon-arrow-right} Scrum
 * *Architecture* {icon-arrow-right} Microservice
-* *Impl* DevOps Strategy
 ** Automate Test, Build
 * *Release* more *often*
+* Standards & Technology used
 
 [#block,left="550px",top="50px"]
 image:scrum-process.jpg[width="70%"]
@@ -287,41 +274,17 @@ image:eip-book.jpg[]
 image:eip-patterns.png[]
 
 // ************** slide ********
-[#tooling]
-== Slide
+[#devops-strategy]
+== DevOps vision ...
 
-* Integration tooling to package, deploy
+[.noredheader]
+|===
+a|* *Objective* {icon-arrow-right} *Continuous Integration* strategy
+* Establish a concrete *pipeline to production* {icon-exclamation-mark}
+* Build/Test/Release *more* often! | image:idea.jpeg[]
+|===
 
-// ************** slide ********
-[#cd-strategy]
-== Slide
-
-* CD/CI Strategy for Dev/Ops
-
-// ************** slide ********
-[#container-agnostic]
-== Slide
-
-* Container agnostic
-
-// ************** slide ********
-[#cloud-ready]
-== Slide
-
-* Cloud ready
-
-// ************** slide ********
-[#crossing]
-== Slide
-
-* Cross Technology Support to
-** Design complex logic using rules engine, 
-** Manage long term process using standard BPM
-** Distribute workload in an sync/async way
-** Manage & govern services
-** Report centrally the logs & activities
-** Secure endpoints and services
-...
+See next *conference* about DevOps
 
 // ************** transition page ************
 [#transition4, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
@@ -335,88 +298,328 @@ image::{revealjs_cover_image}[]
 
 // ************** How Can we simplify that ********
 [#ideal-platform]
-== Ideal Integration Platform
+== Fuse World
 
-* Does it exist --> YES
-* What is the technology supporting such vision --> JBoss Fuse, JBoss A-MQ, OpenShift & emerging (Keycloak, ApiMan, Overlord, Hawtio, Fabric8, ...)
+image::fuse-technology2-donut.png[]
 
-// ************** slide ********
-[#dsl-eip]
-== Slide
+// ************** How Can we simplify that ********
+[#timeline]
+== History
 
-* Common language, grammar between actors (developer, analyst & architect)
-** Correspond to DSL
-** Implement EIP Patterns instead of lockin standards
-
-* Reduce Dev Time as Functional Integration diagram can be implemented directly by the Developer
+image::fuse-history.png[]
 
 // ************** slide ********
 [#dsl-eip]
-== Slide
+== Require
 
-* Adopt Opensource Framework implementing EIP Patterns and DSL like Apache Camel 
-** Benefit to use well establishes patterns & practices
-** Reduce functional & technical analysis & Architecture design
-** Opensource community power 
+* Use *Common language*, *grammar* between actors (developer, analyst & architect)
+* Adopt *Domain* *Specific* *Language* - DSL
+* Implement *EIP* Patterns
 
-// ************** slide ********
-[#extend]
-== Slide
+[#block,left="650px",top="180px"]
+image:goal.jpeg[]
 
-* Use Java standards when possible (Junit), Logging (SLF4J) & Java EE standards (JPA, JTA, ...)
-** Reduce dvlpt cost, learning curves as such tehnology are "mastered" by Java Developers 
+[#block,left="50px",top="300px"]
+{icon-arrow-right} Reduce Functional to Develop Time
 
-// ************** slide ********
-[#adopting]
-== Slide
+// ************** Camel ************
+[#apache-camel]
+== Apache Camel
 
-* Adopt Camel Testing model to design Integration Test
-** Explain why & motivations
-** Can be started, debugged and profiled locally in JBDS (no need to
-use Java Container)
+* Java **Integration** Framework
 
-// ************** slide ********
-[#components]
-== Slide
+[.newline]
+* Implements {icon-arrow-right} **D**omain **S**pecific **L**anguage
 
-* Library of Components & Data Format support 95% of the use case 
-without to develop
+[.newline]
+* Supports **E**nterprise **I**ntegration **P**atterns
 
-// ************** slide ********
-[#new-component-format]
-== Slide
+* {icon-cogs} *Manage Complex use cases* {icon-arrow-right} correlation, orchestration, routing, mediation, transformation
 
-* Can be extended easily (just 3-4 classes to be implemented to create a 
-new component) + Data Format
+[#block,top="50px",left="600px"]
+image:camel-box-small.png[]
 
-// ************** slide ********
-[#processors]
-== Slide
+[#block,top="350px",left="400px"]
+image:eip_book.jpg[width="45%"]
 
-* Huge collection of processor/interceptor supporting all the EIP
+// ************** Camel ************
+[#camel-route]
+== Simple **C**oncepts
+
+* Camel project {icon-arrow-right} Collection of routes
+* Route {icon-angle-double-right} Processor(s) + Interceptor(s)
+* Producing or consuming Messages/Exchanges
+
+image:pipeline.png[]
+
+// ************** Camel ************
+[#camel-interceptor]
+== Interceptor
+
+* To trace, log, capture business events
+
+[.newline]
+image:pipeline2.png[]
+
+// ************** Camel ************
+[#camel-context]
+== Container
+
+[.noredheader,cols="50,50"]
+|===
+a| * Routes {icon-arrow-right} *Endpoints* 
+* Registered {icon-arrow-right} CamelContext | image:camel-features.png[]
+|===
+
+// ************** Camel ************
+[#camel-communication-allowed]
+== Communication
+
+image:camel-features3.png[]
+
+// ************** Camel ************
+[#camel-ff]
+== Fire / Forget pattern
+
+image::inonly.png[width="65%"]
+
+// ************** Camel ************
+[#camel-request-reply]
+== Request / Reply pattern
+
+image::inout.png[width="75%"]
+
+// ************** Camel ************
+[#camel-convert]
+== Convert
+
+* **Data Transformation** for complex use case
+
+[source, java]
+----
+package my.cool.demo;
+
+import java.io.InputStream;
+import java.io.OutputStream;
+import org.apache.camel.Exchange;
+
+public interface DataFormat {
+
+    void marshal(Exchange exchange, Object graph, OutputStream stream) throws Exception;
+
+    Object unmarshal(Exchange exchange, InputStream stream) throws Exception;
+}
+----
+
+* **Marshalling** : Object {icon-arrow-right} XML (JAXB)
+* **Unmarshalling** : XML {icon-arrow-right} Object (JAXB)
+
+// ************** Camel ************
+[#camel-data-format]
+== Data Format supported
+
+* http://camel.apache.org/dataformat.html[> 20 Data Format]
+
+image::dataformat-2.png[]
+
+// ************** Camel ************
+[#camel-java-dsl]
+== Java DSL
+
+* Fluent API
+
+[source,java]
+----
+package my.cool.demo;
+
+import org.apache.camel.builder.RouteBuilder;
+
+public class ExampleRouteBuilder extends RouteBuilder {
+    @Override
+    public void configure() throws Exception {
+
+        from("amq:queue:quotes")
+           .filter().xpath("/quote/product/ = 'widget")
+                .bean("QuotesService", "widget")
+           .filter().xpath("/quote/product/ = 'gadget")
+                .bean("QuotesService","gadget");
+    }
+}
+
+----
+
+// ************** Camel ************
+[#camel-xml-dsl]
+== XML DSL
+
+* Alternative : Spring, Blueprint DSL
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+    ">
+    <bean id="quotesService" class="my.cool.demo.camel.QuotesService"/>"
+
+    <camelContext  xmlns="http://camel.apache.org/schema/spring">
+        <route>
+            <from uri="amq:queue:quotes"/>
+            <filter>
+                <xpath>"/quote/product/ = 'widget"</xpath>
+            </filter>
+                <bean id="quotesService" method="widget"/>
+            <filter>
+                <xpath>"/quote/product/ = 'gadget"</xpath>
+            </filter>
+            <bean id="quotesService" method="gadget"/>
+        </route>
+    </camelContext>
+</beans>
+----
+
+// ************** Camel ************
+[#camel-features]
+== Facts
+
+* *In-Memory* bus
+* Support *Object* : XML, File, Stream, Bytes
+* *Predicate* & *Expression* language (xslt, xpath, ...)
+* *Sync*/*Async* exchanges
+* Threads Management
+* *Tx* Architecture
+* *Error* & *Exception* handling
+* Policy driven
+* Container *Agnostic*
 
 // ************** slide ********
 [#junit]
-== Slide
+== Junit Test case
 
-* Junit & Exception centric
+[source,java]
+----
+public class FilterTest extends CamelTestSupport {
+
+    @EndpointInject(uri = "mock:result")
+    protected MockEndpoint resultEndpoint;
+
+    @Produce(uri = "direct:start")
+    protected ProducerTemplate template;
+
+    @Test
+    public void testSendMatchingMessage() throws Exception {
+        String expectedBody = "<matched/>";
+
+        resultEndpoint.expectedBodiesReceived(expectedBody);
+
+        template.sendBodyAndHeader(expectedBody, "foo", "bar");
+
+        resultEndpoint.assertIsSatisfied();
+    }
+    
+    @Override
+        protected RouteBuilder createRouteBuilder() {
+            return new RouteBuilder() {
+                public void configure() {
+                    from("direct:start").filter(header("foo").isEqualTo("bar")).to("mock:result");
+                }
+        };
+    }
+----
 
 // ************** slide ********
 [#exception]
-== Slide
+== Exception handling
 
-* Exception centric
+[source,java]
+----
+// we do special error handling for when OrderFailedException is thrown
+onException(OrderFailedException.class)
+    // we mark the exchange as handled so the caller doesn't receive the
+    // OrderFailedException but whatever we want to return instead
+    .handled(true)
+    // this bean handles the error handling where we can customize the error response
+    .bean(OrderService.class, "orderFailed")
+    // and since this is an unit test we use mocks for testing
+    .to("mock:error");
+----
+
+[source,java]
+----
+// this is just the generic error handler where we set the destination
+// and the number of redeliveries we want to try
+errorHandler(deadLetterChannel("mock:error").maximumRedeliveries(1));
+----
+
+[source,java]
+----
+from("direct:start")
+    // this bean is our order service
+    .bean(OrderService.class, "handleOrder")
+    // this is the destination if the order is OK
+    .to("mock:result");
+----
 
 // ************** slide ********
-[#microservice-architecture]
-== Slide
+[#exception1]
+== Like Java 
 
-* Propose microservice architecture model
-* Split services as collection of camel routes
+[source,xml]
+----
+<route>
+    <from uri="direct:start"/>
+    <doTry>
+        <process ref="processorFail"/>
+        <to uri="mock:result"/>
+        <doCatch>
+            <exception>java.io.IOException</exception>
+            <exception>java.lang.IllegalStateException</exception>
+            <to uri="mock:catch"/>
+        </doCatch>
+        <doFinally>
+            <to uri="mock:finally"/>
+        </doFinally>
+    </doTry>
+</route>
+----
+
+// ************** Karaf ************
+[#karaf-container]
+== Integration container
+
+* Camel routes isolated from each other (classloader)
+* Bundle {icon-arrow-right}  CamelContext boundary {icon-arrow-right} acting as a Local BUS
+* Camel routes {icon-arrow-right} can have different SLA (Threads, Policies, ...)
+
+image:karaf/karaf1.png[]
+
+// ************** Karaf ************
+[#karaf-integration]
+== Integration container
+
+* Camel routes can be started/stopped/updated
+* {icon-arrow-right} Simplify maintenance process
+
+image:karaf/karaf2.png[]
+
+// ************** integration everywhere ************
+[#cloud]
+== Management
+
+image:karaf/karaf4.png[]
+
+// ************** integration everywhere ************
+[#microservice]
+== Microservice
+
+image:microservice-camel.png[]
 
 // ************** slide ********
 [#separate-service-contract]
-== Slide
+== REST Proxy
 
 * Support to separate Service from the model (by adoption a REST proxy layer
 validating the data outside of the endpoint, ...)
@@ -430,7 +633,7 @@ validating the data outside of the endpoint, ...)
 
 // ************** slide ********
 [#governance-service]
-== Slide
+== Security Governance
 
 * Manage your services & governance
 ** Apiman
@@ -438,17 +641,10 @@ validating the data outside of the endpoint, ...)
 
 // ************** slide ********
 [#bai]
-== Slide
+== Business Activities
 
 * Business Activities
 ** Overlord or Insight
-
-// ************** slide ********
-[#solution]
-== Slide
-
-* Add a pie chart about Red Hat Middleware portfolio + emerging
-* JBoss Fuse, JBoss A-MQ, Fabric8 v2, Openshift v3, Apiman, Keycloak, ...
 
 // *********************************
 [#questions]
@@ -462,8 +658,8 @@ a|* Twitter : *{speaker-twitter}*
 |===
 
 * More info {icon-arrow-right}
-  - www.jboss.org/products/fuse.html
-  - http://www.redhat.com/en/technologies/jboss-middleware
+ - www.jboss.org/products/fuse.html
+ - http://www.redhat.com/en/technologies/jboss-middleware
 
 
 
