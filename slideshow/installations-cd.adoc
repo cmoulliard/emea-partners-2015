@@ -115,9 +115,25 @@ gofabric8 pull chat-letschat
 == Install the kube applications
 
 . Open your web browser at this address `http://fabric8.vagrant.f8/`, select from the home screen the `default` namespace and clickon the `runtime` tab.
-. From this screen, click on the `Run` button (available top of the right part of the screen and select `chat-letschat` and `cd-pipeline` applications
+. From this screen, click on the `un` button (available top of the right part of the screen and select `chat-letschat` and `cd-pipeline` applications
 . For each application, you can tailor the different keys 
 . Example, you can define the description of the gerrit fit repo, the user name and password to be used to access the gerrit kube app
+
+== Create a CD Project
+
+. Return to the `Workspaces` -> `default` namespace screen
+. Click on the `Create Project` button
+. If you are not yet authenticated, you will see a screen requesting that you sign in with the Gogs Server
+. Encode the username (gogsadmin), password (RedHat$1) & email (gogsadmin@fabric8.io) address to access `Gogs` Server
+. Click on the `signin` button
+. Click on the `Create Project using wizzard` button
+
+
+== DevOps Project creation
+
+TODO
+
+Add screenshot
 
 == Install Snapshot of CD-Pipeline
 
