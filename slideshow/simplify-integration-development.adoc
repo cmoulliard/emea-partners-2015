@@ -66,47 +66,106 @@ image::{revealjs_cover_image}[]
 [#why-so-hard-1]
 == Why integration is so hard ?
 
-* Many systems to integrate
-* Many different formats, protocols to support
-* Many standards, APis, languages to "inter operate" between applications, systems
+[.noredheader,cols="45,55"]
+|===
+a|* *Integration* is *Hard!*
+* *Different* system *vintages*
+* Mainframe, EAI Hub, MOM, EJB, Web Services
+* *Systems* must *collaborate* 
 * Team collaboration
-* Many different business to interface
+* Many different business to *interface*| image:esb.png[width="85%"]
+|===
 
 // ************** why so hard ********
 [#why-so-hard-2]
 == Why integration is so hard - cont'd
 
-* Data model & schemas not managed all
-* Lack of common vocabulary, grammar  between integration actors
-* Lack of catalogue or registry to publish services, data structure, validation rules
-* Lack of vision OR strategy to manage common "data model",
-  "services definition" between business units
-* Multi-disciplinary projects
+[.noredheader,cols="40,60"]
+|===
+a|
+* Platforms, *Protocols*
+* *Data Formats*
+* Data *Mapping*
+* Cross-*domain*, Per-domain
+* Schemas, XSD, JSon | image:integration-2.png[width="95%"]
+|===
+
+// ************** why so hard ********
+[#why-so-hard-3]
+== Why integration is so hard - cont'd
+
+[.noredheader,cols="55,45"]
+|===
+a|
+* *Mngt* of Data Models, Mappings, BUs
+* *Common* vocabulary, *grammar* between integration actors
+* *Catalogue* or *Registry* of
+** Services
+** Data Format
+** Validation rules | image:lack-of-management.jpg[]
+|===
 
 // ************** slide ********
 [#devops-strategy]
-== Dev Ops
+== DevOps vision ...
 
-* Absence of DevOps strategy (reuse some ideas
-developed through - CD/CI talk)
+[.noredheader]
+|===
+a|* *Objective* {icon-arrow-right} *Continuous Integration* strategy
+* Establish a concrete *pipeline to production* {icon-exclamation-mark}
+* Build/Test/Release *more* often! | image:idea.jpeg[]
+|===
+
+See next *conference* about DevOps
 
 // ************** slide ********
 [#so-expensive]
 == Why integration is so expensive ?
 
-* Every change will impact;
-** Testing use cases
-** Release Management
-** Deployment procedures
+[.noredheader,cols="65,35"]
+|===
+a|
+* Service(s) Review (consumer/producer)
 
+{space}{space}
+
+* Code, Documentation
+
+{space}{space}
+
+* *Update* Testing coverage (Unit/Int.)
+
+{space}{space}
+
+* Prepare *new* Release(s)
+
+{space}{space}
+
+* *Deployment* procedures | image:expensive.jpeg[]
+|===
+
+[#block,width="200px",left="250px",top="150px"]
+{icon-arrow-down}
+
+[#block,width="200px",left="250px",top="220px"]
+{icon-arrow-down}
+
+[#block,width="200px",left="250px",top="300px"]
+{icon-arrow-down}
+
+[#block,width="200px",left="250px",top="380px"]
+{icon-arrow-down}
 // ************** slide ********
 [#impact-measurement]
+== Impact
 
-* Every change will require to measure impact on:
-
-** Existing applicationS
-** Business & Data Model /Services related
-** Calculate risk & modifications
+[.noredheader,cols="75,35"]
+|===
+a|
+* *Existing* ApplicationS
+* *Business* & Data Model / Services
+* Calculate *Risk* & *Modifications* | image:swot.png[]
+|===
 
 // ************** transition page ************
 [#transition2, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]

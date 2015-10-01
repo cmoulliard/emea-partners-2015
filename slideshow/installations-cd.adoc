@@ -494,6 +494,7 @@ generate a unique commit-id message.
 
 Run the script and pass as parameter the directory name of the project to be created locally on your machine and the gerrit git repository (should be by example : devnation)
 ```
+   ./demo/scripts/review.sh /Users/chmoulli/Temp/dabou dabou
   /scripts/review.sh devnation devnation
 
    /path/to/the/script/scripts/review.sh devnation devnation
@@ -609,6 +610,7 @@ mvn fabric8:apply -Dfabric8.domain=vagrant.f8
 
 ```
     docker exec -it $(docker ps | grep 'fabric8/jenkernetes' | cut -f1 -d" ") bash
+    docker exec -it $(docker ps | grep 'fabric8/gerrit' | cut -f1 -d" ") bash
 ```
 
 == Get pods, services, ...
@@ -690,8 +692,16 @@ docker exec -it $(docker ps | grep 'fabric8/gogs' | cut -f1 -d" ") bash
 == Check logs of journalctl
 
 ```
-    sudo journalctl -r -u openshift
-    sudo journalctl -r -u docker
+sudo journalctl -r -u openshift
+sudo journalctl -r -u docker
 ```
+
+== Test Fabric8 Maven plugin to create a gerrit repo
+
+``
+mvn io.fabric8:fabric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="demo" -Dempty_commit="false"
+mvnDebug io.fabric8:fabric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="demo" -Dempty_commit="false"
+```
+
 
 
