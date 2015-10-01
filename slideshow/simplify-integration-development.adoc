@@ -179,38 +179,52 @@ image::{revealjs_cover_image}[]
 
 // ************** facts ********
 [#existing]
-== Existing solutions
+== Timeline
 
-? Add a timeline with solutions
+* 2000 - EAI {icon-arrow-right} 2005 - *ESB* {icon-arrow-right} 2007 - *EIP*
 
-* EAI
-* 2005 -> JBI & SCA emerging
-* Centric --> ESB
-* BPEL & WebServices
-* REST & Web2
-* Distributed --> Microservice
+{space}
 
-// ************** slide ********
-[#issues]
-== Centric vision
+* Specification : Proprietary {icon-arrow-right} JBI, SCA {icon-arrow-right} Camel
 
-* Centric vision
-** XML based (inner conversion from CSV to XML or XML to CSV, ...) --> increase functional & modeling cost
-** Central server where the processes are deployed and run (what about incremental updates, ...)
-** Long process to design/develop due to technology complexity --> increase dvlpt time & learning curve
+{space}
+
+* Architecture : *Centric* (ESB) {icon-arrow-right} *Distributed* (Microservice - Stateless)
+
+{space}
+
+* Technology : BPEL & WebServices {icon-arrow-right} *REST* & *Web2*
+
+image::jboss-fuse-cloud.jpg[width="60%"]
 
 // ************** slide ********
 [#issues]
-== Integration & orchestration standards
+== JBI, SCA & Centric vision
+
+* *XML* based
+* Inner conversion from Format-A to XML or XML to Format-B
+* *ESB* {icon-arrow-right} *Centric* Platform
+* Learning curve {icon-arrow-up} & Time to design/develop {icon-arrow-up}
+
+[#block,top="300px",left="750px"]
+image:csv-xml.jpeg[]
+
+[#block,top="300px",left="50px"]
+image:esb.jpg[]
+
+
+// ************** slide ********
+[#issues]
+== Integration & Orchestration
 
 * JBI, SCA
-** Proprietary implementation
-** Suffer from number of components --> will require home code (TODO: To be reviewed)
+** *Proprietary* implementation
+** Lack of *Components*
 
-* Orchestration engines
-** BPEL & WebServices --> increase learning curve & expertise level, does not fit very well huge volume processing
-** Contract(s) & Services (TODO: To be reviewed)
-** Not compatible
+* Orchestration Engine
+** BPEL & WebServices
+** Contract(s) & Services
+** Not compatible (jBPM, BPEL, BPM, ...)
 
 // ************** slide ********
 [#proprietary]

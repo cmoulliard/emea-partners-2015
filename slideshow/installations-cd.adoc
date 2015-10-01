@@ -103,6 +103,22 @@ When the VirtualBox machine has been started and created successfully, you shoul
 ==> default: services/docker-registry
 ----
 
+== Pull cd-pipeline and chat-letschat
+
+SSH to the vagrant box and issue these gofabric8 commands to download the docker images required
+
+----
+gofabric8 pull cd-pipeline
+gofabric8 pull chat-letschat
+----
+
+== Install the kube applications
+
+. Open your web browser at this address `http://fabric8.vagrant.f8/`, select from the home screen the `default` namespace and clickon the `runtime` tab.
+. From this screen, click on the `Run` button (available top of the right part of the screen and select `chat-letschat` and `cd-pipeline` applications
+. For each application, you can tailor the different keys 
+. Example, you can define the description of the gerrit fit repo, the user name and password to be used to access the gerrit kube app
+
 == Install Snapshot of CD-Pipeline
 
 As a snapshot version of the Fabric8 Forge Docker image is required, we have to build it and deploy the docker image into OSv3.
@@ -699,7 +715,7 @@ sudo journalctl -r -u docker
 == Test Fabric8 Maven plugin to create a gerrit repo
 
 ``
-mvn io.fabric8:fabric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="demo" -Dempty_commit="false"
+mvn io.fabric8:abric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="demo" -Dempty_commit="false"
 mvnDebug io.fabric8:fabric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="demo" -Dempty_commit="false"
 ```
 
