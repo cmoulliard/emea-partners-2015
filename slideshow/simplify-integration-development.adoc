@@ -615,6 +615,14 @@ image:karaf/karaf4.png[]
 [#microservice]
 == Microservice
 
+image:microservice.jpeg[]
+
+image:microservice1.png[]
+
+// ************** integration everywhere ************
+[#microservice-camel]
+== Microservice & Camel
+
 image:microservice-camel.png[]
 
 // ************** slide ********
