@@ -216,11 +216,11 @@ image:esb.jpg[]
 [#issue-2]
 == Integration
 
-* JBI, SCA
-** *Proprietary*
-** Lack of *Components*
-** *Complex* to learn, debug
-** J2EE {icon-arrow-left}{icon-arrow-right} Integration {icon-exclamation-mark}
+* JBI, SCA, BPM
+* Lack of *Components*
+* *Complex* to use & develop
+* J2EE {icon-arrow-left}{icon-arrow-right} Integration {icon-exclamation-mark}
+* BPEL, WebService, XSD Schema, ...
 
 [#block,top="150px",left="550px"]
 image:jbi.gif[] 
@@ -229,34 +229,17 @@ image:jbi.gif[]
 image:sca.png[]
 
 // ************** slide ********
-[#issue-3]
-== Orchestration
-
-* BPEL & WebServices
-* Contract(s) & Services
-* Compatibility (jBPM, BPEL, BPM, ...)
-
-// ************** slide ********
 [#proprietary]
 == Dev Impact
 
-* Targeted to the Business User (wisiwig tool, BPEL and Web Services ...) BUT
-** Not for the Developer
-** Complex to learn, to be used between by teams or cross projects (TODO: To be reviewed)
-** Generated code
-** Design & runtime platforms are different
---> Not possible to debug, to test (TODO: To be reviewed)
+* *Wysiwyg* tool {icon-arrow-right} easy to use 
+* As targeted {icon-arrow-right} Business user
+* *BUT* Time spend top dev code {icon-arrow-down}
+* Sometimes code generated {icon-exclamation-mark}
+* Design & runtime platforms {icon-arrow-right} Not the same {icon-exclamation-mark}
 
-// ************** slide ********
-[#not-agile]
-== Slide
-
-* Not agile at all due to the usage of the Web Services, XML & XSD
-schema (or complex spec like WS-Atom, ...) everywhere 
-* Imposing to embed the model within the service itself (TODO: To be reviewed)
-
-[#block,width="800px",top="0px"]
-image:worked-fine-in-dev.png[width="80%"]
+[#block,top="50px",left="550px"]
+image:dev_impact1.png[width="95%"]
 
 // ************** transition page ************
 [#transition3, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
@@ -270,38 +253,38 @@ image::{revealjs_cover_image}[]
 
 // ************** What are we looking for ? ********
 [#looking-for]
-== How can we simplify Integration Project Dev
+== Rethink 
 
-* Use agile Dev technique (scrum, ...)
-* Adopt a design, develop, test& build "platform"
+* *Agile* Project Mngt {icon-arrow-right} Scrum
+* *Architecture* {icon-arrow-right} Microservice
+* *Impl* DevOps Strategy
+** Automate Test, Build
+* *Release* more *often*
 
-// ************** slide ********
-[#lock-in]
-== Slide
+[#block,left="550px",top="50px"]
+image:scrum-process.jpg[width="70%"]
 
-*  No more lock in to "proprietary" solutions
+[#block,left="50px",top="350px"]
+image:microservice.jpg[width="65%"]
 
 // ************** slide ********
 [#opensource]
-== Slide
+== Open Source
 
-* Open Source & Apache License Model is the way to go (for the reasons 
-that we know)
+* *Adopt* it {icon-arrow-right} no more *proprietary* code
+* No *viral* license {icon-arrow-right} *freedom* to use, modify & redistribute it
+
+image:oss.jpeg[] image:oss1.jpeg[]
 
 // ************** slide ********
 [#java-integration]
-== Slide
+== Move to *EIP*
 
-* Java Integration Framework easy to use
+[#block,left="50px",top="150px"]
+image:eip-book.jpg[]
 
-// ************** slide ********
-[#microservice]
-== Slide
-
-* Microservice architecture
-** No more centric vision
-** Deployment of integration project as collection of services
-** Using OSGI bundle, Docker image or Kubernetes application
+[#block,left="350px",top="150px"]
+image:eip-patterns.png[]
 
 // ************** slide ********
 [#tooling]
