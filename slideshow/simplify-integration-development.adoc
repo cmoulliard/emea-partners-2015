@@ -198,7 +198,7 @@ image::{revealjs_cover_image}[]
 image::jboss-fuse-cloud.jpg[width="60%"]
 
 // ************** slide ********
-[#issues]
+[#issue-1]
 == JBI, SCA & Centric vision
 
 * *XML* based
@@ -212,19 +212,29 @@ image:csv-xml.jpeg[]
 [#block,top="300px",left="50px"]
 image:esb.jpg[]
 
-
 // ************** slide ********
-[#issues]
-== Integration & Orchestration
+[#issue-2]
+== Integration
 
 * JBI, SCA
-** *Proprietary* implementation
+** *Proprietary*
 ** Lack of *Components*
+** *Complex* to learn, debug
+** J2EE {icon-arrow-left}{icon-arrow-right} Integration {icon-exclamation-mark}
 
-* Orchestration Engine
-** BPEL & WebServices
-** Contract(s) & Services
-** Not compatible (jBPM, BPEL, BPM, ...)
+[#block,top="150px",left="550px"]
+image:jbi.gif[] 
+
+[#block,top="400px",left="100px"]
+image:sca.png[]
+
+// ************** slide ********
+[#issue-3]
+== Orchestration
+
+* BPEL & WebServices
+* Contract(s) & Services
+* Compatibility (jBPM, BPEL, BPM, ...)
 
 // ************** slide ********
 [#proprietary]
