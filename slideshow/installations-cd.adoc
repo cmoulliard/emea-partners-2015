@@ -155,6 +155,10 @@ oc login -u admin -p admin https://172.28.128.4:8443
 mvn clean install docker:build fabric8:recreate
 ----
 
+== Access Jolokia 
+
+https://vagrant.f8:8443/api/v1/namespaces/default/pods/dabou3-clg8x:8778/proxy/jolokia
+
 == Install the docker images
 
 Return to the terminal opened wihin this directory `fabric8-installer/vagrant/openshift` and ssh to your vagrant machine.
@@ -728,11 +732,12 @@ sudo journalctl -r -u openshift
 sudo journalctl -r -u docker
 ```
 
-== Test Fabric8 Maven plugin to create a gerrit repo
+== Use Fabric8 Maven plugin to create a gerrit repo
 
-``
-mvn io.fabric8:abric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="demo" -Dempty_commit="false"
-mvnDebug io.fabric8:fabric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="demo" -Dempty_commit="false"
+```
+./demo/scripts/set_kubernetes_env.sh
+./demo/scripts/authenticate_with_os.sh
+mvn io.fabric8:fabric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="dabou4" -Dempty_commit="false"
 ```
 
 

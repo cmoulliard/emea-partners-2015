@@ -47,7 +47,7 @@ Email: {speaker-email} |
 == Agenda
 
 * Why integration is so hard & expensive ?
-* Existing solutions
+* Integration Architecture
 * How can we simplify that ?
 * Ideal Integration Platform
 * Wrap Up
@@ -128,7 +128,7 @@ a|
 
 {space}{space}
 
-* *Deployment* procedures | image:expensive.jpeg[]
+* *Flow* Procedures | image:expensive.jpeg[]
 |===
 
 [#block,width="200px",left="250px",top="150px"]
@@ -162,7 +162,7 @@ a|
 image::{revealjs_cover_image}[]
 
 [#cover-h1,left="0px",top="300px",width="2000px"]
-*Existing solutions*
+*Integration Architecture*
 
 // ************** facts ********
 [#existing]
