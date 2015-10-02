@@ -15,10 +15,10 @@ toc::[]
 = Prerequisites
 
 - https://www.vagrantup.com/downloads.html[Vagrant]
-- https://github.com/openshift/origin/releases/tag/v1.0.6[Openshift Client - V1.0.6 (optional)]
 - https://www.virtualbox.org/[VirtualBox]
 - https://git-scm.com/downloads[Git client]
-- https://github.com/fabric8io/gofabric8/releases[gofabric8 client]
+- https://github.com/openshift/origin/releases/tag/v1.0.6[Openshift Client - V1.0.6 (optional)]
+- https://github.com/fabric8io/gofabric8/releases[gofabric8 client (OPTIONAL)]
 
 = Installation
 
@@ -133,7 +133,7 @@ gofabric8 pull chat-letschat
 
 TODO
 
-Add screenshot
+Add screenshots
 
 == Install Snapshot of CD-Pipeline
 
