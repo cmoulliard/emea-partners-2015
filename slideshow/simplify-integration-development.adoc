@@ -637,6 +637,24 @@ image::fabric-diagram.png[]
 
 image:fabric-diagram1.png[]
 
+// ************** Fabric ************
+[#fabric-console]
+== Console
+
+image::jbossfuse-fabric1.png[]
+
+// ************** Fabric ************
+[#fabric-create]
+== Create container
+
+image::jbossfuse-fabric2.png[width="95%"]
+
+// ************** Fabric ************
+[#fabric-create]
+== Service
+
+image::jbossfuse-fabric3.png[width="95%"]
+
 // ************ Hawtio *************
 [#jolokia-camel]
 == Discover your camel routes
