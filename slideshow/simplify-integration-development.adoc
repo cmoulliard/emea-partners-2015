@@ -611,9 +611,31 @@ image:karaf/karaf2.png[]
 
 image:karaf/karaf4.png[]
 
-// ************** slide ********
-[#containers]
-== Fabric
+// ************** Fabric ************
+[#fabric8]
+== Fabric8 v1
+
+* Opensource integration project - http://fabric8.io
+* Mission {icon-arrow-right} simplify management & deployment java *integration* services on *different* machines & JVMs
+
+image::fabric-diagram.png[]
+
+// ************** Fabric ************
+[#fabric8-features]
+== Features
+
+- *Manage* container creation (locally, remotely, cloud, openshift, docker, ...)
+- *Visualise* what is running into JVM to understand your platform
+- *Monitor* whats running and easily scaling up or down
+- Support *Upgrade* via *Version changes* and Rollback
+- *Virtualize* services (endpoints), processes
+- *Search* and *storage* engine for logs, camel, messages, metrics
+
+// ************** Fabric ************
+[#fabric-extend]
+== Fabric extends the possibilities
+
+image:fabric-diagram1.png[]
 
 // ************ Hawtio *************
 [#jolokia-camel]
@@ -648,7 +670,7 @@ image:apiman1.png[width="75%"]
 
 * Policy based
  
-image::apiman2.png[]
+image::apiman3.png[]
 
 * More info - see *Fuse In Action* Lab
 
