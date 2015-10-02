@@ -247,9 +247,9 @@ image::jboss-fuse-cloud.jpg[width="80%"]
 
 * *Agile* Project Mngt {icon-arrow-right} Scrum
 * *Architecture* {icon-arrow-right} Microservice
-** Automate Test, Build
+* *Automate* Test, Build
 * *Release* more *often*
-* Standards & Technology used
+* {icon-question-mark} Standards & Technology used
 
 [#block,left="550px",top="50px"]
 image:scrum-process.jpg[width="70%"]
@@ -270,10 +270,10 @@ image:oss.jpeg[] image:oss1.jpeg[]
 [#java-integration]
 == Move to *EIP*
 
-[#block,left="50px",top="150px"]
+[#block,left="10px",top="120px"]
 image:eip-book.jpg[]
 
-[#block,left="350px",top="150px"]
+[#block,left="300px",top="120px"]
 image:eip-patterns.png[]
 
 // ************** slide ********
@@ -299,37 +299,11 @@ image::{revealjs_cover_image}[]
 [#cover-h1,left="0px",top="300px",width="2000px"]
 *Ideal Integration Platform*
 
-// ************** How Can we simplify that ********
-[#ideal-platform]
-== Fuse World
-
-image::fuse-technology2-donut.png[]
-
-// ************** How Can we simplify that ********
-[#timeline]
-== History
-
-image::fuse-history.png[]
-
-// ************** slide ********
-[#dsl-eip]
-== Require
-
-* Use *Common language*, *grammar* between actors (developer, analyst & architect)
-* Adopt *Domain* *Specific* *Language* - DSL
-* Implement *EIP* Patterns
-
-[#block,left="650px",top="180px"]
-image:goal.jpeg[]
-
-[#block,left="50px",top="300px"]
-{icon-arrow-right} Reduce Functional to Develop Time
-
 // ************** Camel ************
 [#apache-camel]
 == Apache Camel
 
-* Java **Integration** Framework
+* Java **Integration** Framework (*OSS*)
 
 [.newline]
 * Implements {icon-arrow-right} **D**omain **S**pecific **L**anguage
@@ -337,7 +311,12 @@ image:goal.jpeg[]
 [.newline]
 * Supports **E**nterprise **I**ntegration **P**atterns
 
-* {icon-cogs} *Manage Complex use cases* {icon-arrow-right} correlation, orchestration, routing, mediation, transformation
+[.newline]
+* {icon-cogs} *Manage Complex use cases* {icon-arrow-right}
+** correlation, aggregation
+** split, multicast
+** routing, filter
+** transformation
 
 [#block,top="50px",left="600px"]
 image:camel-box-small.png[]
@@ -346,12 +325,85 @@ image:camel-box-small.png[]
 image:eip_book.jpg[width="45%"]
 
 // ************** Camel ************
-[#camel-route]
-== Simple **C**oncepts
+[#camel-java-dsl]
+== Java DSL
 
-* Camel project {icon-arrow-right} Collection of routes
-* Route {icon-angle-double-right} Processor(s) + Interceptor(s)
-* Producing or consuming Messages/Exchanges
+* Fluent API
+
+[source,java]
+----
+package my.cool.demo;
+
+import org.apache.camel.builder.RouteBuilder;
+
+public class ExampleRouteBuilder extends RouteBuilder {
+    @Override
+    public void configure() throws Exception {
+
+        from("amq:queue:quotes")
+           .filter().xpath("/quote/product/ = 'widget")
+                .bean("QuotesService", "widget")
+           .filter().xpath("/quote/product/ = 'gadget")
+                .bean("QuotesService","gadget");
+    }
+}
+
+----
+
+// ************** Camel ************
+[#camel-xml-dsl]
+== XML DSL
+
+* Alternative : Spring, Blueprint
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+    ">
+    <bean id="quotesService" class="my.cool.demo.camel.QuotesService"/>"
+
+    <camelContext  xmlns="http://camel.apache.org/schema/spring">
+        <route>
+            <from uri="amq:queue:quotes"/>
+            <filter>
+                <xpath>"/quote/product/ = 'widget"</xpath>
+            </filter>
+                <bean id="quotesService" method="widget"/>
+            <filter>
+                <xpath>"/quote/product/ = 'gadget"</xpath>
+            </filter>
+            <bean id="quotesService" method="gadget"/>
+        </route>
+    </camelContext>
+</beans>
+----
+
+// ************** slide ********
+[#dsl-eip]
+== Benefit
+
+* Use *Same Language*, *grammar* between actors:
+** developer, analyst & architect
+
+* Adopt *Domain* *Specific* *Language*
+
+{icon-arrow-right} Reduce Functional to Develop Time
+
+[#block,left="600px",top="180px"]
+image:goal.jpeg[]
+
+// ************** Camel ************
+[#camel-route]
+== Simple Concepts
+
+* Workflow {icon-arrow-right} Camel project {icon-arrow-right} Collection of routes
+* Route *{icon-arrow-right}* Sum of Processor(s) + Interceptor(s)
+* Route *{icon-arrow-right}* Produce or Consume Messages
 
 image:pipeline.png[]
 
@@ -363,22 +415,6 @@ image:pipeline.png[]
 
 [.newline]
 image:pipeline2.png[]
-
-// ************** Camel ************
-[#camel-context]
-== Container
-
-[.noredheader,cols="50,50"]
-|===
-a| * Routes {icon-arrow-right} *Endpoints* 
-* Registered {icon-arrow-right} CamelContext | image:camel-features.png[]
-|===
-
-// ************** Camel ************
-[#camel-communication-allowed]
-== Communication
-
-image:camel-features3.png[]
 
 // ************** Camel ************
 [#camel-ff]
@@ -426,63 +462,21 @@ public interface DataFormat {
 image::dataformat-2.png[]
 
 // ************** Camel ************
-[#camel-java-dsl]
-== Java DSL
+[#camel-component]
+== http://camel.apache.org/components.html[Components]
 
-* Fluent API
-
-[source,java]
-----
-package my.cool.demo;
-
-import org.apache.camel.builder.RouteBuilder;
-
-public class ExampleRouteBuilder extends RouteBuilder {
-    @Override
-    public void configure() throws Exception {
-
-        from("amq:queue:quotes")
-           .filter().xpath("/quote/product/ = 'widget")
-                .bean("QuotesService", "widget")
-           .filter().xpath("/quote/product/ = 'gadget")
-                .bean("QuotesService","gadget");
-    }
-}
-
-----
+image::components.png[width="85%"]
 
 // ************** Camel ************
-[#camel-xml-dsl]
-== XML DSL
+[#camel-context]
+== Unit of Work
 
-* Alternative : Spring, Blueprint DSL
-
-[source,xml]
-----
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="
-       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
-    ">
-    <bean id="quotesService" class="my.cool.demo.camel.QuotesService"/>"
-
-    <camelContext  xmlns="http://camel.apache.org/schema/spring">
-        <route>
-            <from uri="amq:queue:quotes"/>
-            <filter>
-                <xpath>"/quote/product/ = 'widget"</xpath>
-            </filter>
-                <bean id="quotesService" method="widget"/>
-            <filter>
-                <xpath>"/quote/product/ = 'gadget"</xpath>
-            </filter>
-            <bean id="quotesService" method="gadget"/>
-        </route>
-    </camelContext>
-</beans>
-----
+[.noredheader,cols="50,50"]
+|===
+a| * *CamelContext* registering {icon-arrow-right}
+* Routes : *List of Processors*
+* Collection of *Endpoints* | image:camel-features.png[]
+|===
 
 // ************** Camel ************
 [#camel-features]
@@ -494,13 +488,10 @@ public class ExampleRouteBuilder extends RouteBuilder {
 * *Sync*/*Async* exchanges
 * Threads Management
 * *Tx* Architecture
-* *Error* & *Exception* handling
-* Policy driven
-* Container *Agnostic*
 
 // ************** slide ********
 [#junit]
-== Junit Test case
+== What about Testing
 
 [source,java]
 ----
@@ -532,6 +523,8 @@ public class FilterTest extends CamelTestSupport {
         };
     }
 ----
+
+* Benefit from your Java *JUnit* Testing Knowledge
 
 // ************** slide ********
 [#exception]
@@ -566,9 +559,11 @@ from("direct:start")
     .to("mock:result");
 ----
 
+* Capitalize your Java skills about *Exception Management*
+
 // ************** slide ********
 [#exception1]
-== Like Java 
+== More about Exception
 
 [source,xml]
 ----
@@ -588,6 +583,8 @@ from("direct:start")
     </doTry>
 </route>
 ----
+
+* *Mimic* Java Try/Catch/Block Structure
 
 // ************** Karaf ************
 [#karaf-container]
@@ -614,48 +611,52 @@ image:karaf/karaf2.png[]
 
 image:karaf/karaf4.png[]
 
-// ************** integration everywhere ************
-[#microservice]
-== Microservice
-
-image:microservice.jpeg[]
-
-image:microservice1.png[]
-
-// ************** integration everywhere ************
-[#microservice-camel]
-== Microservice & Camel
-
-image:microservice-camel.png[]
-
-// ************** slide ********
-[#separate-service-contract]
-== REST Proxy
-
-* Support to separate Service from the model (by adoption a REST proxy layer
-validating the data outside of the endpoint, ...)
-
 // ************** slide ********
 [#containers]
-== Slide
+== Fabric
 
-* Fuse Container
-* Docker & kubernetes application
+// ************ Hawtio *************
+[#jolokia-camel]
+== Discover your camel routes
+
+image:hawtio-3.png[]
+
+// ************** Fabric ***********
+[#analyze]
+== Manage Log/Events
+
+image::elasticsearch.png[80%,80%]
+
+// ************** Fabric ***********
+[#insight]
+== Insight Camel
+
+image::es-camel.png[80%,80%]
 
 // ************** slide ********
 [#governance-service]
-== Security Governance
+== Security
 
-* Manage your services & governance
-** Apiman
-** Keycloak
+* Services & governance : Apiman
+* SSO, Oauth2 : Keycloak
+
+image:apiman1.png[width="75%"]
 
 // ************** slide ********
-[#bai]
-== Business Activities
+[#apiman]
+== Security
 
-* Business Activities
-** Overlord or Insight
+* Policy based
+ 
+image::apiman2.png[]
+
+* More info - see *Fuse In Action* Lab
+
+// ************** How Can we simplify that ********
+[#ideal-platform]
+== Fuse World
+
+image::fuse-technology2-donut.png[]
 
 // *********************************
 [#questions]
