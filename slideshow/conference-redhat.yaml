@@ -27,6 +27,7 @@ attributes:
   icon-arrow-left: <i class="fa fa-arrow-left"></i>
   icon-arrow-right: <i class="fa fa-arrow-right"></i>
   icon-arrow-down: <i class="fa fa-arrow-down" style="color:rgb(167,0,0)"></i>
+  icon-arrow-downcenter: <i class="fa fa-arrow-down" style="color:rgb(167,0,0);text-align:center;"></i>
   icon-arrow-up: <i class="fa fa-arrow-up" style="color:rgb(167,0,0)"></i>
   icon-plus: <i class="fa fa-plus"></i>
   icon-exclamation-mark: <i class="fa fa-exclamation"></i>
