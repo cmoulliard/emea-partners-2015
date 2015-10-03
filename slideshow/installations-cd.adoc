@@ -734,6 +734,7 @@ sudo journalctl -r -u docker
 
 == Use Fabric8 Maven plugin to create a gerrit repo
 
+
 ```
 ./demo/scripts/set_kubernetes_env.sh
 ./demo/scripts/authenticate_with_os.sh
