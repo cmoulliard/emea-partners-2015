@@ -53,7 +53,6 @@ Email: {speaker-email} |
 * Integration Architecture
 * How can we simplify that ?
 * Ideal Integration Platform
-* Wrap Up
 
 // ************** transition page ************
 [#transition1, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
@@ -223,7 +222,8 @@ a|
 * Time to design/develop {icon-arrow-up}
 * J2EE {icon-arrow-left} Integration {icon-exclamation-mark}
 * Many specs to *know*
-** WS, XSD, Schema, XML | image:dev_impact1.png[width="99%"]
+** WS, WSDL
+** XSD, XML | image:dev_impact1.png[width="99%"]
 |===
 
 // ************** transition page ************
