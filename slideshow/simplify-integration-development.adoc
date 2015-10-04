@@ -47,7 +47,7 @@ Email: {speaker-email} |
 
 // ************** Agenda  ********
 [#agenda]
-== Agenda
+== Agenda image:redhat_EMEA_partnerconf_logo_2015.png[]
 
 * Why integration is so hard & expensive ?
 * Integration Architecture
