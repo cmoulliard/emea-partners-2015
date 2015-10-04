@@ -59,7 +59,7 @@ attributes:
   revealjs_display_slidenumber: true
   revealjs_history: true
   revealjs_cover_image: /Users/chmoulli/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/hyla-1.0.8/lib/resources/assets/revealjs-redhat/image/1156515-Logo_RH_RGB_Reverse.png
-
+  revealjs_partners_logo: redhat_EMEA_partnerconf_logo_2015.png
   revealjs_scrollbar: true
   revealjs_footer_copyright: Copyright ©2015 Red Hat, Inc.
   revealjs_slideshow: false

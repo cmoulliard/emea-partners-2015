@@ -7,7 +7,7 @@
 :speaker-twitter: http://twitter.com/cmoulliard[@cmoulliard]
 :talk-speaker: {speaker}
 :talk-name: Continuous Delivery with JBoss Fuse & Openshift
-:talk-date: EMEA Partners - 5 to 7 Oct 2015
+:talk-date: 5th of October 2015
 
 [#cover,data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
@@ -29,6 +29,9 @@ image:redhat-emea-partner-2015.png[width="95%"]
 [#who]
 == Who
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [.noredheader,cols="30,70"]
 |===
 | image:cmoulliard.png[width="90%",height="100%"]
@@ -48,6 +51,9 @@ Email: {speaker-email} |
 // ************** Agenda ********
 [#agenda]
 == Agenda
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 * The cost of change
 * CD/CI
@@ -70,6 +76,9 @@ image::{revealjs_cover_image}[]
 [#cost-of-change]
 == Cost of change image:change.png[width="15%",height="15%",float="right"]
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [.noredheader,cols=""]
 |===
 | **B**usiness requirements
@@ -91,6 +100,9 @@ image::{revealjs_cover_image}[]
 [#integration-cost]
 == Integration costs
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [.noredheader,cols="45,55"]
 |===
 a|* *Integration* is *Hard!*
@@ -102,6 +114,9 @@ a|* *Integration* is *Hard!*
 // ************** cost of change ********
 [#integration-cost-cont1]
 == Integration costs
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader,cols="40,60"]
 |===
@@ -115,6 +130,9 @@ a|
 // ************** cost of change ********
 [#integration-cost-cont2]
 == Integration costs
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader,cols="40,60"]
 |===
@@ -140,12 +158,18 @@ image::{revealjs_cover_image}[]
 [#devops]
 == {blank-space}
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [#block,width="800px",top="0px"]
 image:worked-fine-in-dev.png[width="80%"]
 
 // ************** devops ************
 [#devops-wtf]
 == “WTF is DevOps?”
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader]
 |===
@@ -161,11 +185,17 @@ a| * *IT* is a *core* competency
 [#devops-wtf1]
 == “Coder, programmer”
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 image::developer.jpg[width="75%"]
 
 // ************** devops ************
 [#devops-wtf2]
 == “Interest”
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 image::languages.jpeg[width="65%"]
 
@@ -175,6 +205,9 @@ image::languages.jpeg[width="65%"]
 [#devops-wtf3]
 == “Operation guy”
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 image::opts-it.jpg[width="65%"]
 
 {icon-arrow-right} log, procedure, cpu, thread blocked, report, deployment procedure, alert, monitor, ...
@@ -182,6 +215,9 @@ image::opts-it.jpg[width="65%"]
 // ************** devops ************
 [#cd]
 == Strategy
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader]
 |===
@@ -194,6 +230,9 @@ a|* *Objective* {icon-arrow-right} *Continuous Integration* strategy
 [#cd1]
 == Impact
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [.noredheader, cols="40,60"]
 |===
 a|* *Bottlenecks ?*
@@ -204,6 +243,9 @@ a|* *Bottlenecks ?*
 // ************** devops ************
 [#cd-automate]
 == Automate Pipeline !
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader, cols="40,60"]
 |===
@@ -217,7 +259,10 @@ a|* Developer
 
 // ************** devops ************
 [#cd-automate1]
-== Automate Pipeline - con't
+== Automate Pipeline
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader, cols="40,60"]
 |===
@@ -241,6 +286,9 @@ image::{revealjs_cover_image}[]
 [#cd-tools]
 == Dev **T**ools
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [.noredheader]
 |===
 a|* Git for SCM
@@ -256,6 +304,9 @@ image:fabric8-cd-tools.png[height="65%"]
 // ************** devops ************
 [#cd-tools1]
 == **P**latform
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader]
 |===
@@ -280,12 +331,18 @@ image::{revealjs_cover_image}[]
 [#process]
 == Process
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [#block,width="800px",top="50px"]
 image:docker-animated-1.gif[]
 
 // ************** docker ************
 [#docker]
 == Docker
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 * *Container runtime*, *image* distribution, *Process* launcher
 
@@ -298,6 +355,9 @@ image:docker-logo.png[width="25%",height="25%"]
 // ************** docker ************
 [#docker-descr]
 == Docker
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 image::docker-filesystems-multilayer.png[width="60%,height="60%"]
 
@@ -321,6 +381,9 @@ image::{revealjs_cover_image}[]
 [#kubernetes]
 == Kubernetes
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 * Runtime & *Operational management* of containers
 * ApiServer (event, status), *Scheduler*, *Controller* & State Storage
 * *Agent - Kubelet* - manage containers on host
@@ -332,12 +395,18 @@ image::kubernetes-logo.png[width="25%",height="25%"]
 [#kubernetes-platform]
 == Kubernetes
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [#block,width="800px",left="0px",top="50px"]
 image:kubernetes-platform.png[]
 
 // ************** kubernetes ************
 [#pord-docker]
 == Pod & docker
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 image::fabric8-pod.png[]
 
@@ -347,6 +416,9 @@ image::fabric8-pod.png[]
 [#pod-port]
 == Pod & port
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 image::fabric8-pod-port.png[]
 
 * Ports can be *exposed*
@@ -354,6 +426,9 @@ image::fabric8-pod-port.png[]
 // ************** kubernetes ************
 [#pod-volume]
 == Pod & volume
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 image::fabric8-pod-volume.png[]
 
@@ -363,14 +438,20 @@ image::fabric8-pod-volume.png[]
 [#kubernetes-service]
 == Kubernetes Service
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 image::fabric8-service-pod.png[]
 
 * Kube Service *loadbalanced* through the pods using *HA-Proxy* & *Routes*
 
 // ************** kubernetes ************
-
-== Kube Application JSon
 [#kube-application]
+== Kube Application JSon
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [.noredheader]
 |===
 | image:kubernetes-json-1.png[width="85%"] | image:kubernetes-json-2.png[width="65%"]
@@ -390,6 +471,9 @@ image::{revealjs_cover_image}[]
 [#paas]
 == OpenShift v3
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [.noredheader,cols="45,55"]
 |===
 a|* *Designed* around Kubernetes, Docker, Fabric8
@@ -404,7 +488,10 @@ image:rht-atomic-enterprise-openshift.png[width="100%"]
 
 // ************** openshift ************
 [#os3-architecture]
-== OS3 Architecture
+== Architecture
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [#block,width="800px",top="120px"]
 image:ose-v3.png[width="95%",height="95%"]
@@ -412,6 +499,9 @@ image:ose-v3.png[width="95%",height="95%"]
 // ************** devops ************
 [#cd-tools2]
 == **C**Delivery Technology
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader]
 |===
@@ -427,6 +517,9 @@ image:fabric8-logo.png[height="15%"]
 // ************** fabric v2 ************
 [#fabric8-plugin]
 == http://fabric8.io/gitbook/mavenPlugin.html[Fabric8 Maven Plugin]
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 * docker:build {icon-arrow-right} Build image of app
 
@@ -447,6 +540,9 @@ image:fabric8-logo.png[height="15%"]
 [#fabric8-desc]
 == {blank-space}
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [#block,width="800px",top="0px"]
 image:fabric8-diagram1.png[width="80%",height="80%"]
 
@@ -454,12 +550,18 @@ image:fabric8-diagram1.png[width="80%",height="80%"]
 [#fabric8-cdci]
 == {blank-space}
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [#block,width="800px",top="0px"]
 image:fabric8-cdci.png[width="80%"]
 
 // ************** transition page ************
 [#transition7, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [#block,width="200px",left="70px",top="0px"]
 image::{revealjs_cover_image}[]
@@ -472,6 +574,9 @@ image::jenkins-pipeline.png[width="95%",height="95%"]
 // *********************************
 [#questions]
 == Questions
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader,cols="65,.<45"]
 |===

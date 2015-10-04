@@ -7,7 +7,7 @@
 :speaker-twitter: http://twitter.com/cmoulliard[@cmoulliard]
 :talk-speaker: {speaker}
 :talk-name: How Red Hat Middleware technology can simplify your Integration Development
-:talk-date: EMEA Partners - 5 to 7 Oct 2015
+:talk-date: 5th of October 2015
 
 [#cover,data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
@@ -29,6 +29,9 @@ image:redhat-emea-partner-2015.png[width="95%"]
 [#who]
 == Who
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [.noredheader,cols="30,70"]
 |===
 | image:cmoulliard.png[width="90%",height="100%"]
@@ -47,7 +50,10 @@ Email: {speaker-email} |
 
 // ************** Agenda  ********
 [#agenda]
-== Agenda image:redhat_EMEA_partnerconf_logo_2015.png[]
+== Agenda
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 * Why integration is so hard & expensive ?
 * Integration Architecture
@@ -68,6 +74,9 @@ image::{revealjs_cover_image}[]
 [#why-so-hard-1]
 == Why integration is so hard ?
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [.noredheader,cols="45,55"]
 |===
 a|* *Integration* is *Hard!*
@@ -80,7 +89,10 @@ a|* *Integration* is *Hard!*
 
 // ************** why so hard ********
 [#why-so-hard-2]
-== Why integration is so hard - cont'd
+== Why integration is so hard ?
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader,cols="40,60"]
 |===
@@ -94,7 +106,10 @@ a|
 
 // ************** why so hard ********
 [#why-so-hard-3]
-== Why integration is so hard - cont'd
+== Why integration is so hard ?
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader,cols="55,45"]
 |===
@@ -109,7 +124,10 @@ a|
 
 // ************** slide ********
 [#so-expensive]
-== Why integration is so expensive ?
+== Why so expensive ?
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader,cols="65,35"]
 |===
@@ -148,6 +166,9 @@ a|
 [#impact-measurement]
 == Impact
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [.noredheader,cols="75,35"]
 |===
 a|
@@ -170,6 +191,9 @@ image::{revealjs_cover_image}[]
 [#history]
 == History
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 * 2000 - *EAI* 
 
 {space}
@@ -190,6 +214,9 @@ image:esb.png[width="55%"]
 [#evolution]
 == Evolution
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 * Proprietary {icon-arrow-right} Standards based - JBI, SCA {icon-arrow-right} Integration Framework
 
 {space}
@@ -199,6 +226,9 @@ image:esb.png[width="55%"]
 // ************** slide ********
 [#issue-1]
 == JBI & Centric vision
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 * *XML* based
 * Inner conversion from Format-A to XML or XML to Format-B
@@ -213,6 +243,9 @@ image:csv-xml.jpeg[]
 // ************** slide ********
 [#issue-2]
 == Dev Impact
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader,cols="45,65"]
 |===
@@ -240,6 +273,9 @@ image::{revealjs_cover_image}[]
 [#vision]
 == Vision
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 image::jboss-fuse-cloud.jpg[width="80%"]
 
 * Goal {icon-exclamation-mark} Integrate, Exchange, Communicate *everywhere*
@@ -247,6 +283,9 @@ image::jboss-fuse-cloud.jpg[width="80%"]
 // ************** What are we looking for ? ********
 [#looking-for]
 == Rethink 
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 * *Agile* Project Mngt {icon-arrow-right} Scrum
 * *Architecture* {icon-arrow-right} Microservice
@@ -264,6 +303,9 @@ image:microservice.jpg[width="65%"]
 [#opensource]
 == Open Source
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 * *Adopt* it {icon-arrow-right} no more *proprietary* code
 * No *viral* license {icon-arrow-right} *freedom* to use, modify & redistribute it
 
@@ -272,6 +314,9 @@ image:oss.jpeg[] image:oss1.jpeg[]
 // ************** slide ********
 [#java-integration]
 == Move to *EIP*
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [#block,left="10px",top="120px"]
 image:eip-book.jpg[]
@@ -282,6 +327,9 @@ image:eip-patterns.png[]
 // ************** slide ********
 [#devops-strategy]
 == DevOps vision ...
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader]
 |===
@@ -305,6 +353,9 @@ image::{revealjs_cover_image}[]
 // ************** Camel ************
 [#apache-camel]
 == Apache Camel
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 * Java **Integration** Framework (*OSS*)
 
@@ -331,6 +382,9 @@ image:eip_book.jpg[width="45%"]
 [#camel-java-dsl]
 == Java DSL
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 * Fluent API
 
 [source,java]
@@ -356,6 +410,9 @@ public class ExampleRouteBuilder extends RouteBuilder {
 // ************** Camel ************
 [#camel-xml-dsl]
 == XML DSL
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 * Alternative : Spring, Blueprint
 
@@ -390,6 +447,9 @@ public class ExampleRouteBuilder extends RouteBuilder {
 [#dsl-eip]
 == Benefit
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 * Use *Same Language*, *grammar* between actors:
 ** developer, analyst & architect
 
@@ -404,6 +464,9 @@ image:goal.jpeg[]
 [#camel-route]
 == Simple Concepts
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 * Workflow {icon-arrow-right} Camel project {icon-arrow-right} Collection of routes
 * Route *{icon-arrow-right}* Sum of Processor(s) + Interceptor(s)
 * Route *{icon-arrow-right}* Produce or Consume Messages
@@ -414,6 +477,9 @@ image:pipeline.png[]
 [#camel-interceptor]
 == Interceptor
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 * To trace, log, capture business events
 
 [.newline]
@@ -423,17 +489,26 @@ image:pipeline2.png[]
 [#camel-ff]
 == Fire / Forget pattern
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 image::inonly.png[width="65%"]
 
 // ************** Camel ************
 [#camel-request-reply]
 == Request / Reply pattern
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 image::inout.png[width="75%"]
 
 // ************** Camel ************
 [#camel-convert]
 == Convert
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 * **Data Transformation** for complex use case
 
@@ -460,6 +535,9 @@ public interface DataFormat {
 [#camel-data-format]
 == Data Format supported
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 * http://camel.apache.org/dataformat.html[> 20 Data Format]
 
 image::dataformat-2.png[]
@@ -468,11 +546,17 @@ image::dataformat-2.png[]
 [#camel-component]
 == http://camel.apache.org/components.html[Components]
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 image::components.png[width="85%"]
 
 // ************** Camel ************
 [#camel-context]
 == Unit of Work
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader,cols="50,50"]
 |===
@@ -485,6 +569,9 @@ a| * *CamelContext* registering {icon-arrow-right}
 [#camel-features]
 == Facts
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 * *In-Memory* bus
 * Support *Object* : XML, File, Stream, Bytes
 * *Predicate* & *Expression* language (xslt, xpath, ...)
@@ -495,6 +582,9 @@ a| * *CamelContext* registering {icon-arrow-right}
 // ************** slide ********
 [#junit]
 == What about Testing
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [source,java]
 ----
@@ -533,6 +623,9 @@ public class FilterTest extends CamelTestSupport {
 [#exception]
 == Exception handling
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [source,java]
 ----
 // we do special error handling for when OrderFailedException is thrown
@@ -568,6 +661,9 @@ from("direct:start")
 [#exception1]
 == More about Exception
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 [source,xml]
 ----
 <route>
@@ -593,6 +689,9 @@ from("direct:start")
 [#karaf-container]
 == Integration container
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 * Camel routes isolated from each other (classloader)
 * Bundle {icon-arrow-right}  CamelContext boundary {icon-arrow-right} acting as a Local BUS
 * Camel routes {icon-arrow-right} can have different SLA (Threads, Policies, ...)
@@ -603,6 +702,9 @@ image:karaf/karaf1.png[]
 [#karaf-integration]
 == Integration container
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 * Camel routes can be started/stopped/updated
 * {icon-arrow-right} Simplify maintenance process
 
@@ -612,11 +714,17 @@ image:karaf/karaf2.png[]
 [#cloud]
 == Management
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 image:karaf/karaf4.png[]
 
 // ************** Fabric ************
 [#fabric8]
 == Fabric8 v1
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 * Opensource integration project - http://fabric8.io
 * Mission {icon-arrow-right} simplify management & deployment java *integration* services on *different* machines & JVMs
@@ -627,6 +735,9 @@ image::fabric-diagram.png[]
 [#fabric8-features]
 == Features
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 - *Manage* container creation (locally, remotely, cloud, openshift, docker, ...)
 - *Visualise* what is running into JVM to understand your platform
 - *Monitor* whats running and easily scaling up or down
@@ -636,7 +747,10 @@ image::fabric-diagram.png[]
 
 // ************** Fabric ************
 [#fabric-extend]
-== Fabric extends the possibilities
+== Extends the possibilities
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 image:fabric-diagram1.png[]
 
@@ -644,11 +758,17 @@ image:fabric-diagram1.png[]
 [#fabric-console]
 == Console
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 image::jbossfuse-fabric1.png[]
 
 // ************** Fabric ************
 [#fabric-create]
 == Create container
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 image::jbossfuse-fabric2.png[width="95%"]
 
@@ -656,11 +776,17 @@ image::jbossfuse-fabric2.png[width="95%"]
 [#fabric-create]
 == Service
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 image::jbossfuse-fabric3.png[width="95%"]
 
 // ************ Hawtio *************
 [#jolokia-camel]
 == Discover your camel routes
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 image:hawtio-3.png[]
 
@@ -668,17 +794,26 @@ image:hawtio-3.png[]
 [#analyze]
 == Manage Log/Events
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 image::elasticsearch.png[80%,80%]
 
 // ************** Fabric ***********
 [#insight]
 == Insight Camel
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 image::es-camel.png[80%,80%]
 
 // ************** slide ********
 [#governance-service]
 == Security
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 * Services & governance : Apiman
 * SSO, Oauth2 : Keycloak
@@ -688,6 +823,9 @@ image:apiman1.png[width="75%"]
 // ************** slide ********
 [#apiman]
 == Security
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 * Policy based
  
@@ -699,11 +837,17 @@ image::apiman3.png[]
 [#ideal-platform]
 == Fuse World
 
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
 image::fuse-technology2-donut.png[]
 
 // *********************************
 [#questions]
 == Questions
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader,cols="65,.<45"]
 |===
