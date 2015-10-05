@@ -59,6 +59,7 @@ image:{revealjs_partners_logo}[width="80%"]
 * Integration Architecture
 * How can we simplify that ?
 * Ideal Integration Platform
+* Demo
 
 // ************** transition page ************
 [#transition1, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
@@ -845,6 +846,19 @@ image::apiman3.png[]
 image:{revealjs_partners_logo}[width="80%"]
 
 image::fuse-technology2-donut.png[]
+
+// ************** transition page ************
+[#transition5, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
+== {blank-space}
+
+[#block,top="0px",left="790px"]
+image:{revealjs_partners_logo}[width="80%"]
+
+[#block,width="200px",left="70px",top="0px"]
+image::{revealjs_cover_image}[]
+
+[#cover-h1,width="600px",left="0px",top="350px"]
+*Demo*
 
 // *********************************
 [#questions]
