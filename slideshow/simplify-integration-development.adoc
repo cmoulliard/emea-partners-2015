@@ -98,7 +98,7 @@ image:{revealjs_partners_logo}[width="80%"]
 |===
 a|
 * *Protocols*
-* *Data Formats*
+* *Data Format*
 * Data *Mapping*
 * Cross-*domain*, Per-domain
 * WSDL, XSD, JSon | image:integration-2.png[width="95%"]
