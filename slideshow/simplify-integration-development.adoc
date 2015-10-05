@@ -97,8 +97,8 @@ image:{revealjs_partners_logo}[width="80%"]
 [.noredheader,cols="40,60"]
 |===
 a|
-* *Protocols*
-* *Data Format*
+* *Protocol*
+* *Format*
 * Data *Mapping*
 * Cross-*domain*, Per-domain
 * WSDL, XSD, JSon | image:integration-2.png[width="95%"]
@@ -217,7 +217,11 @@ image:esb.png[width="55%"]
 [#block,top="0px",left="790px"]
 image:{revealjs_partners_logo}[width="80%"]
 
-* Proprietary {icon-arrow-right} Standards based - JBI, SCA {icon-arrow-right} Integration Framework
+* Proprietary {icon-arrow-right} Standards based - JBI, SCA
+
+{space}
+
+* From Standards {icon-arrow-right} Integration Framework
 
 {space}
 
