@@ -97,11 +97,11 @@ image:{revealjs_partners_logo}[width="80%"]
 [.noredheader,cols="40,60"]
 |===
 a|
-* Platforms, *Protocols*
+* *Protocols*
 * *Data Formats*
 * Data *Mapping*
 * Cross-*domain*, Per-domain
-* Schemas, XSD, JSon | image:integration-2.png[width="95%"]
+* WSDL, XSD, JSon | image:integration-2.png[width="95%"]
 |===
 
 // ************** why so hard ********
