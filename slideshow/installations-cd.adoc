@@ -45,18 +45,10 @@ export PATH=$OPENSHIFT_HOME:$PATH
 export GOFABRIC8_HOME=~/MyApplications/gofabric8-0.3.13
 export PATH=$GOFABRIC8_HOME:$PATH
 ----
-
-.. Source your bash file to be able to run `oc` command within one of your terminal
 +
-. Configure the routing between your local machine and the VM Box
-..  Add the routes used by the macosx machine to access the Pods/Docker containers running within the VM by issuing these commands within a terminal
-+
-----
-sudo route -n delete 172.0.0.0/8
-sudo route -n add 172.0.0.0/8  172.28.128.4
-----
+.. Source your bash file to be able to run `gofabric8` command within one of your terminal
 
-== Install Vagrant config file
+== Install Vagrant Fabric8 config file
 
 . Clone the https://github.com/fabric8io/fabric8-installer.git[Fabric8-installer] git project or download/unzip it from this https://github.com/fabric8io/fabric8-installer/archive/master.zip[repository address]
 . Unzip the content
