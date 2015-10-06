@@ -389,12 +389,18 @@ sudo journalctl -r -u docker
 
 == Use Fabric8 Maven plugin to create a gerrit repo
 
+. Set Kubernetes & Docker env variables
++
+    source /Users/chmoulli/MyProjects/MyConferences/emea-2015/demo/scripts/set_kubernetes_env.sh
++
+. Authenticate with the openshift platform using `oc login` command
++
+    /Users/chmoulli/MyProjects/MyConferences/emea-2015/demo/scripts/authenticate_with_os.sh
++
+. Run the Fabric8 Gerrit plugin to create a project
++    
+    mvn io.fabric8:fabric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="demo" -Dempty_commit="false"
 
-```
-source /Users/chmoulli/MyProjects/MyConferences/emea-2015/demo/scripts/set_kubernetes_env.shset_kubernetes_env.sh
-/Users/chmoulli/MyProjects/MyConferences/emea-2015/demo/scripts/authenticate_with_os.sh
-mvn io.fabric8:fabric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="demo" -Dempty_commit="false"
-```
 
 
 
