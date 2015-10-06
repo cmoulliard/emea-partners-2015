@@ -125,7 +125,10 @@ image::images/fabric8-apps.png[]
 image::images/fabric8-green-button.png[]
 +
 . For each application, you can tailor different keys
-. Example, you can define the description of the gerrit git repo, the user name and password to be used to access the gerrit kube app, and so on.
++
+image::images/fabric8-keys.png[]
+
+NOTE: Example, you can define the description of the gerrit git repo, the user name and password to be used to access the gerrit kube app, and so on.
 
 == Create a Continuous Delivery Project
 
