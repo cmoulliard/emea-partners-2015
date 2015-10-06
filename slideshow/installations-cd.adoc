@@ -122,10 +122,13 @@ image::images/fabric8-apps.png[]
 . For each application, you can tailor the different keys 
 . Example, you can define the description of the gerrit fit repo, the user name and password to be used to access the gerrit kube app
 
-== Create a CD Project
+== Create a Continuous Delivery Project
 
 . Return to the `Workspaces` -> `default` namespace screen
 . Click on the `Create Project` button
++
+image::images
++
 . If you are not yet authenticated, you will see a screen requesting that you sign in with the Gogs Server
 . Encode the username (gogsadmin), password (RedHat$1) & email (gogsadmin@fabric8.io) address to access `Gogs` Server
 . Click on the `signin` button
