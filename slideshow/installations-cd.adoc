@@ -115,7 +115,7 @@ image::images/fabric8-home.png[]
 image::images/fabric8-projects.png[]
 +
 . From this screen, click on the `run` button (available top of the right part of the screen) and select the `chat-letschat` and `cd-pipeline` applications to be deployed for this
-  Continuous Delivery/Integration pipeline demo. You can install them by clicking on this image:images/fabric8-green-button.png[width="20%"] button.
+  Continuous Delivery/Integration pipeline demo. You can install them by clicking on the green button.
 +
 image::images/fabric8-run-button.png[]
 image::images/fabric8-apps.png[]
