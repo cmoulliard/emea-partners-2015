@@ -514,8 +514,8 @@ image::images/jenkins-2.png[]
 * Clone the Git Gogs repo using a git command issued in a terminal to make a change & start a review process
 
 ```
-   git clone http://gogs.vagrant.f8/gogsadmin/devnation.git
-   Cloning into 'devnation'...
+   git clone http://gogs.vagrant.f8/gogsadmin/demo.git
+   Cloning into 'demo'...
    remote: Counting objects: 24, done.
    remote: Compressing objects: 100% (16/16), done.
    remote: Total 24 (delta 2), reused 0 (delta 0)
@@ -530,10 +530,7 @@ generate a unique commit-id message.
 
 Run the script and pass as parameter the directory name of the project to be created locally on your machine and the gerrit git repository (should be by example : devnation)
 ```
-   ./demo/scripts/review.sh /Users/chmoulli/Temp/dabou dabou
-  /scripts/review.sh devnation devnation
-
-   /path/to/the/script/scripts/review.sh devnation devnation
+   ./demo/scripts/review.sh /Users/chmoulli/Temp/demo demo
    Counting objects: 24, done.
    Delta compression using up to 8 threads.
    Compressing objects: 100% (16/16), done.
@@ -557,7 +554,7 @@ origin branch
 git commit -m "First commit" -a
 [master d53d106] First commit
  1 file changed, 2 insertions(+)
-dabou:~/Temp/test-devnation/devnation$ git push review
+dabou:~/Temp/demo/demo$ git push review
 Counting objects: 3, done.
 Delta compression using up to 8 threads.
 Compressing objects: 100% (3/3), done.
