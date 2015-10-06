@@ -114,20 +114,21 @@ image::images/fabric8-home.png[]
 +
 image::images/fabric8-projects.png[]
 +
-. From this screen, click on the `run` button (available top of the right part of the screen and select `chat-letschat` and `cd-pipeline` applications
+. From this screen, click on the `run` button (available top of the right part of the screen) and select the `chat-letschat` and `cd-pipeline` applications to be deployed for this
+  Continuous Delivery/Integration pipeline demo
 +
 image::images/fabric8-run-button.png[]
 image::images/fabric8-apps.png[]
 +
-. For each application, you can tailor the different keys 
-. Example, you can define the description of the gerrit fit repo, the user name and password to be used to access the gerrit kube app
+. For each application, you can tailor different keys
+. Example, you can define the description of the gerrit git repo, the user name and password to be used to access the gerrit kube app, and so on.
 
 == Create a Continuous Delivery Project
 
 . Return to the `Workspaces` -> `default` namespace screen
 . Click on the `Create Project` button
 +
-image::images
+image::images/fabric8-projects.png[]
 +
 . If you are not yet authenticated, you will see a screen requesting that you sign in with the Gogs Server
 . Encode the username (gogsadmin), password (RedHat$1) & email (gogsadmin@fabric8.io) address to access `Gogs` Server
