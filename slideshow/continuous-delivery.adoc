@@ -81,7 +81,7 @@ image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader,cols=""]
 |===
-| **B**usiness requirements
+| **B**usiness requirement
 |
 | {icon-arrow-down} 2x
 |
@@ -89,7 +89,7 @@ image:{revealjs_partners_logo}[width="80%"]
 |
 | {icon-arrow-down} 3x
 |
-| **O**perations
+| **O**peration
 |
 | {icon-arrow-down} 4x
 |
