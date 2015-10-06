@@ -7,7 +7,7 @@
 :speaker-twitter: http://twitter.com/cmoulliard[@cmoulliard]
 :talk-speaker: {speaker}
 :talk-name: Continuous Delivery with JBoss Fuse & Openshift
-:talk-date: 5th of October 2015
+:talk-date: 6th of October 2015
 
 [#cover,data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
@@ -121,10 +121,10 @@ image:{revealjs_partners_logo}[width="80%"]
 [.noredheader,cols="40,60"]
 |===
 a|
-* Platforms, *Protocols*
-* *Data Formats*
-* Data *Mapping* 
-* Schemas, XSD, JSon | image:integration-2.png[width="95%"]
+* *Protocol* (IIOP, DCOM, JMS, MQTT, AMDP, ...)
+* *Standard* (JBI, EJB)
+* *Data Format* (XSD, JSon)
+* Data *Mapping* (csv to XML) | image:integration-2.png[width="95%"]
 |===
 
 // ************** cost of change ********
@@ -267,7 +267,7 @@ image:{revealjs_partners_logo}[width="80%"]
 [.noredheader, cols="40,60"]
 |===
 a|* Operations
-** Setup *VMachine*
+** Setup *(V)Machine*
 ** *Provisioning* software
 ** *Deployment* in QA/UAT/PROD | image:devops1.jpeg[]
 |===
@@ -291,11 +291,11 @@ image:{revealjs_partners_logo}[width="80%"]
 
 [.noredheader]
 |===
-a|* Git for SCM
-* Gerrit for code review
-* Gitlab/Gogs for git projects mngt
-* Apache Maven - build
-* Jenkins + plugins - automate
+a|* SCM {icon-arrow-right} Git
+* Code Review {icon-arrow-right} Gerrit
+* Git Repos mngt {icon-arrow-right} Gitlab/Gogs
+* Build {icon-arrow-right} Apache Maven
+* Automate {icon-arrow-right} Jenkins
 a|
 [#block, top=25px, left=500px]
 image:fabric8-cd-tools.png[height="65%"]
@@ -501,12 +501,15 @@ image:ose-v3.png[width="95%",height="95%"]
 == **C**Delivery Technology
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_partners_logo}[width="50%"]
+
+[#block,top="300px",left="10px"]
+image:new-cd-pipeline.png[width="70%"]
 
 [.noredheader]
 |===
 a|* Manage *setup/build/deploy* images
-* Tool to *design Kubernetes* Applications
+* *Tooling* Mngt CD Pipeline & Apps
 * *Stage* environments
 * Provision Worflow *Pipeline*
 a|
@@ -529,8 +532,9 @@ image:{revealjs_partners_logo}[width="80%"]
 
 * fabric8:json {icon-arrow-right} generates Kube MetaData App
 
-* fabric8:apply/recreate {icon-arrow-right} deploy/redeploy on Openshift
-* fabric8:apply/recreate {icon-arrow-right} deploy/redeploy on Openshift
+* fabric8:apply {icon-arrow-right} deploy on Openshift
+* fabric8:recreate {icon-arrow-right} redeploy on Openshift
+* fabric8:devops {icon-arrow-right} automate pipeline creation
 
 {space}
 
@@ -566,10 +570,8 @@ image:{revealjs_partners_logo}[width="80%"]
 [#block,width="200px",left="70px",top="0px"]
 image::{revealjs_cover_image}[]
 
-[#cover-h1,width="600px",left="0px",top="500px"]
+[#cover-h1,width="600px",left="0px",top="350px"]
 *Demo*
-
-image::jenkins-pipeline.png[width="95%",height="95%"]
 
 // *********************************
 [#questions]

@@ -476,8 +476,6 @@ image::images/fabric8-project-1.png[]
 
 * Encode the login/password to access Gogs (gogsadmin/RedHat$1 & gogsadmin@fabric8.local)
 
-image::images/fabric8-git-login.png[]
-
 * From this view, click on the button "create project", a new screen will be displayed where
   you can encode the name of the project (= name of the git repo, jenkins dsl pipeline, ...), the package name & version to be used
   Remark : The build system can't be changed for the moment and is maven like the type "From Archetype catalog"
@@ -733,9 +731,9 @@ sudo journalctl -r -u docker
 
 
 ```
-./demo/scripts/set_kubernetes_env.sh
-./demo/scripts/authenticate_with_os.sh
-mvn io.fabric8:fabric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="dabou4" -Dempty_commit="false"
+source /Users/chmoulli/MyProjects/MyConferences/emea-2015/demo/scripts/set_kubernetes_env.shset_kubernetes_env.sh
+/Users/chmoulli/MyProjects/MyConferences/emea-2015/demo/scripts/authenticate_with_os.sh
+mvn io.fabric8:fabric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="demo" -Dempty_commit="false"
 ```
 
 
