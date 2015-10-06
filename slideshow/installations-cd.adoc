@@ -168,6 +168,20 @@ image::images/jenkins-1b.png[]
 .Fabric8 CD/CI Pipeline created from the project
 image::images/jenkins-2.png[]
 
+== Use Fabric8 Maven plugin to create a gerrit repo
+
+. Set Kubernetes & Docker env variables
++
+    source /Users/chmoulli/MyProjects/MyConferences/emea-2015/demo/scripts/set_kubernetes_env.sh
++
+. Authenticate with the openshift platform using `oc login` command
++
+    /Users/chmoulli/MyProjects/MyConferences/emea-2015/demo/scripts/authenticate_with_os.sh
++
+. Run the Fabric8 Gerrit plugin to create a project
++
+    mvn io.fabric8:fabric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="demo" -Dempty_commit="false"
+
 
 * Clone the Git Gogs repo using a git command issued in a terminal to make a change & start a review process
 
@@ -386,21 +400,4 @@ docker exec -it $(docker ps | grep 'fabric8/gogs' | cut -f1 -d" ") bash
 sudo journalctl -r -u openshift
 sudo journalctl -r -u docker
 ```
-
-== Use Fabric8 Maven plugin to create a gerrit repo
-
-. Set Kubernetes & Docker env variables
-+
-    source /Users/chmoulli/MyProjects/MyConferences/emea-2015/demo/scripts/set_kubernetes_env.sh
-+
-. Authenticate with the openshift platform using `oc login` command
-+
-    /Users/chmoulli/MyProjects/MyConferences/emea-2015/demo/scripts/authenticate_with_os.sh
-+
-. Run the Fabric8 Gerrit plugin to create a project
-+    
-    mvn io.fabric8:fabric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="demo" -Dempty_commit="false"
-
-
-
 
