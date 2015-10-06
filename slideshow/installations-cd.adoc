@@ -97,17 +97,17 @@ When the VirtualBox machine has been started and created successfully, you shoul
 
 == Pull cd-pipeline and chat-letschat
 
-SSH to the vagrant box and issue these gofabric8 commands to download the docker images required
+SSH to the vagrant box using `vagrant ssh` command and issue these gofabric8 commands to download the docker images required by the cd-pipeline and letschat kube applications
 
 ----
-gofabric8 pull cd-pipeline
 gofabric8 pull chat-letschat
+gofabric8 pull cd-pipeline
 ----
 
 == Install the kube applications
 
-. Open your web browser at this address `http://fabric8.vagrant.f8/`, select from the home screen the `default` namespace and clickon the `runtime` tab.
-. From this screen, click on the `un` button (available top of the right part of the screen and select `chat-letschat` and `cd-pipeline` applications
+. Open your web browser at this address `http://fabric8.vagrant.f8/`, select from the home screen the `default` namespace available within the `workspaces` and click on the `runtime` tab.
+. From this screen, click on the `run` button (available top of the right part of the screen and select `chat-letschat` and `cd-pipeline` applications
 . For each application, you can tailor the different keys 
 . Example, you can define the description of the gerrit fit repo, the user name and password to be used to access the gerrit kube app
 
