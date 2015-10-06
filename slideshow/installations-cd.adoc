@@ -108,6 +108,9 @@ gofabric8 pull cd-pipeline
 
 . Open your web browser at this address `http://fabric8.vagrant.f8/`, select from the home screen the `default` namespace available within the `workspaces` and click on the `runtime` tab.
 . From this screen, click on the `run` button (available top of the right part of the screen and select `chat-letschat` and `cd-pipeline` applications
++
+image:fabric8-run-button.png[]
++
 . For each application, you can tailor the different keys 
 . Example, you can define the description of the gerrit fit repo, the user name and password to be used to access the gerrit kube app
 
