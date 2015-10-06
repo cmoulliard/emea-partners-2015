@@ -106,7 +106,14 @@ gofabric8 pull cd-pipeline
 
 == Install the kube applications
 
-. Open your web browser at this address `http://fabric8.vagrant.f8/`, select from the home screen the `default` namespace available within the `workspaces` and click on the `runtime` tab.
+. Open your web browser at this address `http://fabric8.vagrant.f8/`
++
+image::images/fabric8-home.png[]
++
+select from the home screen the `default` namespace available within the `workspaces` and click on the `runtime` tab.
++
+image::images/fabric8-projects.png[]
++
 . From this screen, click on the `run` button (available top of the right part of the screen and select `chat-letschat` and `cd-pipeline` applications
 +
 image::images/fabric8-run-button.png[]
