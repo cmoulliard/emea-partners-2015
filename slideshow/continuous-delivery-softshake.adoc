@@ -1,12 +1,12 @@
 :footer_copyright:
 :imagesdir: images/
 :speaker: Charles Moulliard
-:speaker-title: Pr. Solution Architect, Fuse Expert, Apache Committer
+:speaker-title: Apache Committer, Architect, Fuse Expert
 :speaker-email: cmoulliard@redhat.com
 :speaker-blog: http://cmoulliard.github.io
 :speaker-twitter: http://twitter.com/cmoulliard[@cmoulliard]
 :talk-speaker: {speaker}
-:talk-name: Continuous Delivery with Fabric8 & Openshift
+:talk-name: Continuous Delivery & Integration with Fabric8 on Cloud platform
 :talk-date: 23th of October 2015
 
 [#cover,data-background-color="white"]
@@ -15,10 +15,10 @@
 [#block,left="0px",top="80px"]
 image:softshake-2015.png[width="500px"]
 
-[#cover-h1,width="1000px",left="0px",top="250px"]
+[#cover-h1,width="900px",left="0px",top="250px"]
 {talk-name}
 
-[#cover-h2,width="800px",left="0px",top="450px"]
+[#cover-h2,width="800px",left="0px",top="550px"]
 {speaker} +
 {talk-date}
 
@@ -228,6 +228,9 @@ a|* Operations
 [#transition3, data-background-color="white"]
 == {blank-space}
 
+[#block,left="0px",top="80px"]
+image:softshake-2015.png[width="500px"]
+
 [#cover-h1,left="0px",top="350px",width="2000px"]
 *Requirements to support CD*
 
@@ -263,6 +266,9 @@ image:rhel-atomic.png[height="65%"]
 // ************** transition page ************
 [#transition4, data-background-color="white"]
 == {blank-space}
+
+[#block,left="0px",top="80px"]
+image:softshake-2015.png[width="500px"]
 
 [#cover-h1,left="0px",top="350px",width="2000px"]
 *Linux container*
@@ -301,6 +307,9 @@ image:dockerfile.png[width="65%"]
 // ************** transition page ************
 [#transition5, data-background-color="white"]
 == {blank-space}
+
+[#block,left="0px",top="80px"]
+image:softshake-2015.png[width="500px"]
 
 [#cover-h1,left="0px",top="350px",width="2000px"]
 *Management platform*
@@ -367,6 +376,9 @@ image::fabric8-service-pod.png[]
 // ************** transition page ************
 [#transition6, data-background-color="white"]
 == {blank-space}
+
+[#block,left="0px",top="80px"]
+image:softshake-2015.png[width="500px"]
 
 [#cover-h1,left="0px",top="350px",width="2000px"]
 *Platform as Service*
@@ -450,6 +462,9 @@ image:fabric8-cdci.png[width="80%"]
 [#transition7, data-background-color="white"]
 == {blank-space}
 
+[#block,left="0px",top="80px"]
+image:softshake-2015.png[width="500px"]
+
 [#cover-h1,width="600px",left="0px",top="350px"]
 *Demo*
 
@@ -457,12 +472,12 @@ image:fabric8-cdci.png[width="80%"]
 [#questions]
 == Questions
 
-[.noredheader,cols="65,.<45"]
+[.noredheader,cols="65,45"]
 |===
 .2+|image:questions.png[width="95%",height="95%"]
 a|* Twitter : *{speaker-twitter}*
 |===
 
 * More info {icon-arrow-right}
-  - www.jboss.org/products/fuse.html
-  - http://www.redhat.com/en/technologies/jboss-middleware
+  - http://fabric8.io/
+  - http://fabric8.io/guide/cdelivery.html
