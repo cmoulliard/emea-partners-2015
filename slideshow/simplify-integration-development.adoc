@@ -30,7 +30,7 @@ image:redhat-emea-partner-2015.png[width="95%"]
 == Who
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols="30,70"]
 |===
@@ -53,7 +53,7 @@ Email: {speaker-email} |
 == Agenda
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * Why integration is so hard & expensive ?
 * Integration Architecture
@@ -76,7 +76,7 @@ image::{revealjs_cover_image}[]
 == Why integration is so hard ?
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols="45,55"]
 |===
@@ -93,7 +93,7 @@ a|* *Integration* is *Hard!*
 == Why integration is so hard ?
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols="40,60"]
 |===
@@ -110,7 +110,7 @@ a|
 == Why integration is so hard ?
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols="55,45"]
 |===
@@ -128,7 +128,7 @@ a|
 == Why so expensive ?
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols="65,35"]
 |===
@@ -168,7 +168,7 @@ a|
 == Impact
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols="75,35"]
 |===
@@ -193,7 +193,7 @@ image::{revealjs_cover_image}[]
 == History
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * 2000 - *EAI* 
 
@@ -216,7 +216,7 @@ image:esb.png[width="55%"]
 == Evolution
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * Proprietary {icon-arrow-right} Standards based - JBI, SCA
 
@@ -233,7 +233,7 @@ image:{revealjs_partners_logo}[width="80%"]
 == JBI & Centric vision
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * *XML* based
 * Inner conversion from Format-A to XML or XML to Format-B
@@ -250,7 +250,7 @@ image:csv-xml.jpeg[]
 == Dev Impact
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols="45,65"]
 |===
@@ -279,7 +279,7 @@ image::{revealjs_cover_image}[]
 == Vision
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::jboss-fuse-cloud.jpg[width="80%"]
 
@@ -290,7 +290,7 @@ image::jboss-fuse-cloud.jpg[width="80%"]
 == Rethink 
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * *Agile* Project Mngt {icon-arrow-right} Scrum
 * *Architecture* {icon-arrow-right} Microservice
@@ -309,7 +309,7 @@ image:microservice.jpg[width="65%"]
 == Open Source
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * *Adopt* it {icon-arrow-right} no more *proprietary* code
 * No *viral* license {icon-arrow-right} *freedom* to use, modify & redistribute it
@@ -321,7 +321,7 @@ image:oss.jpeg[] image:oss1.jpeg[]
 == Move to *EIP*
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [#block,left="10px",top="120px"]
 image:eip-book.jpg[]
@@ -334,7 +334,7 @@ image:eip-patterns.png[]
 == DevOps vision ...
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader]
 |===
@@ -360,7 +360,7 @@ image::{revealjs_cover_image}[]
 == Apache Camel
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * Java **Integration** Framework (*OSS*)
 
@@ -388,7 +388,7 @@ image:eip_book.jpg[width="45%"]
 == Java DSL
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * Fluent API
 
@@ -417,7 +417,7 @@ public class ExampleRouteBuilder extends RouteBuilder {
 == XML DSL
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * Alternative : Spring, Blueprint
 
@@ -453,7 +453,7 @@ image:{revealjs_partners_logo}[width="80%"]
 == Benefit
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * Use *Same Language*, *grammar* between actors:
 ** developer, analyst & architect
@@ -470,7 +470,7 @@ image:goal.jpeg[]
 == Simple Concepts
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * Workflow {icon-arrow-right} Camel project {icon-arrow-right} Collection of routes
 * Route *{icon-arrow-right}* Sum of Processor(s) + Interceptor(s)
@@ -483,7 +483,7 @@ image:pipeline.png[]
 == Interceptor
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * To trace, log, capture business events
 
@@ -495,7 +495,7 @@ image:pipeline2.png[]
 == Fire / Forget pattern
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::inonly.png[width="65%"]
 
@@ -504,7 +504,7 @@ image::inonly.png[width="65%"]
 == Request / Reply pattern
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::inout.png[width="75%"]
 
@@ -513,7 +513,7 @@ image::inout.png[width="75%"]
 == Convert
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * **Data Transformation** for complex use case
 
@@ -541,7 +541,7 @@ public interface DataFormat {
 == Data Format supported
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * http://camel.apache.org/dataformat.html[> 20 Data Format]
 
@@ -552,7 +552,7 @@ image::dataformat-2.png[]
 == http://camel.apache.org/components.html[Components]
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::components.png[width="85%"]
 
@@ -561,7 +561,7 @@ image::components.png[width="85%"]
 == Unit of Work
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols="50,50"]
 |===
@@ -575,7 +575,7 @@ a| * *CamelContext* registering {icon-arrow-right}
 == Facts
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * *In-Memory* bus
 * Support *Object* : XML, File, Stream, Bytes
@@ -589,7 +589,7 @@ image:{revealjs_partners_logo}[width="80%"]
 == What about Testing
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [source,java]
 ----
@@ -629,7 +629,7 @@ public class FilterTest extends CamelTestSupport {
 == Exception handling
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [source,java]
 ----
@@ -667,7 +667,7 @@ from("direct:start")
 == More about Exception
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [source,xml]
 ----
@@ -695,7 +695,7 @@ image:{revealjs_partners_logo}[width="80%"]
 == Integration container
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * Camel routes isolated from each other (classloader)
 * Bundle {icon-arrow-right}  CamelContext boundary {icon-arrow-right} acting as a Local BUS
@@ -708,7 +708,7 @@ image:karaf/karaf1.png[]
 == Integration container
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * Camel routes can be started/stopped/updated
 * {icon-arrow-right} Simplify maintenance process
@@ -720,7 +720,7 @@ image:karaf/karaf2.png[]
 == Management
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image:karaf/karaf4.png[]
 
@@ -729,7 +729,7 @@ image:karaf/karaf4.png[]
 == Fabric8 v1
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * Opensource integration project - http://fabric8.io
 * Mission {icon-arrow-right} simplify management & deployment java *integration* services on *different* machines & JVMs
@@ -741,7 +741,7 @@ image::fabric-diagram.png[]
 == Features
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 - *Manage* container creation (locally, remotely, cloud, openshift, docker, ...)
 - *Visualise* what is running into JVM to understand your platform
@@ -755,7 +755,7 @@ image:{revealjs_partners_logo}[width="80%"]
 == Extends the possibilities
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image:fabric-diagram1.png[]
 
@@ -764,7 +764,7 @@ image:fabric-diagram1.png[]
 == Console
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::jbossfuse-fabric1.png[]
 
@@ -773,7 +773,7 @@ image::jbossfuse-fabric1.png[]
 == Create container
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::jbossfuse-fabric2.png[width="95%"]
 
@@ -782,7 +782,7 @@ image::jbossfuse-fabric2.png[width="95%"]
 == Service
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::jbossfuse-fabric3.png[width="95%"]
 
@@ -791,7 +791,7 @@ image::jbossfuse-fabric3.png[width="95%"]
 == Discover your camel routes
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image:hawtio-3.png[]
 
@@ -800,7 +800,7 @@ image:hawtio-3.png[]
 == Manage Log/Events
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::elasticsearch.png[80%,80%]
 
@@ -809,7 +809,7 @@ image::elasticsearch.png[80%,80%]
 == Insight Camel
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::es-camel.png[80%,80%]
 
@@ -818,7 +818,7 @@ image::es-camel.png[80%,80%]
 == Security
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * Services & governance : Apiman
 * SSO, Oauth2 : Keycloak
@@ -830,7 +830,7 @@ image:apiman1.png[width="75%"]
 == Security
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * Policy based
  
@@ -843,7 +843,7 @@ image::apiman3.png[]
 == Fuse World
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::fuse-technology2-donut.png[]
 
@@ -852,7 +852,7 @@ image::fuse-technology2-donut.png[]
 == {blank-space}
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [#block,width="200px",left="70px",top="0px"]
 image::{revealjs_cover_image}[]
@@ -865,7 +865,7 @@ image::{revealjs_cover_image}[]
 == Questions
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols="65,.<45"]
 |===

@@ -30,7 +30,7 @@ image:redhat-emea-partner-2015.png[width="95%"]
 == Who
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols="30,70"]
 |===
@@ -53,7 +53,7 @@ Email: {speaker-email} |
 == Agenda
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * The cost of change
 * CD/CI
@@ -77,7 +77,7 @@ image::{revealjs_cover_image}[]
 == Cost of change image:change.png[width="15%",height="15%",float="right"]
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols=""]
 |===
@@ -101,7 +101,7 @@ image:{revealjs_partners_logo}[width="80%"]
 == Integration costs
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols="45,55"]
 |===
@@ -116,7 +116,7 @@ a|* *Integration* is *Hard!*
 == Integration costs
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols="40,60"]
 |===
@@ -132,7 +132,7 @@ a|
 == Integration costs
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols="40,60"]
 |===
@@ -159,7 +159,7 @@ image::{revealjs_cover_image}[]
 == {blank-space}
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [#block,width="800px",top="0px"]
 image:worked-fine-in-dev.png[width="80%"]
@@ -169,7 +169,7 @@ image:worked-fine-in-dev.png[width="80%"]
 == “WTF is DevOps?”
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader]
 |===
@@ -186,7 +186,7 @@ a| * *IT* is a *core* competency
 == “Coder, programmer”
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::developer.jpg[width="75%"]
 
@@ -195,7 +195,7 @@ image::developer.jpg[width="75%"]
 == “Interest”
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::languages.jpeg[width="65%"]
 
@@ -206,7 +206,7 @@ image::languages.jpeg[width="65%"]
 == “Operation guy”
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::opts-it.jpg[width="65%"]
 
@@ -217,7 +217,7 @@ image::opts-it.jpg[width="65%"]
 == Strategy
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader]
 |===
@@ -231,7 +231,7 @@ a|* *Objective* {icon-arrow-right} *Continuous Integration* strategy
 == Impact
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader, cols="40,60"]
 |===
@@ -245,7 +245,7 @@ a|* *Bottlenecks ?*
 == Automate Pipeline !
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader, cols="40,60"]
 |===
@@ -262,7 +262,7 @@ a|* Developer
 == Automate Pipeline
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader, cols="40,60"]
 |===
@@ -287,7 +287,7 @@ image::{revealjs_cover_image}[]
 == Dev **T**ools
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader]
 |===
@@ -306,7 +306,7 @@ image:fabric8-cd-tools.png[height="65%"]
 == **P**latform
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader]
 |===
@@ -332,7 +332,7 @@ image::{revealjs_cover_image}[]
 == Process
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [#block,width="800px",top="50px"]
 image:docker-animated-1.gif[]
@@ -342,7 +342,7 @@ image:docker-animated-1.gif[]
 == Docker
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * *Container runtime*, *image* distribution, *Process* launcher
 
@@ -357,7 +357,7 @@ image:docker-logo.png[width="25%",height="25%"]
 == Docker
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::docker-filesystems-multilayer.png[width="60%,height="60%"]
 
@@ -382,7 +382,7 @@ image::{revealjs_cover_image}[]
 == Kubernetes
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * Runtime & *Operational management* of containers
 * ApiServer (event, status), *Scheduler*, *Controller* & State Storage
@@ -396,7 +396,7 @@ image::kubernetes-logo.png[width="25%",height="25%"]
 == Kubernetes
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [#block,width="800px",left="0px",top="50px"]
 image:kubernetes-platform.png[]
@@ -406,7 +406,7 @@ image:kubernetes-platform.png[]
 == Pod & docker
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::fabric8-pod.png[]
 
@@ -417,7 +417,7 @@ image::fabric8-pod.png[]
 == Pod & port
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::fabric8-pod-port.png[]
 
@@ -428,7 +428,7 @@ image::fabric8-pod-port.png[]
 == Pod & volume
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::fabric8-pod-volume.png[]
 
@@ -439,7 +439,7 @@ image::fabric8-pod-volume.png[]
 == Kubernetes Service
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 image::fabric8-service-pod.png[]
 
@@ -450,7 +450,7 @@ image::fabric8-service-pod.png[]
 == Kube Application JSon
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader]
 |===
@@ -472,7 +472,7 @@ image::{revealjs_cover_image}[]
 == OpenShift v3
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols="45,55"]
 |===
@@ -491,7 +491,7 @@ image:rht-atomic-enterprise-openshift.png[width="100%"]
 == Architecture
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [#block,width="800px",top="120px"]
 image:ose-v3.png[width="95%",height="95%"]
@@ -501,7 +501,7 @@ image:ose-v3.png[width="95%",height="95%"]
 == **C**Delivery Technology
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="50%"]
+image:{revealjs_conference_logo}[width="50%"]
 
 [#block,top="300px",left="10px"]
 image:new-cd-pipeline.png[width="70%"]
@@ -522,7 +522,7 @@ image:fabric8-logo.png[height="15%"]
 == http://fabric8.io/gitbook/mavenPlugin.html[Fabric8 Maven Plugin]
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 * docker:build {icon-arrow-right} Build image of app
 
@@ -545,7 +545,7 @@ image:{revealjs_partners_logo}[width="80%"]
 == {blank-space}
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [#block,width="800px",top="0px"]
 image:fabric8-diagram1.png[width="80%",height="80%"]
@@ -555,7 +555,7 @@ image:fabric8-diagram1.png[width="80%",height="80%"]
 == {blank-space}
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [#block,width="800px",top="0px"]
 image:fabric8-cdci.png[width="80%"]
@@ -565,7 +565,7 @@ image:fabric8-cdci.png[width="80%"]
 == {blank-space}
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [#block,width="200px",left="70px",top="0px"]
 image::{revealjs_cover_image}[]
@@ -578,7 +578,7 @@ image::{revealjs_cover_image}[]
 == Questions
 
 [#block,top="0px",left="790px"]
-image:{revealjs_partners_logo}[width="80%"]
+image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader,cols="65,.<45"]
 |===

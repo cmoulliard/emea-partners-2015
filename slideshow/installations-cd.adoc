@@ -182,7 +182,6 @@ image::images/jenkins-2.png[]
 +
     mvn io.fabric8:fabric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="demo" -Dempty_commit="false"
 
-
 * Clone the Git Gogs repo using a git command issued in a terminal to make a change & start a review process
 
 ```

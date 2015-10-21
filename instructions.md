@@ -1,6 +1,7 @@
 # Generate the Slideshow
 
     hyla generate -c slideshow/conference-redhat.yaml
+    hyla generate -c slideshow/conference-softshake-2015.yaml
     hyla generate -c demo/conference-redhat.yaml
 
 # Move content to Github io
