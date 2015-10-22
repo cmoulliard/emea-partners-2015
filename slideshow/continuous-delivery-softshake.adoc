@@ -236,7 +236,7 @@ image:softshake-2015.png[width="500px"]
 
 // ************** devops ************
 [#cd-tools]
-== Dev **T**ools
+== Dev Tools
 
 [.noredheader]
 |===
@@ -245,6 +245,9 @@ a|* SCM {icon-arrow-right} Git
 * Git Repos mngt {icon-arrow-right} Gitlab/Gogs
 * Build {icon-arrow-right} Apache Maven
 * Automate {icon-arrow-right} Jenkins
+* Code Quality {icon-arrow-right} Sonarqube
+* Project Mngt {icon-arrow-right} Taiga
+* IRC/Chat {icon-arrow-right} LetsChat
 a|
 [#block, top=25px, left=500px]
 image:fabric8-cd-tools.png[height="65%"]
@@ -281,6 +284,22 @@ image:softshake-2015.png[width="500px"]
 image:docker-animated-1.gif[]
 
 // ************** docker ************
+[#docker-image]
+== Docker
+
+image::docker-filesystems-multilayer.png[width="60%,height="60%"]
+
+* Union *FS* mounted with immutable images
+* Benefits: *portability*, *reusability*, versioning, application-centric
+
+// ************** docker ************
+[#docker-config]
+== Docker config
+
+[#block,width="150px",top="50px",left="50px"]
+image:dockerfile.png[width="95%"]
+
+// ************** docker ************
 [#docker]
 == Docker
 
@@ -291,22 +310,6 @@ image:docker-animated-2.gif[]
 
 [#block,width="100px",top="-20px",left="200px"]
 image:docker-logo.png[width="25%",height="25%"]
-
-// ************** docker ************
-[#docker-descr]
-== Docker
-
-image::docker-filesystems-multilayer.png[width="60%,height="60%"]
-
-* Union *FS* mounted with immutable images
-* Benefits: *portability*, *reusability*, versioning, application-centric
-
-// ************** docker ************
-[#docker-config]
-== Docker
-
-[#block,width="150px",top="50px",left="50px"]
-image:dockerfile.png[width="95%"]
 
 // ************** transition page ************
 [#transition5, data-background-color="white"]
