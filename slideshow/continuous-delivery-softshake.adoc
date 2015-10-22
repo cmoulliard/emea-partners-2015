@@ -12,15 +12,15 @@
 [#cover,data-background-color="white"]
 == {blank-space}
 
-[#block,left="0px",top="80px"]
-image:softshake-2015.png[width="500px"]
-
-[#cover-h1,width="900px",left="0px",top="250px"]
+[#cover-h1,width="900px",left="0px",top="80px"]
 {talk-name}
 
-[#cover-h2,width="800px",left="0px",top="550px"]
+[#cover-h2,width="800px",left="0px",top="350px"]
 {speaker} +
 {talk-date}
+
+[#block,left="-20px",top="550px"]
+image:softshake-2015.png[width="500px"]
 
 // ************** who - charles ********
 [#who]
@@ -57,11 +57,11 @@ Email: {speaker-email} |
 [#transition1, data-background-color="white"]
 == {blank-space}
 
-[#block,left="0px",top="80px"]
-image:softshake-2015.png[width="500px"]
-
-[#cover-h1,width="600px",left="0px",top="400px"]
+[#cover-h1,width="600px",left="0px",top="200px"]
 *Cost of change*
+
+[#block,left="-20px",top="550px"]
+image:softshake-2015.png[width="500px"]
 
 // ************** cost of change ********
 [#cost-of-change]
@@ -127,11 +127,11 @@ a|
 [#transition2, data-background-color="white"]
 == {blank-space}
 
-[#block,left="0px",top="80px"]
-image:softshake-2015.png[width="500px"]
-
-[#cover-h1,left="0px",top="350px",width="2000px"]
+[#cover-h1,left="0px",top="200px",width="2000px"]
 *Continuous Delivery Strategy !*
+
+[#block,left="-20px",top="550px"]
+image:softshake-2015.png[width="500px"]
 
 // ************** devops ***********
 [#devops]
@@ -228,11 +228,11 @@ a|* Operations
 [#transition3, data-background-color="white"]
 == {blank-space}
 
-[#block,left="0px",top="80px"]
-image:softshake-2015.png[width="500px"]
-
-[#cover-h1,left="0px",top="350px",width="2000px"]
+[#cover-h1,left="0px",top="200px",width="2000px"]
 *Requirements to support CD*
+
+[#block,left="-20px",top="550px"]
+image:softshake-2015.png[width="500px"]
 
 // ************** devops ************
 [#cd-tools]
@@ -267,11 +267,11 @@ image:rhel-atomic.png[height="65%"]
 [#transition4, data-background-color="white"]
 == {blank-space}
 
-[#block,left="0px",top="80px"]
-image:softshake-2015.png[width="500px"]
-
-[#cover-h1,left="0px",top="350px",width="2000px"]
+[#cover-h1,left="0px",top="200px",width="2000px"]
 *Linux container*
+
+[#block,left="-20px",top="550px"]
+image:softshake-2015.png[width="500px"]
 
 // ************** docker ************
 [#process]
@@ -298,21 +298,25 @@ image:docker-logo.png[width="25%",height="25%"]
 
 image::docker-filesystems-multilayer.png[width="60%,height="60%"]
 
-* Top of a Union FS mounted with immutable images
+* Union *FS* mounted with immutable images
 * Benefits: *portability*, *reusability*, versioning, application-centric
 
-[#block,width="150px",top="0px",left="350px"]
-image:dockerfile.png[width="65%"]
+// ************** docker ************
+[#docker-config]
+== Docker
+
+[#block,width="150px",top="50px",left="50px"]
+image:dockerfile.png[width="95%"]
 
 // ************** transition page ************
 [#transition5, data-background-color="white"]
 == {blank-space}
 
-[#block,left="0px",top="80px"]
-image:softshake-2015.png[width="500px"]
-
-[#cover-h1,left="0px",top="350px",width="2000px"]
+[#cover-h1,left="0px",top="200px",width="2000px"]
 *Management platform*
+
+[#block,left="-20px",top="550px"]
+image:softshake-2015.png[width="500px"]
 
 // ************** kubernetes ************
 [#kubernetes]
@@ -362,7 +366,8 @@ image::fabric8-pod-volume.png[]
 
 image::fabric8-service-pod.png[]
 
-* Kube Service *loadbalanced* through the pods using *HA-Proxy* & *Routes*
+* Kube Service *loadbalanced* through the pods using *HA-Proxy*
+ *Routes* map *private* with *public* IP address
 
 // ************** kubernetes ************
 [#kube-application]
@@ -377,11 +382,11 @@ image::fabric8-service-pod.png[]
 [#transition6, data-background-color="white"]
 == {blank-space}
 
-[#block,left="0px",top="80px"]
-image:softshake-2015.png[width="500px"]
-
-[#cover-h1,left="0px",top="350px",width="2000px"]
+[#cover-h1,left="0px",top="200px",width="2000px"]
 *Platform as Service*
+
+[#block,left="-20px",top="550px"]
+image:softshake-2015.png[width="500px"]
 
 // ************** openshift ************
 [#paas]
@@ -392,8 +397,9 @@ image:softshake-2015.png[width="500px"]
 a|* *Designed* around Kubernetes, Docker, Fabric8
 * Provide *new* features {icon-arrow-right}
 ** Docker Images *Registry* & **C**ertification
-** SSO - Authentication Server
-** Api for Management, Client Command Line
+** *SSO* - Authentication Server
+** *Api* for Management, Client Command Line
+** Build *S2I*
 a|
 [#block,left="450px",top="100px",width="700px"]
 image:rht-atomic-enterprise-openshift.png[width="100%"]
@@ -408,7 +414,7 @@ image:ose-v3.png[width="95%",height="95%"]
 
 // ************** devops ************
 [#cd-tools2]
-== **C**Delivery Technology
+== CDelivery Technology
 
 [#block,top="300px",left="10px"]
 image:new-cd-pipeline.png[width="70%"]
@@ -462,11 +468,11 @@ image:fabric8-cdci.png[width="80%"]
 [#transition7, data-background-color="white"]
 == {blank-space}
 
-[#block,left="0px",top="80px"]
-image:softshake-2015.png[width="500px"]
-
-[#cover-h1,width="600px",left="0px",top="350px"]
+[#cover-h1,width="600px",left="0px",top="200px"]
 *Demo*
+
+[#block,left="-20px",top="550px"]
+image:softshake-2015.png[width="500px"]
 
 // *********************************
 [#questions]
