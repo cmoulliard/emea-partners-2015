@@ -120,7 +120,8 @@ a|
 * Security
 * *Procedures*
 * *Volumetry*
-* *Timing*, **Communication** | image:integration-1.png[width="90%"]
+* *Timing*
+* *Communication* | image:integration-1.png[width="90%"]
 |===
 
 // ************** transition page ************
@@ -174,7 +175,7 @@ image::languages.jpeg[width="65%"]
 
 image::opts-it.jpg[width="65%"]
 
-{icon-arrow-right} log, procedure, cpu, thread blocked, report, deployment procedure, alert, monitor, ...
+{icon-arrow-right} log, cpu, thread blocked, report, procedure, alert, monitoring, ...
 
 // ************** devops ************
 [#cd]
@@ -184,7 +185,7 @@ image::opts-it.jpg[width="65%"]
 |===
 a|* *Objective* {icon-arrow-right} *Continuous Integration* strategy
 * Establish a concrete *pipeline to production* {icon-exclamation-mark}
-* Build/Test/Release *more* often! | image:idea.jpeg[]
+* Build/Test/Release *more* often | image:idea.jpeg[]
 |===
 
 // ************** devops ************
@@ -195,12 +196,12 @@ a|* *Objective* {icon-arrow-right} *Continuous Integration* strategy
 |===
 a|* *Bottlenecks ?*
 * Involves *Dev* & *Ops* to be *successful*
-* Every *build* is a “release candidate” | image:collaborate.jpeg[]
+* Every *build* {icon-arrow-right} "release candidate" | image:collaborate.jpeg[]
 |===
 
 // ************** devops ************
 [#cd-automate]
-== Automate Pipeline !
+== Automate Pipeline
 
 [.noredheader, cols="40,60"]
 |===
@@ -221,7 +222,7 @@ a|* Developer
 a|* Operations
 ** Setup *(V)Machine*
 ** *Provisioning* software
-** *Deployment* in QA/UAT/PROD | image:devops1.jpeg[]
+** *Deploy* procedures in QA/UAT/PROD | image:devops1.jpeg[]
 |===
 
 // ************** transition page ************
@@ -255,11 +256,12 @@ image:fabric8-cd-tools.png[height="65%"]
 
 // ************** devops ************
 [#cd-tools1]
-== **P**latform
+== Platform
 
 [.noredheader]
 |===
-a|* Machine -> VM -> Linux **Container**
+a|* Machine -> VM
+* VM -> Linux **Container**
 * Red Hat **Atomic** Enterprise Platform
 a|
 [#block, top=90px, left=500px]
@@ -399,7 +401,7 @@ image:softshake-2015.png[width="500px"]
 |===
 a|* *Designed* around Kubernetes, Docker, Fabric8
 * Provide *new* features {icon-arrow-right}
-** Docker Images *Registry* & **C**ertification
+** Docker Images *Registry* & *Certification*
 ** *SSO* - Authentication Server
 ** *Api* for Management, Client Command Line
 ** Build *S2I*
