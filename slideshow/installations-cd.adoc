@@ -180,7 +180,7 @@ image::images/jenkins-2.png[]
 +
 . Run the Fabric8 Gerrit plugin to create a project
 +
-    mvn io.fabric8:fabric8-maven-plugin:2.2.37:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="demo" -Dempty_commit="false"
+    mvn io.fabric8:fabric8-maven-plugin:2.2.67:create-gitrepo -DgerritAdminUsername="admin" -DgerritAdminPassword="secret" -Drepo="demo" -Dempty_commit="false"
 
 * Clone the Git Gogs repo using a git command issued in a terminal to make a change & start a review process
 
@@ -399,4 +399,16 @@ docker exec -it $(docker ps | grep 'fabric8/gogs' | cut -f1 -d" ") bash
 sudo journalctl -r -u openshift
 sudo journalctl -r -u docker
 ```
+== Snapshot of VMs
+
+To save your time, use the snapshot plugin (https://github.com/dergachev/vagrant-vbox-snapshot/) to backup an existing VM. 
+
+Steps :
+
+* Create a new VM -> `vagrant up`
+* Use gofabric8 to install cd-pipeline & social --> `gofabric8 pull cd-pipeline`, `gofabric8 pull cd-pipeline`, `gofabric8 pull social`
+* Execute `run` cd-pipeline and `run` chat-letschat from the Fabric8 console to install the required pods. 
+* Take a snapshot -> `vagrant snapshot take default cleanstart-2.2.67`
+* To restore -> `vagrant snapshot go default cleanstart-2.2.67`
+
 
