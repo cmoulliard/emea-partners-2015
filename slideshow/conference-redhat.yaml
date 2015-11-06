@@ -63,4 +63,5 @@ attributes:
   revealjs_scrollbar: true
   revealjs_footer_copyright: Copyright ©2015 Red Hat, Inc.
   revealjs_slideshow: false
+  revealjs_conference_logo: redhat_EMEA_partnerconf_logo_2015.png
 # 

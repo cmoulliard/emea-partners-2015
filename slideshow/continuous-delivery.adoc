@@ -7,7 +7,7 @@
 :speaker-twitter: http://twitter.com/cmoulliard[@cmoulliard]
 :talk-speaker: {speaker}
 :talk-name: Continuous Delivery with JBoss Fuse & Openshift
-:talk-date: 6th of October 2015
+:talk-date: 9th of November 2015
 
 [#cover,data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
 == {blank-space}
@@ -21,7 +21,7 @@ image:redhat-emea-partner-2015.png[width="95%"]
 [#cover-h1,width="600px",left="0px",top="200px"]
 {talk-name}
 
-[#cover-h2,width="800px",left="0px",top="450px"]
+[#cover-h2,width="800px",left="0px",top="500px"]
 {speaker} +
 {talk-date}
 
@@ -141,7 +141,8 @@ a|
 * Security
 * *Procedures*
 * *Volumetry*
-* *Timing*, **Communication** | image:integration-1.png[width="90%"]
+* *Timing*
+* *Communication* | image:integration-1.png[width="90%"]
 |===
 
 // ************** transition page ************
@@ -210,7 +211,7 @@ image:{revealjs_conference_logo}[width="80%"]
 
 image::opts-it.jpg[width="65%"]
 
-{icon-arrow-right} log, procedure, cpu, thread blocked, report, deployment procedure, alert, monitor, ...
+{icon-arrow-right} log, cpu, thread blocked, report, procedure, alert, monitoring, ...
 
 // ************** devops ************
 [#cd]
@@ -223,7 +224,7 @@ image:{revealjs_conference_logo}[width="80%"]
 |===
 a|* *Objective* {icon-arrow-right} *Continuous Integration* strategy
 * Establish a concrete *pipeline to production* {icon-exclamation-mark}
-* Build/Test/Release *more* often! | image:idea.jpeg[]
+* Build/Test/Release *more* often | image:idea.jpeg[]
 |===
 
 // ************** devops ************
@@ -237,7 +238,7 @@ image:{revealjs_conference_logo}[width="80%"]
 |===
 a|* *Bottlenecks ?*
 * Involves *Dev* & *Ops* to be *successful*
-* Every *build* is a “release candidate” | image:collaborate.jpeg[]
+* Every *build* {icon-arrow-right} "release candidate" | image:collaborate.jpeg[]
 |===
 
 // ************** devops ************
@@ -269,7 +270,7 @@ image:{revealjs_conference_logo}[width="80%"]
 a|* Operations
 ** Setup *(V)Machine*
 ** *Provisioning* software
-** *Deployment* in QA/UAT/PROD | image:devops1.jpeg[]
+** *Deploy* procedures in QA/UAT/PROD | image:devops1.jpeg[]
 |===
 
 // ************** transition page ************
@@ -296,6 +297,9 @@ a|* SCM {icon-arrow-right} Git
 * Git Repos mngt {icon-arrow-right} Gitlab/Gogs
 * Build {icon-arrow-right} Apache Maven
 * Automate {icon-arrow-right} Jenkins
+* Code Quality {icon-arrow-right} Sonarqube
+* Project Mngt {icon-arrow-right} Taiga
+* IRC/Chat {icon-arrow-right} LetsChat
 a|
 [#block, top=25px, left=500px]
 image:fabric8-cd-tools.png[height="65%"]
@@ -310,7 +314,8 @@ image:{revealjs_conference_logo}[width="80%"]
 
 [.noredheader]
 |===
-a|* Machine -> VM -> Linux **Container**
+a|* Machine -> VM
+* VM -> Linux **Container**
 * Red Hat **Atomic** Enterprise Platform
 a|
 [#block, top=90px, left=500px]
@@ -338,6 +343,22 @@ image:{revealjs_conference_logo}[width="80%"]
 image:docker-animated-1.gif[]
 
 // ************** docker ************
+[#docker-image]
+== Docker
+
+image::docker-filesystems-multilayer.png[width="60%,height="60%"]
+
+* Union *FS* mounted with immutable images
+* Benefits: *portability*, *reusability*, versioning, application-centric
+
+// ************** docker ************
+[#docker-config]
+== Docker config
+
+[#block,width="150px",top="50px",left="50px"]
+image:dockerfile.png[width="95%"]
+
+// ************** docker ************
 [#docker]
 == Docker
 
@@ -351,21 +372,6 @@ image:docker-animated-2.gif[]
 
 [#block,width="100px",top="-20px",left="200px"]
 image:docker-logo.png[width="25%",height="25%"]
-
-// ************** docker ************
-[#docker-descr]
-== Docker
-
-[#block,top="0px",left="790px"]
-image:{revealjs_conference_logo}[width="80%"]
-
-image::docker-filesystems-multilayer.png[width="60%,height="60%"]
-
-* Top of a Union FS mounted with immutable images
-* Benefits: *portability*, *reusability*, versioning, application-centric
-
-[#block,width="150px",top="0px",left="350px"]
-image:dockerfile.png[width="65%"]
 
 // ************** transition page ************
 [#transition5, data-background-image="revealjs-redhat/image/1156524-bg_redhat.png" data-background-color="#cc0000"]
@@ -443,7 +449,8 @@ image:{revealjs_conference_logo}[width="80%"]
 
 image::fabric8-service-pod.png[]
 
-* Kube Service *loadbalanced* through the pods using *HA-Proxy* & *Routes*
+* Kube Service *loadbalanced* through the pods using *HA-Proxy*
+ *Routes* map *private* with *public* IP address
 
 // ************** kubernetes ************
 [#kube-application]
@@ -478,9 +485,10 @@ image:{revealjs_conference_logo}[width="80%"]
 |===
 a|* *Designed* around Kubernetes, Docker, Fabric8
 * Provide *new* features {icon-arrow-right}
-** Docker Images *Registry* & **C**ertification
-** SSO - Authentication Server
-** Api for Management, Client Command Line
+** Docker Images *Registry* & *Certification*
+** *SSO* - Authentication Server
+** *Api* for Management, Client Command Line
+** Build *S2I*
 a|
 [#block,left="450px",top="100px",width="700px"]
 image:rht-atomic-enterprise-openshift.png[width="100%"]
@@ -590,3 +598,5 @@ a|* Twitter : *{speaker-twitter}*
 * More info {icon-arrow-right}
   - www.jboss.org/products/fuse.html
   - http://www.redhat.com/en/technologies/jboss-middleware
+  - http://fabric8.io/
+  - http://fabric8.io/guide/cdelivery.html
