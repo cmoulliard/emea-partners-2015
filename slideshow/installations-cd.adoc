@@ -201,7 +201,7 @@ generate a unique commit-id message.
 
 Run the script and pass as parameter the directory name of the project to be created locally on your machine and the gerrit git repository (should be by example : devnation)
 ```
-   ./demo/scripts/review.sh /Users/chmoulli/Temp/demo demo
+   /Users/chmoulli/MyProjects/MyConferences/emea-2015/demo/scripts/review.sh /Users/chmoulli/Temp/demo demo
    Counting objects: 24, done.
    Delta compression using up to 8 threads.
    Compressing objects: 100% (16/16), done.
